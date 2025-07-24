@@ -6,175 +6,470 @@
     <title>BetaBuilders – Volunteer with Startups</title>
     <meta name="description" content="BetaBuilders connects volunteer developers and designers with early-stage startup founders to build real products together." />
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      * {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+      
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      .animated-gradient-bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
+        background-size: 400% 400%;
+        animation: gradientMove 12s ease-in-out infinite;
+        opacity: 0.9;
+      }
+      
+      @keyframes gradientMove {
+        0% { background-position: 0% 50%; }
+        25% { background-position: 100% 50%; }
+        50% { background-position: 100% 100%; }
+        75% { background-position: 0% 100%; }
+        100% { background-position: 0% 50%; }
+      }
+      
+      .glass-effect {
+        backdrop-filter: blur(20px);
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      
+      .card-hover {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      }
+      
+      .text-gradient {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      
+      .btn-primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px 0 rgba(102, 126, 234, 0.4);
+      }
+      
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px 0 rgba(102, 126, 234, 0.6);
+      }
+      
+      .section-padding {
+        padding: 5rem 1rem;
+      }
+      
+      @media (max-width: 768px) {
+        .section-padding {
+          padding: 3rem 1rem;
+        }
+      }
+      
+      .feature-icon {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        width: 4rem;
+        height: 4rem;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+      
+      .nav-link {
+        position: relative;
+        transition: all 0.3s ease;
+      }
+      
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 50%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+      }
+      
+      .nav-link:hover::after {
+        width: 100%;
+      }
+    </style>
   </head>
-  <body class="bg-gray-50 text-gray-800 font-sans">
-    <header class="bg-white shadow">
-      <div class="max-w-6xl mx-auto px-4 py-6 flex items-center justify-between">
-        <h1 class="text-2xl font-bold text-orange-600">BetaBuilders</h1>
-        <nav class="space-x-4">
-          <a href="#about" class="text-gray-700 hover:text-orange-600 font-medium">About</a>
-          <a href="#events" class="text-gray-700 hover:text-orange-600 font-medium">Events</a>
-          <a href="#volunteer" class="text-gray-700 hover:text-orange-600 font-medium">Volunteer</a>
-          <a href="#contact" class="text-gray-700 hover:text-orange-600 font-medium">Connect</a>
-        </nav>
+  <body class="bg-gray-50 text-gray-800">
+    <header class="bg-white backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-gray-100">
+      <div class="max-w-7xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl flex items-center justify-center">
+              <span class="text-white font-bold text-lg">B</span>
+            </div>
+            <h1 class="text-2xl font-bold text-gradient">BetaBuilders</h1>
+          </div>
+          <nav class="hidden md:flex space-x-8">
+            <a href="#about" class="nav-link text-gray-700 hover:text-purple-600 font-medium">About</a>
+            <a href="#events" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Events</a>
+            <a href="#volunteer" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Volunteer</a>
+            <a href="#contact" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Connect</a>
+          </nav>
+          <button class="md:hidden p-2 rounded-lg hover:bg-gray-100">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
       </div>
     </header>
   
     <main>
-      <section class="bg-orange-100 text-center py-20 px-6">
-        <h2 class="text-4xl font-bold text-orange-800 mb-4">Build Startups. Gain Experience. Make Impact.</h2>
-        <p class="text-xl max-w-2xl mx-auto">BetaBuilders connects volunteer developers, designers, and product thinkers with early-stage startup founders to help turn bold ideas into real MVPs.</p>
+      <!-- Hero Section -->
+      <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="animated-gradient-bg"></div>
+        <div class="relative z-10 text-center px-6 max-w-5xl mx-auto">
+          <h2 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Build Startups.<br>
+            <span class="text-yellow-300">Gain Experience.</span><br>
+            Make Impact.
+          </h2>
+          <p class="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed">
+            BetaBuilders connects volunteer developers, designers, and product thinkers with early-stage startup founders to help turn bold ideas into real MVPs.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#volunteer" class="btn-primary text-white px-8 py-4 rounded-full font-semibold text-lg inline-flex items-center justify-center">
+              Start Volunteering
+              <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </a>
+            <a href="#events" class="glass-effect text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition">
+              View Events
+            </a>
+          </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </div>
       </section>
   
-      <section id="about" class="max-w-5xl mx-auto px-4 py-16">
-        <h3 class="text-3xl font-bold text-gray-900 mb-4">What is BetaBuilders?</h3>
-        <p class="mb-4">BetaBuilders is a nonprofit initiative that empowers early-stage startups by matching them with passionate volunteers who want to build, learn, and collaborate. Whether you're a founder with a dream or a dev looking for real experience — you're in the right place.</p>
-        <ul class="list-disc list-inside space-y-2 text-gray-700">
-          <li>Weekly <strong>Pitch to Build</strong> events</li>
-          <li>Real-world experience for aspiring devs & designers</li>
-          <li>Collaborative MVPs that make an impact</li>
-          <li>Community-driven projects — no funding required</li>
-        </ul>
+      <!-- About Section -->
+      <section id="about" class="section-padding bg-white">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">What is BetaBuilders?</h3>
+            <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mb-8"></div>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                BetaBuilders is a nonprofit initiative that empowers early-stage startups by matching them with passionate volunteers who want to build, learn, and collaborate. Whether you're a founder with a dream or a dev looking for real experience — you're in the right place.
+              </p>
+              <div class="space-y-4">
+                <div class="flex items-center space-x-3">
+                  <div class="w-2 h-2 bg-purple-600 rounded-full"></div>
+                  <span class="text-gray-700">Weekly <strong>Pitch to Build</strong> events</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <div class="w-2 h-2 bg-purple-600 rounded-full"></div>
+                  <span class="text-gray-700">Real-world experience for aspiring devs & designers</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <div class="w-2 h-2 bg-purple-600 rounded-full"></div>
+                  <span class="text-gray-700">Collaborative MVPs that make an impact</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <div class="w-2 h-2 bg-purple-600 rounded-full"></div>
+                  <span class="text-gray-700">Community-driven projects — no funding required</span>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-blue-600 rounded-3xl transform rotate-6"></div>
+              <div class="relative bg-white p-8 rounded-3xl shadow-xl">
+                <div class="text-center">
+                  <div class="text-4xl mb-4">🚀</div>
+                  <h4 class="text-xl font-semibold mb-2">Ready to Launch?</h4>
+                  <p class="text-gray-600">Join our community of builders and makers</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <!-- ========= Mission ========= -->
-<section id="mission" class="bg-white py-16 px-4">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-    <div class="md:w-1/2">
-      <h3 class="text-3xl font-bold text-gray-900 mb-4">Our Mission</h3>
-      <p class="text-gray-700 leading-relaxed">
-        BetaBuilders exists to turn courageous ideas into working products while
-        giving volunteers a place to learn, ship, and shine.  
-        We rally <strong>builders</strong> and <strong>founders</strong> around a
-        single goal: <em>launch something that matters</em>.
-      </p>
-    </div>
-    <div class="md:w-1/2">
-      <img src="images/mission.png" alt="Rocket launch illustration" class="w-full h-auto" />
-    </div>
-  </div>
-</section>
+      <!-- Mission & Vision -->
+      <section class="section-padding bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-16">
+            <!-- Mission -->
+            <div class="flex flex-col justify-center">
+              <div class="feature-icon text-white">🎯</div>
+              <h3 class="text-3xl font-bold text-gray-900 mb-6">Our Mission</h3>
+              <p class="text-lg text-gray-700 leading-relaxed">
+                BetaBuilders exists to turn courageous ideas into working products while
+                giving volunteers a place to learn, ship, and shine.  
+                We rally <strong class="text-purple-600">builders</strong> and <strong class="text-purple-600">founders</strong> around a
+                single goal: <em>launch something that matters</em>.
+              </p>
+            </div>
+            <div class="relative">
+              <img src="images/mission.png" alt="Rocket launch illustration" class="w-full h-auto rounded-2xl shadow-lg" />
+            </div>
+          </div>
+        </div>
+      </section>
 
-<!-- ========= Vision ========= -->
-<section id="vision" class="bg-gray-100 py-16 px-4">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row-reverse items-center gap-12">
-    <div class="md:w-1/2">
-      <h3 class="text-3xl font-bold text-gray-900 mb-4">Our Vision</h3>
-      <p class="text-gray-700 leading-relaxed">
-        We imagine a world where <strong>talent</strong> and
-        <strong>ambition</strong> are all you need to build a startup—funding
-        optional. Every volunteer leaves with new skills, meaningful
-        connections, and a portfolio piece they’re proud of.
-      </p>
-    </div>
-    <div class="md:w-1/2">
-      <img src="images/vision.png" alt="Collaboration handshake" class="w-full h-auto" />
-    </div>
-  </div>
-</section>
+      <section class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-16">
+            <div class="relative order-2 md:order-1">
+              <img src="images/vision.png" alt="Collaboration handshake" class="w-full h-auto rounded-2xl shadow-lg" />
+            </div>
+            <!-- Vision -->
+            <div class="flex flex-col justify-center order-1 md:order-2">
+              <div class="feature-icon text-white">👁️</div>
+              <h3 class="text-3xl font-bold text-gray-900 mb-6">Our Vision</h3>
+              <p class="text-lg text-gray-700 leading-relaxed">
+                We imagine a world where <strong class="text-purple-600">talent</strong> and
+                <strong class="text-purple-600">ambition</strong> are all you need to build a startup—funding
+                optional. Every volunteer leaves with new skills, meaningful
+                connections, and a portfolio piece they're proud of.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<!-- ========= How It Works ========= -->
-<section id="how-it-works" class="bg-white py-16 px-4">
-  <div class="max-w-6xl mx-auto">
-    <h3 class="text-3xl font-bold text-center text-gray-900 mb-12">How It Works</h3>
+      <!-- How It Works -->
+      <section id="how-it-works" class="section-padding bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">How It Works</h3>
+            <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto"></div>
+          </div>
 
-    <div class="grid md:grid-cols-3 gap-10">
-      <!-- Step 1 -->
-      <div class="flex flex-col items-center text-center space-y-4">
-        <img src="images/step01.png" alt="Microphone icon" class="w-24 h-24" />
-        <h4 class="text-xl font-semibold">Pitch</h4>
-        <p class="text-gray-700">Founders present real problems and bold ideas at our weekly events.</p>
-      </div>
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- Step 1 -->
+            <div class="bg-white rounded-2xl p-8 text-center card-hover shadow-lg">
+              <div class="feature-icon text-white mx-auto">🎤</div>
+              <h4 class="text-2xl font-semibold mb-4">Pitch</h4>
+              <p class="text-gray-700 leading-relaxed">Founders present real problems and bold ideas at our weekly events.</p>
+            </div>
 
-      <!-- Step 2 -->
-      <div class="flex flex-col items-center text-center space-y-4">
-        <img src="images/step02.png" alt="Team icon" class="w-24 h-24" />
-        <h4 class="text-xl font-semibold">Team Up</h4>
-        <p class="text-gray-700">Volunteers join squads that match their skills and passions.</p>
-      </div>
+            <!-- Step 2 -->
+            <div class="bg-white rounded-2xl p-8 text-center card-hover shadow-lg">
+              <div class="feature-icon text-white mx-auto">👥</div>
+              <h4 class="text-2xl font-semibold mb-4">Team Up</h4>
+              <p class="text-gray-700 leading-relaxed">Volunteers join squads that match their skills and passions.</p>
+            </div>
 
-      <!-- Step 3 -->
-      <div class="flex flex-col items-center text-center space-y-4">
-        <img src="images/step03.png" alt="Laptop icon" class="w-24 h-24" />
-        <h4 class="text-xl font-semibold">Build &amp; Launch</h4>
-        <p class="text-gray-700">Together we ship MVPs, learn fast, and share success.</p>
-      </div>
-    </div>
-  </div>
-</section>
+            <!-- Step 3 -->
+            <div class="bg-white rounded-2xl p-8 text-center card-hover shadow-lg">
+              <div class="feature-icon text-white mx-auto">💻</div>
+              <h4 class="text-2xl font-semibold mb-4">Build & Launch</h4>
+              <p class="text-gray-700 leading-relaxed">Together we ship MVPs, learn fast, and share success.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<!-- ========= Services ========= -->
-<section id="services" class="bg-gray-100 py-16 px-4">
-  <div class="max-w-6xl mx-auto">
-    <h3 class="text-3xl font-bold text-center text-gray-900 mb-8">Our Services for Startups</h3>
-    <p class="text-xl text-center text-gray-700 mb-10 max-w-3xl mx-auto">
-      We help unfunded early stage startups for <span class="font-bold text-orange-600">free</span> with:
-    </p>
-    <div class="grid md:grid-cols-2 gap-10">
-      <!-- Coaching -->
-      <div class="bg-white rounded-lg shadow p-8 flex flex-col">
-        <h4 class="text-2xl font-semibold text-orange-700 mb-4 flex items-center"><span class="mr-2">🎓</span>Coaching</h4>
-        <ul class="list-disc list-inside text-gray-700 space-y-2">
-          <li>How to go from a single person to a team</li>
-          <li>From prototype to MVP</li>
-          <li>From dev to prod</li>
-          <li>Get first users &amp; get funded</li>
-        </ul>
-      </div>
-      <!-- Marketing -->
-      <div class="bg-white rounded-lg shadow p-8 flex flex-col">
-        <h4 class="text-2xl font-semibold text-orange-700 mb-4 flex items-center"><span class="mr-2">📣</span>Marketing</h4>
-        <p class="text-gray-700">Post and promote about your idea/team/product on all social media</p>
-      </div>
-      <!-- Website -->
-      <div class="bg-white rounded-lg shadow p-8 flex flex-col">
-        <h4 class="text-2xl font-semibold text-orange-700 mb-4 flex items-center"><span class="mr-2">🌐</span>Website</h4>
-        <p class="text-gray-700">Build beautiful and engaging website for you to help you attract volunteers and co-founders/investors</p>
-      </div>
-      <!-- Hiring -->
-      <div class="bg-white rounded-lg shadow p-8 flex flex-col">
-        <h4 class="text-2xl font-semibold text-orange-700 mb-4 flex items-center"><span class="mr-2">🤝</span>Hiring</h4>
-        <p class="text-gray-700">Help you get like-minded volunteers to work on your idea.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
+      <!-- Services -->
+      <section id="services" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Services for Startups</h3>
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              We help unfunded early stage startups for <span class="font-bold text-gradient">free</span> with:
+            </p>
+            <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mt-6"></div>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- Coaching -->
+            <div class="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-8 card-hover border border-purple-100">
+              <div class="feature-icon text-white mb-6">🎓</div>
+              <h4 class="text-2xl font-semibold text-gray-900 mb-4">Coaching</h4>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start space-x-3">
+                  <svg class="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span>How to go from a single person to a team</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <svg class="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span>From prototype to MVP</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <svg class="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span>From dev to prod</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <svg class="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Get first users & get funded</span>
+                </li>
+              </ul>
+            </div>
+            
+            <!-- Marketing -->
+            <div class="bg-gradient-to-br from-pink-50 to-orange-50 rounded-2xl p-8 card-hover border border-pink-100">
+              <div class="feature-icon text-white mb-6">📣</div>
+              <h4 class="text-2xl font-semibold text-gray-900 mb-4">Marketing</h4>
+              <p class="text-gray-700 leading-relaxed">Post and promote about your idea/team/product on all social media platforms to maximize reach and engagement.</p>
+            </div>
+            
+            <!-- Website -->
+            <div class="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-8 card-hover border border-green-100">
+              <div class="feature-icon text-white mb-6">🌐</div>
+              <h4 class="text-2xl font-semibold text-gray-900 mb-4">Website</h4>
+              <p class="text-gray-700 leading-relaxed">Build beautiful and engaging websites to help you attract volunteers, co-founders, and investors with professional design.</p>
+            </div>
+            
+            <!-- Hiring -->
+            <div class="bg-gradient-to-br from-yellow-50 to-red-50 rounded-2xl p-8 card-hover border border-yellow-100">
+              <div class="feature-icon text-white mb-6">🤝</div>
+              <h4 class="text-2xl font-semibold text-gray-900 mb-4">Hiring</h4>
+              <p class="text-gray-700 leading-relaxed">Connect with like-minded volunteers who are passionate about your vision and ready to contribute their skills.</p>
+            </div>
+          </div>
+        </div>
+      </section>
   
-      <section id="events" class="bg-gray-100 py-16 px-4">
-        <div class="max-w-5xl mx-auto text-center">
-          <h3 class="text-3xl font-bold text-gray-900 mb-4">Events</h3>
-          <p class="mb-6">We host weekly events where startup founders pitch their ideas to a live audience of volunteers. Join us to brainstorm, collaborate, and get involved.</p>
-          <a href="https://www.meetup.com/it-volunteers-and-interns/" target="_blank" class="inline-block bg-orange-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-700 transition">
+      <!-- Events -->
+      <section id="events" class="section-padding bg-gradient-to-br from-purple-600 to-blue-600 text-white">
+        <div class="max-w-6xl mx-auto text-center">
+          <h3 class="text-4xl md:text-5xl font-bold mb-6">Events</h3>
+          <p class="text-xl mb-10 max-w-3xl mx-auto leading-relaxed opacity-90">
+            We host weekly events where startup founders pitch their ideas to a live audience of volunteers. Join us to brainstorm, collaborate, and get involved.
+          </p>
+          <a href="https://www.meetup.com/it-volunteers-and-interns/" target="_blank" class="inline-flex items-center bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition transform hover:scale-105 shadow-lg">
             View Events on Meetup
+            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+            </svg>
           </a>
         </div>
       </section>
   
-      <section id="volunteer" class="max-w-5xl mx-auto px-4 py-16">
-        <h3 class="text-3xl font-bold text-gray-900 mb-4">Volunteer With Us</h3>
-        <p class="mb-6">Want to grow your skills, build your portfolio, or contribute to something meaningful? BetaBuilders is your launchpad.</p>
-        <ul class="space-y-4 text-gray-800">
-          <li>✅ Work on real startup MVPs</li>
-          <li>✅ Collaborate with passionate founders</li>
-          <li>✅ Learn by doing, not just watching</li>
-          <li>✅ Get references, feedback, and networking support</li>
-        </ul>
+      <!-- Volunteer -->
+      <section id="volunteer" class="section-padding bg-white">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Volunteer With Us</h3>
+              <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                Want to grow your skills, build your portfolio, or contribute to something meaningful? BetaBuilders is your launchpad.
+              </p>
+              <div class="space-y-4">
+                <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl">
+                  <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <span class="text-gray-800 font-medium">Work on real startup MVPs</span>
+                </div>
+                <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl">
+                  <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <span class="text-gray-800 font-medium">Collaborate with passionate founders</span>
+                </div>
+                <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl">
+                  <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <span class="text-gray-800 font-medium">Learn by doing, not just watching</span>
+                </div>
+                <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl">
+                  <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <span class="text-gray-800 font-medium">Get references, feedback, and networking support</span>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-blue-600 rounded-3xl transform -rotate-6"></div>
+              <div class="relative bg-white p-8 rounded-3xl shadow-xl border border-gray-100">
+                <div class="text-center">
+                  <div class="text-6xl mb-6">🚀</div>
+                  <h4 class="text-2xl font-bold mb-4 text-gray-900">Ready to Start?</h4>
+                  <p class="text-gray-600 mb-6">Join hundreds of volunteers building the future</p>
+                  <a href="#contact" class="btn-primary text-white px-6 py-3 rounded-full font-semibold inline-flex items-center">
+                    Get Started
+                    <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
   
-      <section id="contact" class="bg-white py-16 px-4">
-        <div class="max-w-4xl mx-auto text-center">
-          <h3 class="text-3xl font-bold mb-4">Connect With Us</h3>
-          <p class="mb-6">Questions? Ideas? Want to partner or get involved? Reach out to us on LinkedIn — we’d love to hear from you.</p>
-          <a href="https://www.linkedin.com/company/beta-builders-club" target="_blank" class="inline-block bg-gray-800 text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-900 transition">
+      <!-- Contact -->
+      <section id="contact" class="section-padding bg-gray-900 text-white">
+        <div class="max-w-6xl mx-auto text-center">
+          <h3 class="text-4xl md:text-5xl font-bold mb-6">Connect With Us</h3>
+          <p class="text-xl mb-10 max-w-3xl mx-auto leading-relaxed opacity-90">
+            Questions? Ideas? Want to partner or get involved? Reach out to us on LinkedIn — we'd love to hear from you.
+          </p>
+          <a href="https://www.linkedin.com/company/beta-builders-club" target="_blank" class="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-700 transition transform hover:scale-105 shadow-lg">
+            <svg class="mr-3 w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
             Connect on LinkedIn
+            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+            </svg>
           </a>
         </div>
       </section>
     </main>
   
-    <footer class="bg-gray-200 text-center py-6 text-sm text-gray-600">
-      &copy; 2025 BetaBuilders. Built with ❤️ by volunteers.
+    <footer class="bg-black text-white py-8">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <div class="flex items-center justify-center space-x-3 mb-4">
+          <div class="w-8 h-8 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold">B</span>
+          </div>
+          <span class="text-xl font-bold">BetaBuilders</span>
+        </div>
+        <p class="text-gray-400">
+          &copy; 2025 BetaBuilders. Built with ❤️ by volunteers.
+        </p>
+      </div>
     </footer>
   </body>
 </html>
