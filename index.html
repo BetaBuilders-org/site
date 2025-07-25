@@ -7,6 +7,7 @@
     <meta name="description" content="BetaBuilders connects volunteer developers and designers with early-stage startup founders to build real products together." />
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/Logo.png" type="image/png" />
     <style>
       * {
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -117,13 +118,21 @@
         <div class="flex items-center justify-between">
           <div class="flex items-center space-x-3">
             <a href="/" class="flex items-center space-x-2 group">
-              <img src="images/Logo_1.png" alt="BetaBuilders Logo" class="w-16 h-16 object-contain transition-transform duration-200 group-hover:scale-105" style="background: transparent;" />
+              <img 
+                src="images/Logo_2.png" 
+                alt="BetaBuilders Logo" 
+                class="w-16 h-16 object-contain origin-left transition-transform duration-200 group-hover:scale-[1.55]" 
+                style="transform: scaleX(1.5) scaleY(1.5); background: transparent;" 
+              />
+
+
             </a>
           </div>
           <nav class="hidden md:flex space-x-8">
             <a href="#about" class="nav-link text-gray-700 hover:text-purple-600 font-medium">About</a>
             <a href="#events" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Events</a>
             <a href="#volunteer" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Volunteer</a>
+            <a href="#founder" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Founder</a>
             <a href="#contact" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Connect</a>
           </nav>
           <button class="md:hidden p-2 rounded-lg hover:bg-gray-100">
@@ -229,8 +238,8 @@
               </p>
             </div>
             <div class="relative">
-              <img src="images/mission.png" alt="Rocket launch illustration" class="w-full h-auto rounded-2xl shadow-lg" />
-            </div>
+              <img src="images/mission.png" alt="Rocket launch illustration" class="max-w-sm w-full h-auto rounded-2xl shadow-lg mx-auto md:mx-0" />
+            </div>            
           </div>
         </div>
       </section>
@@ -239,8 +248,8 @@
         <div class="max-w-7xl mx-auto">
           <div class="grid md:grid-cols-2 gap-16">
             <div class="relative order-2 md:order-1">
-              <img src="images/vision.png" alt="Collaboration handshake" class="w-full h-auto rounded-2xl shadow-lg" />
-            </div>
+              <img src="images/vision.png" alt="Collaboration handshake" class="max-w-sm w-full h-auto rounded-2xl shadow-lg mx-auto md:mx-0" />
+            </div>            
             <!-- Vision -->
             <div class="flex flex-col justify-center order-1 md:order-2">
               <div class="feature-icon text-white">👁️</div>
@@ -515,6 +524,66 @@
           </div>
         </div>
       </section>
+
+
+      <!--Founder-->
+      <section id="founder" class="section-padding bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Founders We Support</h3>
+            <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mb-8"></div>
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              We support startup founders who are committed to learning, building, and leading with purpose.
+            </p>
+          </div>
+      
+          <div class="grid md:grid-cols-2 gap-12">
+            <!-- Left: Traits -->
+            <div>
+              <h4 class="text-2xl font-semibold text-gray-800 mb-4">Traits We Look For</h4>
+              <ul class="space-y-4 text-gray-700 text-lg">
+                <li class="flex items-start space-x-2">
+                  <span class="text-purple-600 mt-1">✓</span>
+                  <span>Honest and open to critical opinions, open to change and feedback.</span>
+                </li>
+                <li class="flex items-start space-x-2">
+                  <span class="text-purple-600 mt-1">✓</span>
+                  <span>Able to adapt thinking when presented with new insights.</span>
+                </li>
+                <li class="flex items-start space-x-2">
+                  <span class="text-purple-600 mt-1">✓</span>
+                  <span>Not just dreamers — focused on solving real, meaningful problems.</span>
+                </li>
+                <li class="flex items-start space-x-2">
+                  <span class="text-purple-600 mt-1">✓</span>
+                  <span>Energetic and open to working with others collaboratively.</span>
+                </li>
+              </ul>
+            </div>
+      
+            <!-- Right: What We Teach -->
+            <div>
+              <h4 class="text-2xl font-semibold text-gray-800 mb-4">What We Teach</h4>
+              <ul class="space-y-4 text-gray-700 text-lg">
+                <li class="flex items-start space-x-2">
+                  <span class="text-blue-600 mt-1">★</span>
+                  <span>First principle thinking — questioning assumptions to build from the ground up.</span>
+                </li>
+                <li class="flex items-start space-x-2">
+                  <span class="text-blue-600 mt-1">★</span>
+                  <span>Thinking from a business perspective — not just tech for tech’s sake.</span>
+                </li>
+                <li class="flex items-start space-x-2">
+                  <span class="text-blue-600 mt-1">★</span>
+                  <span>Leadership — inspiring and enabling others to join your mission.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
       <!-- Volunteer -->
       <section id="volunteer" class="section-padding bg-white">
         <div class="max-w-6xl mx-auto">
