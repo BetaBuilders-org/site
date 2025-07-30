@@ -131,6 +131,14 @@
     .nav-link:hover::after {
       width: 100%;
     }
+
+    @media (min-width: 640px) {
+      .card-fixed {
+        width: 505.5px;
+        height: 220px;
+      }
+    }
+  
   </style>
 </head>
 
@@ -318,37 +326,35 @@
     </section>
 
     <!-- How It Works -->
-    <section id="how-it-works" class="section-padding bg-gray-50">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
+    <section id="how-it-works" class="py-16 px-4 bg-gray-50">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-12">
           <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">How BetaBuilders Works</h3>
           <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto"></div>
-          <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
-            Our 3-step community-driven process helps early-stage startups move from pitch to product — with real-world
-            collaboration and zero funding required.
+          <p class="text-lg text-gray-600 mt-4">
+            Our 3-step community-driven process helps early-stage startups move from pitch to product — with real-world collaboration and zero funding required.
           </p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="flex flex-col gap-6">
           <!-- Step 1 -->
-          <div class="bg-white rounded-2xl p-8 text-center card-hover shadow-lg">
-            <div class="feature-icon text-white mx-auto">🎤</div>
-            <h4 class="text-2xl font-semibold mb-4">Pitch</h4>
-            <p class="text-gray-700 leading-relaxed">Founders present real problems and bold ideas at our weekly events.
-            </p>
+          <div class="bg-white rounded-2xl p-6 text-center card-hover shadow-lg">
+            <div class="feature-icon text-white mx-auto text-4xl">🎤</div>
+            <h4 class="text-2xl font-semibold mb-3">Pitch</h4>
+            <p class="text-gray-700 leading-relaxed">Founders present real problems and bold ideas at our weekly events.</p>
           </div>
 
           <!-- Step 2 -->
-          <div class="bg-white rounded-2xl p-8 text-center card-hover shadow-lg">
-            <div class="feature-icon text-white mx-auto">👥</div>
-            <h4 class="text-2xl font-semibold mb-4">Team Up</h4>
+          <div class="bg-white rounded-2xl p-6 text-center card-hover shadow-lg">
+            <div class="feature-icon text-white mx-auto text-4xl">👥</div>
+            <h4 class="text-2xl font-semibold mb-3">Team Up</h4>
             <p class="text-gray-700 leading-relaxed">Volunteers join squads that match their skills and passions.</p>
           </div>
 
           <!-- Step 3 -->
-          <div class="bg-white rounded-2xl p-8 text-center card-hover shadow-lg">
-            <div class="feature-icon text-white mx-auto">💻</div>
-            <h4 class="text-2xl font-semibold mb-4">Build & Launch</h4>
+          <div class="bg-white rounded-2xl p-6 text-center card-hover shadow-lg">
+            <div class="feature-icon text-white mx-auto text-4xl">💻</div>
+            <h4 class="text-2xl font-semibold mb-3">Build & Launch</h4>
             <p class="text-gray-700 leading-relaxed">Together we ship MVPs, learn fast, and share success.</p>
           </div>
         </div>
@@ -413,8 +419,26 @@
             class="bg-gradient-to-br from-pink-50 to-orange-50 rounded-2xl p-8 card-hover border border-pink-100">
             <div class="feature-icon text-white mb-6">📣</div>
             <h4 class="text-2xl font-semibold text-gray-900 mb-4">Marketing</h4>
-            <p class="text-gray-700 leading-relaxed">Post and promote about your idea/team/product on all social media
-              platforms to maximize reach and engagement.</p>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-pink-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Create marketing assets that feel personal and authentic</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-pink-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Share across platforms to maximize reach</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-pink-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Use feedback loops to boost engagement</span>
+              </li>
+            </ul>
           </article>
 
           <!-- Website -->
@@ -422,8 +446,26 @@
             class="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-8 card-hover border border-green-100">
             <div class="feature-icon text-white mb-6">🌐</div>
             <h4 class="text-2xl font-semibold text-gray-900 mb-4">Website</h4>
-            <p class="text-gray-700 leading-relaxed">Build beautiful and engaging websites to help you attract
-              volunteers, co-founders, and investors with professional design.</p>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Design responsive websites with a modern stack</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Communicate brand story with clean visuals</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Generate inbound interest from investors and volunteers</span>
+              </li>
+            </ul>
           </article>
 
           <!-- Hiring -->
@@ -431,8 +473,26 @@
             class="bg-gradient-to-br from-yellow-50 to-red-50 rounded-2xl p-8 card-hover border border-yellow-100">
             <div class="feature-icon text-white mb-6">🤝</div>
             <h4 class="text-2xl font-semibold text-gray-900 mb-4">Hiring</h4>
-            <p class="text-gray-700 leading-relaxed">Connect with like-minded volunteers who are passionate about your
-              vision and ready to contribute their skills.</p>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-yellow-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Find skilled teammates who share your mission</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-yellow-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Create roles and onboard with clear expectations</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-yellow-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Build momentum with purpose-driven collaboration</span>
+              </li>
+            </ul>
           </article>
         </div>
       </div>
@@ -471,8 +531,9 @@
           <div class="flex flex-col gap-8 items-center">
             
             <!-- Job Search Works -->
-            <div class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 max-w-4xl mx-auto"
-            style="width: 505.5px; height: 220px;">
+            <div 
+              class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 mx-auto w-full h-auto sm:block card-fixed"
+            >
               <!-- Top Row: Left & Right side -->
               <div class="flex flex-row gap-6">
                 <!-- Left: Logo & Title -->
@@ -502,7 +563,7 @@
                   <!-- Remaining -->
                   <div class="bg-gray-300 h-2" style="width: 39%;"></div>
                 </div>
-                <div class="text-xs text-blue-600 mt-1 font-semibold text-center">Current: Go Live</div>
+                <div class="text-xs text-blue-600 mt-1 font-semibold text-center">Go Live</div>
               </div>
               
             </div>
@@ -510,13 +571,12 @@
             
             <!-- QuickSite -->
             <div 
-            class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 max-w-4xl mx-auto"
-            style="width: 505.5px; height: 220px;"
+              class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 mx-auto w-full h-auto sm:block card-fixed"
             >
               <!-- Top Row: Left & Right -->
               <div class="flex flex-row gap-6">
                 <!-- Left: Logo & Title -->
-                <div class="flex flex-col items-start gap-2 min-w-[5rem]">
+                <div class="flex flex-col items-start gap-2 w-36 sm:w-40">
                   <a href="https://quicksite.space/" target="_blank">
                     <img src="images/Quicksite_Logo.png" alt="QuickSite Logo" class="w-16 h-16 object-contain" />
                   </a>
@@ -542,19 +602,19 @@
                   <!-- Remaining -->
                   <div class="bg-gray-300 h-2" style="width: 49%;"></div>
                 </div>
-                <div class="text-xs text-green-600 mt-1 font-semibold text-center">Current: MVP</div>
+                <div class="text-xs text-green-600 mt-1 font-semibold text-center">MVP</div>
               </div>
             </div>
             
 
             <!-- TalentHub.Show -->
             <div 
-            class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 max-w-4xl mx-auto"
-            style="width: 505.5px; height: 220px;">
+              class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 mx-auto w-full h-auto sm:block card-fixed"
+            >
               <!-- Top Row: Left & Right -->
               <div class="flex flex-row gap-6">
                 <!-- Left: Logo & Title -->
-                <div class="flex flex-col items-start gap-2 min-w-[5rem]">
+                <div class="flex flex-col items-start gap-2 w-36 sm:w-40">
                   <a href="https://talenthub.show/" target="_blank">
                     <img src="images/talent_hub_logo.png" alt="Job Search Works Logo" class="w-16 h-16 object-contain rounded-full" />
                   </a>
@@ -580,20 +640,19 @@
                   <!-- Remaining -->
                   <div class="bg-gray-300 h-2" style="width: 50%;"></div>
                 </div>
-                <div class="text-xs text-pink-600 mt-1 font-semibold text-center">Current: MVP</div>
+                <div class="text-xs text-pink-600 mt-1 font-semibold text-center">MVP</div>
               </div>              
             </div>
             
 
             <!-- ArtOut -->
             <div 
-            class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 max-w-4xl mx-auto"
-            style="width: 505.5px; height: 220px;"
+              class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 mx-auto w-full h-auto sm:block card-fixed"
             >
               <!-- Top Row: Left & Right -->
               <div class="flex flex-row gap-6">
                 <!-- Left: Logo & Title -->
-                <div class="flex flex-col items-start gap-2 min-w-[5rem]">
+                <div class="flex flex-col items-start gap-2 w-36 sm:w-40">
                   <a href="https://artout.site/" target="_blank">
                     <img src="images/artout_logo.png" alt="Job Search Works Logo" class="w-16 h-16 object-contain rounded-full" />
                   </a>
@@ -619,7 +678,7 @@
                   <!-- Remaining -->
                   <div class="bg-gray-300 h-2" style="width: 79%;"></div>
                 </div>
-                <div class="text-xs text-purple-600 mt-1 font-semibold text-center">Current: Prototype</div>
+                <div class="text-xs text-purple-600 mt-1 font-semibold text-center">Prototype</div>
               </div>
               
             </div>
@@ -627,12 +686,12 @@
 
             <!-- GrassKarma -->
             <div 
-            class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 max-w-4xl mx-auto"
-            style="width: 505.5px; height: 220px;">
+              class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 mx-auto w-full h-auto sm:block card-fixed"
+            >
               <!-- Top Row: Left & Right -->
               <div class="flex flex-row gap-6">
                 <!-- Left: Logo & Title -->
-                <div class="flex flex-col items-start gap-2 min-w-[5rem]">
+                <div class="flex flex-col items-start gap-2 w-36 sm:w-40">
                   <a href="https://grasskarma.website/" target="_blank">
                     <img src="images/grasskarma_Logo.png" alt="GrassKarma logo" class="w-16 h-16 object-contain" />
                   </a>
@@ -642,8 +701,8 @@
                 <!-- Right: Description -->
                 <div class="flex flex-col justify-center text-left flex-1">
                   <p class="text-gray-700 text-xs leading-snug">
-                    Share the mow, grow the karma. Grass Karma helps neighbors team up for lawn care—taking turns or pooling funds. Save money, reduce stress, and keep your street sharp with reminders and group discounts.
-                  </p>
+                    Share the mow, grow the karma. Team up with neighbors, split costs, and keep lawns sharp with reminders and group deals.
+                  </p>                  
                 </div>
               </div>
 
@@ -658,19 +717,19 @@
                   <!-- Remaining -->
                   <div class="bg-gray-300 h-2" style="width: 79%;"></div>
                 </div>
-                <div class="text-xs text-green-600 mt-1 font-semibold text-center">Current: Prototype</div>
+                <div class="text-xs text-green-600 mt-1 font-semibold text-center">Prototype</div>
               </div>
               
             </div>
 
             <!-- SeedStart -->
             <div 
-            class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 max-w-4xl mx-auto"
-            style="width: 505.5px; height: 220px;">
+              class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 mx-auto w-full h-auto sm:block card-fixed"
+            >
               <!-- Top Row: Left & Right -->
               <div class="flex flex-row gap-6">
                 <!-- Left: Logo & Title -->
-                <div class="flex flex-col items-start gap-2 min-w-[5rem]">
+                <div class="flex flex-col items-start gap-2 w-36 sm:w-40">
                   <a href="https://seedstart.world/" target="_blank">
                     <img src="images/seedstart_logo.png" alt="Job Search Works Logo" class="w-16 h-16 object-contain rounded-full" />
                   </a>
@@ -680,8 +739,8 @@
                 <!-- Right: Description -->
                 <div class="flex flex-col justify-center text-left flex-1">
                   <p class="text-gray-700 text-xs leading-snug">
-                    Turn ideas into reality with SeedSite — the all-in-one platform for founders. Build teams, access expert tools, and launch faster with guided support. Join thousands shaping the future.
-                  </p>                  
+                    Turn ideas into reality with SeedSite. Build your team, use expert tools, and launch fast — with support every step.
+                  </p>                                   
                 </div>
               </div>
 
@@ -696,7 +755,7 @@
                   <!-- Remaining -->
                   <div class="bg-gray-300 h-2" style="width: 55%;"></div>
                 </div>
-                <div class="text-xs text-blue-600 mt-1 font-semibold text-center">Current: MVP</div>
+                <div class="text-xs text-blue-600 mt-1 font-semibold text-center">MVP</div>
               </div>
               
             </div>
@@ -704,39 +763,39 @@
             
             <!-- freedates.app -->
             <div 
-            class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 max-w-4xl mx-auto"
-            style="width: 505.5px; height: 220px;">
-              <!-- Top Row: Left & Right -->
-              <div class="flex flex-row gap-6">
-                <!-- Left: Logo & Title -->
-                <div class="flex flex-col items-start gap-2 min-w-[5rem]">
-                  <a href="https://freedates.app/" target="_blank">
-                    <img src="images/freedates_Logo.png" alt="freedates.app logo" class="w-18 h-16 object-contain rounded-full" />
-                  </a>
-                  <a href="https://freedates.app/" target="_blank" class="text-lg font-semibold text-gradient">Free Dates</a>
-                </div>
-
-                <!-- Right: Description -->
-                <div class="flex flex-col justify-center text-left flex-1">
-                  <p class="text-gray-700 text-xs leading-snug">
-                    Plan get-togethers easily. FreeDates syncs everyone’s availability, eliminates back-and-forth, and helps you lock in plans fast. Simple, private, and free.
-                  </p>                  
-                </div>
+              class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 mx-auto w-full h-auto sm:block card-fixed"
+            >
+            <!-- Top Row: Left & Right -->
+            <div class="flex flex-row gap-6">
+              <!-- Left: Logo & Title -->
+              <div class="flex flex-col items-start gap-2 w-36 sm:w-40">
+                <a href="https://freedates.app/" target="_blank">
+                  <img src="images/freedates_Logo.png" alt="freedates.app logo" class="w-18 h-16 object-contain rounded-full" />
+                </a>
+                <a href="https://freedates.app/" target="_blank" class="text-lg font-semibold text-gradient">Free Dates</a>
               </div>
 
-              <!-- Bottom: Progress Bar full width -->
-              <div class="w-full max-w-4xl mx-auto">
-                <div class="flex justify-between text-xs text-gray-500 mb-1">
-                  <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
-                </div>
-                <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
-                  <!-- Gradient progress bar up to Go Live (71%) -->
-                  <div class="h-2" style="width: 45%; background: linear-gradient(to right, #f87171, #e13030);"></div>
-                  <!-- Remaining -->
-                  <div class="bg-gray-300 h-2" style="width: 55%;"></div>
-                </div>
-                <div class="text-xs text-red-600 mt-1 font-semibold text-center">Current: MVP</div>
+              <!-- Right: Description -->
+              <div class="flex flex-col justify-center text-left flex-1">
+                <p class="text-gray-700 text-xs leading-snug">
+                  Earn attention, not buy it. SMS only, no bots. 100% free. Heart-based, no ghosting. Build, earn, rise in the Hearts Economy.
+                </p>                               
               </div>
+            </div>
+
+            <!-- Bottom: Progress Bar full width -->
+            <div class="w-full mx-auto">
+              <div class="flex justify-between text-xs text-gray-500 mb-1">
+                <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
+              </div>
+              <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
+                <!-- Gradient progress bar up to Go Live (71%) -->
+                <div class="h-2" style="width: 45%; background: linear-gradient(to right, #f87171, #e13030);"></div>
+                <!-- Remaining -->
+                <div class="bg-gray-300 h-2" style="width: 55%;"></div>
+              </div>
+              <div class="text-xs text-red-600 mt-1 font-semibold text-center">MVP</div>
+            </div>
             </div>
 
             
