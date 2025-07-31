@@ -1,408 +1,525 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BetaBuilders – Volunteer with Startups</title>
-    <meta name="description" content="BetaBuilders connects volunteer developers and designers with early-stage startup founders to build real products together." />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="icon" href="images/betabuilder_favicon.png" type="image/png" />
-    <style>
-      * {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BetaBuilders – Volunteer with Startups</title>
+  <meta name="description"
+    content="Join BetaBuilders, a platform connecting volunteers with startups to build MVPs and gain tech experience.">
+  <meta property="og:title" content="BetaBuilders – Volunteer with Startups">
+  <meta property="og:description"
+    content="BetaBuilders connects developers and designers with startup founders to create MVPs. Volunteer today.">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="images/betabuilder_favicon.png" type="image/png" />
+
+  <style>
+    * {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .animated-gradient-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
+      background-size: 400% 400%;
+      animation: gradientMove 12s ease-in-out infinite;
+      opacity: 0.9;
+    }
+
+    @keyframes gradientMove {
+      0% {
+        background-position: 0% 50%;
       }
-      
-      html {
-        scroll-behavior: smooth;
+
+      25% {
+        background-position: 100% 50%;
       }
-      
-      .animated-gradient-bg {
-        position: absolute;
-        inset: 0;
-        z-index: 0;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
-        background-size: 400% 400%;
-        animation: gradientMove 12s ease-in-out infinite;
-        opacity: 0.9;
+
+      50% {
+        background-position: 100% 100%;
       }
-      
-      @keyframes gradientMove {
-        0% { background-position: 0% 50%; }
-        25% { background-position: 100% 50%; }
-        50% { background-position: 100% 100%; }
-        75% { background-position: 0% 100%; }
-        100% { background-position: 0% 50%; }
+
+      75% {
+        background-position: 0% 100%;
       }
-      
-      .glass-effect {
-        backdrop-filter: blur(20px);
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
+
+      100% {
+        background-position: 0% 50%;
       }
-      
-      .card-hover {
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      
-      .card-hover:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-      }
-      
-      .text-gradient {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-      
-      .btn-primary {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px 0 rgba(102, 126, 234, 0.4);
-      }
-      
-      .btn-primary:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 25px 0 rgba(102, 126, 234, 0.6);
-      }
-      
+    }
+
+    .glass-effect {
+      backdrop-filter: blur(20px);
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .card-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px 0 rgba(102, 126, 234, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px 0 rgba(102, 126, 234, 0.6);
+    }
+
+    .section-padding {
+      padding: 5rem 1rem;
+    }
+
+    @media (max-width: 768px) {
       .section-padding {
-        padding: 5rem 1rem;
+        padding: 3rem 1rem;
       }
-      
-      @media (max-width: 768px) {
-        .section-padding {
-          padding: 3rem 1rem;
-        }
+    }
+
+    .feature-icon {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      width: 4rem;
+      height: 4rem;
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .nav-link {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 50%;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    @media (min-width: 640px) {
+      .card-fixed {
+        width: 505.5px;
+        height: 220px;
       }
-      
-      .feature-icon {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        width: 4rem;
-        height: 4rem;
-        border-radius: 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem;
-      }
-      
-      .nav-link {
-        position: relative;
-        transition: all 0.3s ease;
-      }
-      
-      .nav-link::after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: -4px;
-        left: 50%;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        transition: all 0.3s ease;
-        transform: translateX(-50%);
-      }
-      
-      .nav-link:hover::after {
-        width: 100%;
-      }
-    </style>
-  </head>
-  <body class="bg-gray-50 text-gray-800">
-    <header class="bg-white backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-gray-100">
-      <div class="max-w-7xl mx-auto px-6 py-4">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center space-x-3">
-            <a href="/" class="flex items-center space-x-2 group">
-              <img 
-                src="images/Logo_2.png" 
-                alt="BetaBuilders Logo" 
-                class="w-16 h-16 object-contain origin-left transition-transform duration-200 group-hover:scale-[1.55]" 
-                style="transform: scaleX(1.5) scaleY(1.5); background: transparent;" 
-              />
-            </a>
-          </div>
-    
-          <!-- Desktop Nav -->
-          <nav class="hidden md:flex space-x-8">
-            <a href="#about" class="nav-link text-gray-700 hover:text-purple-600 font-medium">About</a>
-            <a href="#events" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Events</a>
-            <a href="#volunteer" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Volunteer</a>
-            <a href="#founder" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Founder</a>
-            <a href="#contact" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Connect</a>
-          </nav>
-    
-          <!-- Hamburger -->
-          <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100 focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                d="M4 6h16M4 12h16M4 18h16"></path>
+    }
+  
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-white backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <a href="/" class="flex items-center space-x-2 group">
+            <img src="images/Logo_2.png" alt="BetaBuilders Logo"
+              class="w-16 h-16 object-contain origin-left transition-transform duration-200 group-hover:scale-[1.55]"
+              style="transform: scaleX(1.5) scaleY(1.5); background: transparent;" />
+          </a>
+        </div>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex space-x-8">
+          <a href="#about" class="nav-link text-gray-700 hover:text-purple-600 font-medium">About</a>
+          <a href="#events" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Events</a>
+          <a href="#volunteer" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Volunteer</a>
+          <a href="#founder" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Founder</a>
+          <a href="#contact" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Connect</a>
+        </nav>
+
+        <!-- Hamburger -->
+        <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden fixed top-[72px] right-6 z-40 bg-white p-4 rounded-lg shadow-lg w-max">
+    <nav class="flex flex-col items-end space-y-2">
+      <a href="#about" class="nav-link text-gray-700 hover:text-purple-600 font-medium px-2">About</a>
+      <a href="#events" class="nav-link text-gray-700 hover:text-purple-600 font-medium px-2">Events</a>
+      <a href="#volunteer" class="nav-link text-gray-700 hover:text-purple-600 font-medium px-2">Volunteer</a>
+      <a href="#founder" class="nav-link text-gray-700 hover:text-purple-600 font-medium px-2">Founder</a>
+      <a href="#contact" class="nav-link text-gray-700 hover:text-purple-600 font-medium px-2">Connect</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <div class="animated-gradient-bg"></div>
+      <div class="relative z-10 text-center px-6 max-w-5xl mx-auto">
+        <h2 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+          Build Startups.<br>
+          <span class="text-yellow-300">Gain Experience.</span><br>
+          Make Impact.
+        </h2>
+        <p class="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed">
+          BetaBuilders is a platform that connects volunteer software developers, UI/UX designers, and product managers
+          with early-stage startup founders to build MVPs and gain real-world experience.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#volunteer"
+            class="btn-primary text-white px-8 py-4 rounded-full font-semibold text-lg inline-flex items-center justify-center">
+            Start Volunteering
+            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
             </svg>
-          </button>
+          </a>
+          <a href="#events"
+            class="glass-effect text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition">
+            View Events
+          </a>
         </div>
       </div>
-    </header>
-
-     <!-- Mobile Menu -->
-     <div id="mobile-menu" class="md:hidden hidden fixed top-[72px] right-6 z-40 bg-white p-4 rounded-lg shadow-lg w-max">
-      <nav class="flex flex-col items-end space-y-2">
-        <a href="#about" class="nav-link text-gray-700 hover:text-purple-600 font-medium px-2">About</a>
-        <a href="#events" class="nav-link text-gray-700 hover:text-purple-600 font-medium px-2">Events</a>
-        <a href="#volunteer" class="nav-link text-gray-700 hover:text-purple-600 font-medium px-2">Volunteer</a>
-        <a href="#founder" class="nav-link text-gray-700 hover:text-purple-600 font-medium px-2">Founder</a>
-        <a href="#contact" class="nav-link text-gray-700 hover:text-purple-600 font-medium px-2">Connect</a>
-      </nav>
-    </div>
-  
-    <main>
-      <!-- Hero Section -->
-      <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div class="animated-gradient-bg"></div>
-        <div class="relative z-10 text-center px-6 max-w-5xl mx-auto">
-          <h2 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Build Startups.<br>
-            <span class="text-yellow-300">Gain Experience.</span><br>
-            Make Impact.
-          </h2>
-          <p class="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed">
-            BetaBuilders connects volunteer developers, designers, and product thinkers with early-stage startup founders to help turn bold ideas into real MVPs.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#volunteer" class="btn-primary text-white px-8 py-4 rounded-full font-semibold text-lg inline-flex items-center justify-center">
-              Start Volunteering
-              <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-              </svg>
-            </a>
-            <a href="#events" class="glass-effect text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition">
-              View Events
-            </a>
-          </div>
-        </div>
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <a href="#about">
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer">
           <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
           </svg>
         </div>
-      </section>
-  
-      <!-- About Section -->
-      <section id="about" class="section-padding bg-white">
-        <div class="max-w-6xl mx-auto">
-          <div class="text-center mb-16">
-            <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">What is BetaBuilders?</h3>
-            <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mb-8"></div>
-          </div>
-          
-          <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                BetaBuilders is a nonprofit initiative that empowers early-stage startups by matching them with passionate volunteers who want to build, learn, and collaborate. Whether you're a founder with a dream or a dev looking for real experience — you're in the right place.
-              </p>
-              <div class="space-y-4">
-                <div class="flex items-center space-x-3">
-                  <div class="w-2 h-2 bg-purple-600 rounded-full"></div>
-                  <span class="text-gray-700">Weekly <strong>Pitch to Build</strong> events</span>
-                </div>
-                <div class="flex items-center space-x-3">
-                  <div class="w-2 h-2 bg-purple-600 rounded-full"></div>
-                  <span class="text-gray-700">Real-world experience for aspiring devs & designers</span>
-                </div>
-                <div class="flex items-center space-x-3">
-                  <div class="w-2 h-2 bg-purple-600 rounded-full"></div>
-                  <span class="text-gray-700">Collaborative MVPs that make an impact</span>
-                </div>
-                <div class="flex items-center space-x-3">
-                  <div class="w-2 h-2 bg-purple-600 rounded-full"></div>
-                  <span class="text-gray-700">Community-driven projects — no funding required</span>
-                </div>
-              </div>
-            </div>
-            <div class="relative">
-              <div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-blue-600 rounded-3xl transform rotate-6"></div>
-              <div class="relative bg-white p-8 rounded-3xl shadow-xl">
-                <div class="text-center">
-                  <div class="text-4xl mb-4">🚀</div>
-                  <h4 class="text-xl font-semibold mb-2">Ready to Launch?</h4>
-                  <p class="text-gray-600">Join our community of builders and makers</p>
-                </div>
-              </div>
-            </div>
-          </div>
+      </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">What is BetaBuilders?</h3>
+          <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mb-8"></div>
         </div>
-      </section>
 
-      <!-- Mission & Vision -->
-      <section class="section-padding bg-gray-50">
-        <div class="max-w-7xl mx-auto">
-          <div class="grid md:grid-cols-2 gap-16">
-            <!-- Mission -->
-            <div class="flex flex-col justify-center">
-              <h3 class="text-3xl font-bold text-gray-900 mb-6">Our Mission</h3>
-              <p class="text-lg text-gray-700 leading-relaxed">
-                BetaBuilders exists to turn courageous ideas into working products while
-                giving volunteers a place to learn, ship, and shine.  
-                We rally <strong class="text-purple-600">builders</strong> and <strong class="text-purple-600">founders</strong> around a
-                single goal: <em>launch something that matters</em>.
-              </p> 
-            </div>
-            <div
-              class="flex items-center justify-center rounded-2xl shadow-lg mx-auto text-white text-8xl"
-              style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); width: 18rem; height: 18rem;"
-            >
-              🎯
-            </div>                          
-          </div>
-        </div>
-      </section>
-
-      <section class="section-padding bg-white">
-        <div class="max-w-7xl mx-auto">
-          <div class="grid md:grid-cols-2 gap-16">
-            <div
-              class="flex items-center justify-center rounded-2xl shadow-lg mx-auto text-white text-8xl"
-              style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); width: 18rem; height: 18rem;"
-            >
-              👁️
-            </div>
-   
-            <!-- Vision -->
-            <div class="flex flex-col justify-center order-1 md:order-2">
-              <h3 class="text-3xl font-bold text-gray-900 mb-6">Our Vision</h3>
-              <p class="text-lg text-gray-700 leading-relaxed">
-                We imagine a world where <strong class="text-purple-600">talent</strong> and
-                <strong class="text-purple-600">ambition</strong> are all you need to build a startup—funding
-                optional. Every volunteer leaves with new skills, meaningful
-                connections, and a portfolio piece they're proud of.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- How It Works -->
-      <section id="how-it-works" class="section-padding bg-gray-50">
-        <div class="max-w-7xl mx-auto">
-          <div class="text-center mb-16">
-            <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">How It Works</h3>
-            <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto"></div>
-          </div>
-
-          <div class="grid md:grid-cols-3 gap-8">
-            <!-- Step 1 -->
-            <div class="bg-white rounded-2xl p-8 text-center card-hover shadow-lg">
-              <div class="feature-icon text-white mx-auto">🎤</div>
-              <h4 class="text-2xl font-semibold mb-4">Pitch</h4>
-              <p class="text-gray-700 leading-relaxed">Founders present real problems and bold ideas at our weekly events.</p>
-            </div>
-
-            <!-- Step 2 -->
-            <div class="bg-white rounded-2xl p-8 text-center card-hover shadow-lg">
-              <div class="feature-icon text-white mx-auto">👥</div>
-              <h4 class="text-2xl font-semibold mb-4">Team Up</h4>
-              <p class="text-gray-700 leading-relaxed">Volunteers join squads that match their skills and passions.</p>
-            </div>
-
-            <!-- Step 3 -->
-            <div class="bg-white rounded-2xl p-8 text-center card-hover shadow-lg">
-              <div class="feature-icon text-white mx-auto">💻</div>
-              <h4 class="text-2xl font-semibold mb-4">Build & Launch</h4>
-              <p class="text-gray-700 leading-relaxed">Together we ship MVPs, learn fast, and share success.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Services -->
-      <section id="services" class="section-padding bg-white">
-        <div class="max-w-7xl mx-auto">
-          <div class="text-center mb-16">
-            <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Services for Startups</h3>
-            <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              We help unfunded early stage startups for <span class="font-bold text-gradient">free</span> with:
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+              Whether you're a founder with a dream or a builder looking for hands-on experience, BetaBuilders offers a
+              unique launchpad.
+              Our platform empowers both sides — enabling founders to bring ideas to life and helping volunteers gain
+              real-world, portfolio-ready experience.
             </p>
-            <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mt-6"></div>
+            <ul class="space-y-4">
+              <li class="flex items-center space-x-3">
+                <div class="w-2 h-2 bg-purple-600 rounded-full"></div>
+                <span class="text-gray-700">Weekly <strong>Pitch to Build</strong> events</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <div class="w-2 h-2 bg-purple-600 rounded-full"></div>
+                <span class="text-gray-700">Real-world experience for aspiring devs & designers</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <div class="w-2 h-2 bg-purple-600 rounded-full"></div>
+                <span class="text-gray-700">Collaborative MVPs that make an impact</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <div class="w-2 h-2 bg-purple-600 rounded-full"></div>
+                <span class="text-gray-700">Community-driven projects — no funding required</span>
+              </li>
+            </ul>
           </div>
-          
-          <div class="grid md:grid-cols-2 gap-8">
-            <!-- Coaching -->
-            <div class="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-8 card-hover border border-purple-100">
-              <div class="feature-icon text-white mb-6">🎓</div>
-              <h4 class="text-2xl font-semibold text-gray-900 mb-4">Coaching</h4>
-              <ul class="space-y-3 text-gray-700">
-                <li class="flex items-start space-x-3">
-                  <svg class="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                  </svg>
-                  <span>How to go from a single person to a team</span>
-                </li>
-                <li class="flex items-start space-x-3">
-                  <svg class="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                  </svg>
-                  <span>From prototype to MVP</span>
-                </li>
-                <li class="flex items-start space-x-3">
-                  <svg class="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                  </svg>
-                  <span>From dev to prod</span>
-                </li>
-                <li class="flex items-start space-x-3">
-                  <svg class="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                  </svg>
-                  <span>Get first users & get funded</span>
-                </li>
-              </ul>
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-blue-600 rounded-3xl transform rotate-6">
             </div>
-            
-            <!-- Marketing -->
-            <div class="bg-gradient-to-br from-pink-50 to-orange-50 rounded-2xl p-8 card-hover border border-pink-100">
-              <div class="feature-icon text-white mb-6">📣</div>
-              <h4 class="text-2xl font-semibold text-gray-900 mb-4">Marketing</h4>
-              <p class="text-gray-700 leading-relaxed">Post and promote about your idea/team/product on all social media platforms to maximize reach and engagement.</p>
-            </div>
-            
-            <!-- Website -->
-            <div class="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-8 card-hover border border-green-100">
-              <div class="feature-icon text-white mb-6">🌐</div>
-              <h4 class="text-2xl font-semibold text-gray-900 mb-4">Website</h4>
-              <p class="text-gray-700 leading-relaxed">Build beautiful and engaging websites to help you attract volunteers, co-founders, and investors with professional design.</p>
-            </div>
-            
-            <!-- Hiring -->
-            <div class="bg-gradient-to-br from-yellow-50 to-red-50 rounded-2xl p-8 card-hover border border-yellow-100">
-              <div class="feature-icon text-white mb-6">🤝</div>
-              <h4 class="text-2xl font-semibold text-gray-900 mb-4">Hiring</h4>
-              <p class="text-gray-700 leading-relaxed">Connect with like-minded volunteers who are passionate about your vision and ready to contribute their skills.</p>
+            <div class="relative bg-white p-8 rounded-3xl shadow-xl">
+              <div class="text-center">
+                <div class="text-4xl mb-4">🚀</div>
+                <h4 class="text-xl font-semibold mb-2">Ready to Launch?</h4>
+                <p class="text-gray-600">Join BetaBuilders — the nonprofit startup accelerator built for creators, by
+                  creators.</p>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-  
-      <!-- Events -->
-      <section id="events" class="section-padding bg-gradient-to-br from-purple-600 to-blue-600 text-white">
-        <div class="max-w-6xl mx-auto text-center">
-          <h3 class="text-4xl md:text-5xl font-bold mb-6">Events</h3>
-          <p class="text-xl mb-10 max-w-3xl mx-auto leading-relaxed opacity-90">
-            We host weekly events where startup founders pitch their ideas to a live audience of volunteers. Join us to brainstorm, collaborate, and get involved.
+      </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="section-padding bg-gray-50" id="mission">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-row flex-wrap items-center justify-between gap-8">
+
+          <!-- Mission -->
+          <div class="flex-1 min-w-[250px]">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
+            <p class="text-lg text-gray-700 leading-relaxed">
+              BetaBuilders exists to turn courageous ideas into working products while
+              giving volunteers a place to learn, ship and shine.
+              We rally <strong class="text-purple-600">builders</strong> and
+              <strong class="text-purple-600">founders</strong> around a single goal:
+              <em>launch something that matters</em>.
+            </p>
+          </div>
+
+          <div class="flex items-center justify-center rounded-2xl shadow-lg text-white 
+               bg-gradient-to-br from-indigo-500 to-purple-600
+               w-32 h-32 sm:w-40 sm:h-40 md:w-56 md:h-56 text-5xl sm:text-6xl md:text-7xl" role="img"
+            aria-label="Target emoji representing BetaBuilders' mission">
+            🎯
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section-padding bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-row flex-wrap items-center justify-between gap-8">
+
+          <div class="flex items-center justify-center rounded-2xl shadow-lg text-white 
+                   bg-gradient-to-br from-indigo-500 to-purple-600
+                   w-32 h-32 sm:w-40 sm:h-40 md:w-56 md:h-56 text-5xl sm:text-6xl md:text-7xl" role="img"
+            aria-label="Eye emoji representing BetaBuilders' vision">
+            👁️
+          </div>
+
+          <!-- Vision -->
+          <div class="flex-1 min-w-[250px]">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Vision</h2>
+            <p class="text-lg text-gray-700 leading-relaxed">
+              We imagine a world where <strong class="text-purple-600">talent</strong> and
+              <strong class="text-purple-600">ambition</strong> are all you need to build a startup — funding optional.
+              Every volunteer leaves with new skills, meaningful connections, and a portfolio piece they're proud of.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-16 px-4 bg-gray-50">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-12">
+          <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">How BetaBuilders Works</h3>
+          <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto"></div>
+          <p class="text-lg text-gray-600 mt-4">
+            Our 3-step community-driven process helps early-stage startups move from pitch to product — with real-world collaboration and zero funding required.
           </p>
-          <a href="https://www.meetup.com/it-volunteers-and-interns/" target="_blank" class="inline-flex items-center bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition transform hover:scale-105 shadow-lg">
-            View Events on Meetup
-            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-            </svg>
-          </a>
         </div>
-      </section>
-  
-      <!-- Featured Startups -->
-      <section id="featured-startups" class="section-padding bg-gray-50">
+
+        <div class="flex flex-col gap-6">
+          <!-- Step 1 -->
+          <div class="bg-white rounded-2xl p-6 text-center card-hover shadow-lg">
+            <div class="feature-icon text-white mx-auto text-4xl">🎤</div>
+            <h4 class="text-2xl font-semibold mb-3">Pitch</h4>
+            <p class="text-gray-700 leading-relaxed">Founders present real problems and bold ideas at our weekly events.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="bg-white rounded-2xl p-6 text-center card-hover shadow-lg">
+            <div class="feature-icon text-white mx-auto text-4xl">👥</div>
+            <h4 class="text-2xl font-semibold mb-3">Team Up</h4>
+            <p class="text-gray-700 leading-relaxed">Volunteers join squads that match their skills and passions.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="bg-white rounded-2xl p-6 text-center card-hover shadow-lg">
+            <div class="feature-icon text-white mx-auto text-4xl">💻</div>
+            <h4 class="text-2xl font-semibold mb-3">Build & Launch</h4>
+            <p class="text-gray-700 leading-relaxed">Together we ship MVPs, learn fast, and share success.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section-padding bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Services for Startups</h3>
+          <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            We help unfunded early stage startups for <span class="font-bold text-gradient">free</span> with:
+          </p>
+          <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mt-6"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Coaching -->
+          <article
+            class="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-8 card-hover border border-purple-100">
+            <div class="feature-icon text-white mb-6">🎓</div>
+            <h4 class="text-2xl font-semibold text-gray-900 mb-4">Coaching</h4>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span>How to go from a single person to a team</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span>From prototype to MVP</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span>From dev to prod</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span>Get first users & get funded</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Marketing -->
+          <article
+            class="bg-gradient-to-br from-pink-50 to-orange-50 rounded-2xl p-8 card-hover border border-pink-100">
+            <div class="feature-icon text-white mb-6">📣</div>
+            <h4 class="text-2xl font-semibold text-gray-900 mb-4">Marketing</h4>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-pink-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Create marketing assets that feel personal and authentic</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-pink-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Share across platforms to maximize reach</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-pink-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Use feedback loops to boost engagement</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Website -->
+          <article
+            class="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-8 card-hover border border-green-100">
+            <div class="feature-icon text-white mb-6">🌐</div>
+            <h4 class="text-2xl font-semibold text-gray-900 mb-4">Website</h4>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Design responsive websites with a modern stack</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Communicate brand story with clean visuals</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Generate inbound interest from investors and volunteers</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Hiring -->
+          <article
+            class="bg-gradient-to-br from-yellow-50 to-red-50 rounded-2xl p-8 card-hover border border-yellow-100">
+            <div class="feature-icon text-white mb-6">🤝</div>
+            <h4 class="text-2xl font-semibold text-gray-900 mb-4">Hiring</h4>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-yellow-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Find skilled teammates who share your mission</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-yellow-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Create roles and onboard with clear expectations</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-yellow-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Build momentum with purpose-driven collaboration</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events -->
+    <section id="events" class="section-padding bg-gradient-to-br from-purple-600 to-blue-600 text-white">
+      <div class="max-w-6xl mx-auto text-center">
+        <h3 class="text-4xl md:text-5xl font-bold mb-6">Events</h3>
+        <p class="text-xl mb-10 max-w-3xl mx-auto leading-relaxed opacity-90">
+          We host weekly events where startup founders pitch their ideas to a live audience of volunteers. Join us to
+          brainstorm, collaborate, and get involved.
+        </p>
+        <a href="https://www.meetup.com/it-volunteers-and-interns/" target="_blank"
+          class="inline-flex items-center bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition transform hover:scale-105 shadow-lg"
+          aria-label="View BetaBuilders events on Meetup">
+          View Events on Meetup
+          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Featured Startups -->
+    <section id="featured-startups" class="section-padding bg-gray-50">
         <div class="max-w-7xl mx-auto">
           <div class="text-center mb-16">
             <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Featured Startups</h3>
@@ -414,8 +531,10 @@
           <div class="flex flex-col gap-8 items-center">
             
             <!-- Job Search Works -->
+
             <div class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 max-w-4xl mx-auto" 
             style="width: 505.5px; height: 220px;"
+
             >
               <!-- Top Row: Left & Right side -->
               <div class="flex flex-row gap-6">
@@ -426,40 +545,42 @@
                   </a>
                   <a href="https://jobsearch.works/" target="_blank" class="text-lg font-semibold text-gradient">Job Search Works</a>
                 </div>
-            
+
                 <!-- Right: Description -->
                 <div class="flex flex-col justify-center text-left flex-1">
+
                   <p class="text-gray-700 text-base leading-snug text-justify">
+
                     Apply once — we handle the rest. AI finds jobs, tailors your resume, submits applications, and tracks progress. No contracts, pay per application.
                   </p>
                 </div>
               </div>
-            
+
               <!-- Bottom: Progress Bar full width -->
               <div class="w-full max-w-4xl mx-auto">
                 <div class="flex justify-between text-xs text-gray-500 mb-1">
                   <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
                 </div>
                 <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
-                  <!-- Gradient progress bar up to Go Live (71%) -->
+                  <!-- Gradient progress bar up to Go Live (61%) -->
                   <div class="h-2" style="width: 61%; background: linear-gradient(to right, #3b82f6, #8b5cf6);"></div>
                   <!-- Remaining -->
                   <div class="bg-gray-300 h-2" style="width: 39%;"></div>
                 </div>
-                <div class="text-xs text-blue-600 mt-1 font-semibold text-center">Current: Go Live</div>
+                <div class="text-xs text-blue-600 mt-1 font-semibold text-center">Go Live</div>
               </div>
               
             </div>
+
             
             <!-- QuickSite -->
             <div 
-            class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 max-w-4xl mx-auto"
-            style="width: 505.5px; height: 220px;"
+              class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 mx-auto w-full h-auto sm:block card-fixed"
             >
               <!-- Top Row: Left & Right -->
               <div class="flex flex-row gap-6">
                 <!-- Left: Logo & Title -->
-                <div class="flex flex-col items-start gap-2 min-w-[5rem]">
+                <div class="flex flex-col items-start gap-2 w-36 sm:w-40">
                   <a href="https://quicksite.space/" target="_blank">
                     <img src="images/Quicksite_Logo.png" alt="QuickSite Logo" class="w-16 h-16 object-contain" />
                   </a>
@@ -468,7 +589,9 @@
 
                 <!-- Right: Description -->
                 <div class="flex flex-col justify-center text-left flex-1">
+
                   <p class="text-gray-700 text-base leading-snug text-justify">
+
                     Launch your website in minutes — no coding needed. AI-powered setup with fast, secure hosting and one-click deployment.
                   </p> <!-- Optional: Add real description here -->
                 </div>
@@ -485,29 +608,30 @@
                   <!-- Remaining -->
                   <div class="bg-gray-300 h-2" style="width: 49%;"></div>
                 </div>
-                <div class="text-xs text-green-600 mt-1 font-semibold text-center">Current: MVP</div>
+                <div class="text-xs text-green-600 mt-1 font-semibold text-center">MVP</div>
               </div>
-              
             </div>
             
 
             <!-- TalentHub.Show -->
             <div 
-            class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 max-w-4xl mx-auto"
-            style="width: 505.5px; height: 220px;">
+              class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 mx-auto w-full h-auto sm:block card-fixed"
+            >
               <!-- Top Row: Left & Right -->
               <div class="flex flex-row gap-6">
                 <!-- Left: Logo & Title -->
-                <div class="flex flex-col items-start gap-2 min-w-[5rem]">
+                <div class="flex flex-col items-start gap-2 w-36 sm:w-40">
                   <a href="https://talenthub.show/" target="_blank">
                     <img src="images/talent_hub_logo.png" alt="Job Search Works Logo" class="w-16 h-16 object-contain rounded-full" />
                   </a>
-                  <a href="https://talenthub.show/" target="_blank" class="text-lg font-semibold text-gradient">TalentHub.Show</a>
+                  <a href="https://talenthub.show/" target="_blank" class="text-lg font-semibold text-gradient">TalentHub</a>
                 </div>
 
                 <!-- Right: Description -->
                 <div class="flex flex-col justify-center text-left flex-1">
+
                   <p class="text-gray-700 text-base leading-snug text-justify">
+
                     Showcase your skills with video intros and a living profile. AI analyzes your interviews to highlight strengths. Connect directly with top employers for faster, smarter hiring.
                   </p>
                 </div>
@@ -524,21 +648,19 @@
                   <!-- Remaining -->
                   <div class="bg-gray-300 h-2" style="width: 50%;"></div>
                 </div>
-                <div class="text-xs text-pink-600 mt-1 font-semibold text-center">Current: MVP</div>
-              </div>
-              
+                <div class="text-xs text-pink-600 mt-1 font-semibold text-center">MVP</div>
+              </div>              
             </div>
             
 
             <!-- ArtOut -->
             <div 
-            class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 max-w-4xl mx-auto"
-            style="width: 505.5px; height: 220px;"
+              class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 mx-auto w-full h-auto sm:block card-fixed"
             >
               <!-- Top Row: Left & Right -->
               <div class="flex flex-row gap-6">
                 <!-- Left: Logo & Title -->
-                <div class="flex flex-col items-start gap-2 min-w-[5rem]">
+                <div class="flex flex-col items-start gap-2 w-36 sm:w-40">
                   <a href="https://artout.site/" target="_blank">
                     <img src="images/artout_logo.png" alt="Job Search Works Logo" class="w-16 h-16 object-contain rounded-full" />
                   </a>
@@ -547,7 +669,9 @@
 
                 <!-- Right: Description -->
                 <div class="flex flex-col justify-center text-left flex-1">
+
                   <p class="text-gray-700 text-base leading-snug text-justify">
+
                     Capture street art live — no uploads or filters. Snap and geotag graffiti and murals instantly. Join a global map to preserve and explore urban creativity worldwide.
                   </p> <!-- Add description if needed -->
                 </div>
@@ -564,7 +688,7 @@
                   <!-- Remaining -->
                   <div class="bg-gray-300 h-2" style="width: 79%;"></div>
                 </div>
-                <div class="text-xs text-purple-600 mt-1 font-semibold text-center">Current: Prototype</div>
+                <div class="text-xs text-purple-600 mt-1 font-semibold text-center">Prototype</div>
               </div>
               
             </div>
@@ -572,12 +696,12 @@
 
             <!-- GrassKarma -->
             <div 
-            class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 max-w-4xl mx-auto"
-            style="width: 505.5px; height: 220px;">
+              class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 mx-auto w-full h-auto sm:block card-fixed"
+            >
               <!-- Top Row: Left & Right -->
               <div class="flex flex-row gap-6">
                 <!-- Left: Logo & Title -->
-                <div class="flex flex-col items-start gap-2 min-w-[5rem]">
+                <div class="flex flex-col items-start gap-2 w-36 sm:w-40">
                   <a href="https://grasskarma.website/" target="_blank">
                     <img src="images/grasskarma_Logo.png" alt="GrassKarma logo" class="w-16 h-16 object-contain" />
                   </a>
@@ -586,7 +710,9 @@
 
                 <!-- Right: Description -->
                 <div class="flex flex-col justify-center text-left flex-1">
+
                   <p class="text-gray-700 text-base leading-snug text-justify">
+
                     Share the mow, grow the karma. Team up with neighbors, split costs, and keep lawns sharp with reminders and group deals.
                   </p>                  
                 </div>
@@ -603,19 +729,19 @@
                   <!-- Remaining -->
                   <div class="bg-gray-300 h-2" style="width: 79%;"></div>
                 </div>
-                <div class="text-xs text-green-600 mt-1 font-semibold text-center">Current: Prototype</div>
+                <div class="text-xs text-green-600 mt-1 font-semibold text-center">Prototype</div>
               </div>
               
             </div>
 
             <!-- SeedStart -->
             <div 
-            class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 max-w-4xl mx-auto"
-            style="width: 505.5px; height: 220px;">
+              class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 mx-auto w-full h-auto sm:block card-fixed"
+            >
               <!-- Top Row: Left & Right -->
               <div class="flex flex-row gap-6">
                 <!-- Left: Logo & Title -->
-                <div class="flex flex-col items-start gap-2 min-w-[5rem]">
+                <div class="flex flex-col items-start gap-2 w-36 sm:w-40">
                   <a href="https://seedstart.world/" target="_blank">
                     <img src="images/seedstart_logo.png" alt="Job Search Works Logo" class="w-16 h-16 object-contain rounded-full" />
                   </a>
@@ -624,7 +750,9 @@
 
                 <!-- Right: Description -->
                 <div class="flex flex-col justify-center text-left flex-1">
+
                   <p class="text-gray-700 text-base leading-snug text-justify">
+
                     Turn ideas into reality with SeedSite. Build your team, use expert tools, and launch fast — with support every step.
                   </p>                                   
                 </div>
@@ -641,7 +769,7 @@
                   <!-- Remaining -->
                   <div class="bg-gray-300 h-2" style="width: 55%;"></div>
                 </div>
-                <div class="text-xs text-blue-600 mt-1 font-semibold text-center">Current: MVP</div>
+                <div class="text-xs text-blue-600 mt-1 font-semibold text-center">MVP</div>
               </div>
               
             </div>
@@ -649,39 +777,41 @@
             
             <!-- freedates.app -->
             <div 
-            class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 max-w-4xl mx-auto"
-            style="width: 505.5px; height: 220px;">
-              <!-- Top Row: Left & Right -->
-              <div class="flex flex-row gap-6">
-                <!-- Left: Logo & Title -->
-                <div class="flex flex-col items-start gap-2 min-w-[5rem]">
-                  <a href="https://freedates.app/" target="_blank">
-                    <img src="images/freedates_Logo.png" alt="freedates.app logo" class="w-18 h-16 object-contain rounded-full" />
-                  </a>
-                  <a href="https://freedates.app/" target="_blank" class="text-lg font-semibold text-gradient">freedates.app</a>
-                </div>
+              class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 mx-auto w-full h-auto sm:block card-fixed"
+            >
+            <!-- Top Row: Left & Right -->
+            <div class="flex flex-row gap-6">
+              <!-- Left: Logo & Title -->
+              <div class="flex flex-col items-start gap-2 w-36 sm:w-40">
+                <a href="https://freedates.app/" target="_blank">
+                  <img src="images/freedates_Logo.png" alt="freedates.app logo" class="w-18 h-16 object-contain rounded-full" />
+                </a>
+                <a href="https://freedates.app/" target="_blank" class="text-lg font-semibold text-gradient">Free Dates</a>
+              </div>
 
               <!-- Right: Description -->
               <div class="flex flex-col justify-center text-left flex-1">
+
                 <p class="text-gray-700 text-base leading-snug text-justify">
+
                   Earn attention, not buy it. SMS only, no bots. 100% free. Heart-based, no ghosting. Build, earn, rise in the Hearts Economy.
                 </p>                               
               </div>
             </div>
 
-              <!-- Bottom: Progress Bar full width -->
-              <div class="w-full max-w-4xl mx-auto">
-                <div class="flex justify-between text-xs text-gray-500 mb-1">
-                  <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
-                </div>
-                <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
-                  <!-- Gradient progress bar up to Go Live (71%) -->
-                  <div class="h-2" style="width: 45%; background: linear-gradient(to right, #f87171, #e13030);"></div>
-                  <!-- Remaining -->
-                  <div class="bg-gray-300 h-2" style="width: 55%;"></div>
-                </div>
-                <div class="text-xs text-red-600 mt-1 font-semibold text-center">Current: MVP</div>
+            <!-- Bottom: Progress Bar full width -->
+            <div class="w-full mx-auto">
+              <div class="flex justify-between text-xs text-gray-500 mb-1">
+                <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
               </div>
+              <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
+                <!-- Gradient progress bar up to Go Live (71%) -->
+                <div class="h-2" style="width: 45%; background: linear-gradient(to right, #f87171, #e13030);"></div>
+                <!-- Remaining -->
+                <div class="bg-gray-300 h-2" style="width: 55%;"></div>
+              </div>
+              <div class="text-xs text-red-600 mt-1 font-semibold text-center">MVP</div>
+            </div>
             </div>
 
             
@@ -689,202 +819,227 @@
         </div>
       </section>
 
-      <!--Founder-->
-      <section id="founder" class="section-padding bg-gray-50">
-        <div class="max-w-6xl mx-auto">
-          <div class="text-center mb-16">
-            <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Founders We Support</h3>
-            <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mb-8"></div>
-            <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              We support startup founders who are committed to learning, building, and leading with purpose.
-            </p>
-          </div>
-      
-          <div class="grid md:grid-cols-2 gap-12">
-            <!-- Left: Traits -->
-            <div>
-              <h4 class="text-2xl font-semibold text-gray-800 mb-4">Traits We Look For</h4>
-              <ul class="space-y-4 text-gray-700 text-lg">
-                <li class="flex items-start space-x-2">
-                  <span class="text-purple-600 mt-1">✓</span>
-                  <span>Honest and open to critical opinions, open to change and feedback.</span>
-                </li>
-                <li class="flex items-start space-x-2">
-                  <span class="text-purple-600 mt-1">✓</span>
-                  <span>Able to adapt thinking when presented with new insights.</span>
-                </li>
-                <li class="flex items-start space-x-2">
-                  <span class="text-purple-600 mt-1">✓</span>
-                  <span>Not just dreamers — focused on solving real, meaningful problems.</span>
-                </li>
-                <li class="flex items-start space-x-2">
-                  <span class="text-purple-600 mt-1">✓</span>
-                  <span>Energetic and open to working with others collaboratively.</span>
-                </li>
-              </ul>
-            </div>
-      
-            <!-- Right: What We Teach -->
-            <div>
-              <h4 class="text-2xl font-semibold text-gray-800 mb-4">What We Teach</h4>
-              <ul class="space-y-4 text-gray-700 text-lg">
-                <li class="flex items-start space-x-2">
-                  <span class="text-blue-600 mt-1">★</span>
-                  <span>First principle thinking — questioning assumptions to build from the ground up.</span>
-                </li>
-                <li class="flex items-start space-x-2">
-                  <span class="text-blue-600 mt-1">★</span>
-                  <span>Thinking from a business perspective — not just tech for tech’s sake.</span>
-                </li>
-                <li class="flex items-start space-x-2">
-                  <span class="text-blue-600 mt-1">★</span>
-                  <span>Leadership — inspiring and enabling others to join your mission.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-      
 
-      <!-- Volunteer -->
-      <section id="volunteer" class="section-padding bg-white">
-        <div class="max-w-6xl mx-auto">
-          <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Volunteer With Us</h3>
-              <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-                Want to grow your skills, build your portfolio, or contribute to something meaningful? BetaBuilders is your launchpad.
-              </p>
-              <div class="space-y-4">
-                <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl">
-                  <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
-                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                    </svg>
-                  </div>
-                  <span class="text-gray-800 font-medium">Work on real startup MVPs</span>
-                </div>
-                <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl">
-                  <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
-                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                    </svg>
-                  </div>
-                  <span class="text-gray-800 font-medium">Collaborate with passionate founders</span>
-                </div>
-                <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl">
-                  <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
-                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                    </svg>
-                  </div>
-                  <span class="text-gray-800 font-medium">Learn by doing, not just watching</span>
-                </div>
-                <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl">
-                  <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
-                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                    </svg>
-                  </div>
-                  <span class="text-gray-800 font-medium">Get references, feedback, and networking support</span>
-                </div>
-              </div>
-            </div>
-            <div class="relative">
-              <div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-blue-600 rounded-3xl transform -rotate-6"></div>
-              <div class="relative bg-white p-8 rounded-3xl shadow-xl border border-gray-100">
-                <div class="text-center">
-                  <div class="text-6xl mb-6">🚀</div>
-                  <h4 class="text-2xl font-bold mb-4 text-gray-900">Ready to Start?</h4>
-                  <p class="text-gray-600 mb-6">Join hundreds of volunteers building the future</p>
-                  <a href="#contact" class="btn-primary text-white px-6 py-3 rounded-full font-semibold inline-flex items-center">
-                    Get Started
-                    <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <!-- Contact -->
-      <section id="contact" class="section-padding bg-gray-900 text-white">
-        <div class="max-w-6xl mx-auto text-center">
-          <h3 class="text-4xl md:text-5xl font-bold mb-6">Connect With Us</h3>
-          <p class="text-xl mb-10 max-w-3xl mx-auto leading-relaxed opacity-90">
-            Questions? Ideas? Want to partner or get involved? Reach out to us on LinkedIn — we'd love to hear from you.
+    <!--Founder-->
+    <section id="founder" class="section-padding bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Founders We Support</h3>
+          <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mb-8"></div>
+          <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            We support startup founders who are committed to learning, building, and leading with purpose.
           </p>
-          <a href="https://www.linkedin.com/company/beta-builders-club" target="_blank" class="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-700 transition transform hover:scale-105 shadow-lg">
-            <svg class="mr-3 w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-            </svg>
-            Connect on LinkedIn
-            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-            </svg>
-          </a>
         </div>
-      </section>
-    </main>
-  
-    <footer class="bg-black text-white py-8">
-      <div class="max-w-6xl mx-auto px-6 text-center">
-        <!-- Logo and Title -->
-        <a href="https://www.linkedin.com/company/beta-builders-club/posts/?feedView=all" target="_blank" class="flex items-center justify-center space-x-3 mb-4">
-          <img src="images/Logo.png" alt="BetaBuilders Logo" class="w-12 h-12 object-contain rounded-full border-2 border-purple-200 shadow-lg" />
-          <span class="text-xl font-bold">BetaBuilders</span>
-        </a>
-        
-    
-        <!-- Social Media Links -->
-        <div class="flex justify-center space-x-6 mb-4">
-          <!-- Facebook -->
-          <a href="https://www.facebook.com/profile.php?id=61577926374535" target="_blank" aria-label="Facebook" class="hover:text-blue-600 transition">
-            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" >
-              <path d="M22.675 0h-21.35C.6 0 0 .6 0 1.337v21.326C0 23.4.6 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464.098 2.796.142v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.764v2.312h3.59l-.467 3.622h-3.123V24h6.116C23.4 24 24 23.4 24 22.673V1.327C24 .6 23.4 0 22.675 0z"/>
-            </svg>
-          </a>
-    
-          <!-- Instagram -->
-          <a href="https://instagram.com/BetaBuilders" target="_blank" aria-label="Instagram" class="hover:text-pink-500 transition">
-            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" >
-              <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5a3.75 3.75 0 003.75-3.75v-8.5A3.75 3.75 0 0016.25 4h-8.5zm8.75 2.75a1 1 0 110 2 1 1 0 010-2zm-4.25 1a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/>
-            </svg>
-          </a>
-    
-          <!-- X (Twitter) -->
-          <a href="https://x.com/BetaBuildersOrg" target="_blank" aria-label="X" class="hover:text-blue-400 transition text-2xl font-bold flex items-center justify-center w-6 h-6">
-            X
-          </a>
-        </div>
-    
-        <!-- Copyright -->
-        <p class="text-gray-400">
-          &copy; 2025 BetaBuilders. Built with ❤️ by volunteers.
-        </p>
-      </div>
-    </footer>
-    
 
-    <script>
-      const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const mobileLinks = mobileMenu.querySelectorAll('a');
-    
-      mobileMenuToggle.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Left: Traits -->
+          <div role="region" aria-labelledby="traits-heading">
+            <h4 id="traits-heading" class="text-2xl font-semibold text-gray-800 mb-4">Traits We Look For</h4>
+            <ul class="space-y-4 text-gray-700 text-lg">
+              <li class="flex items-start space-x-2">
+                <span class="text-purple-600 mt-1" aria-hidden="true">✓</span>
+                <span>Honest and open to critical opinions, open to change and feedback.</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-purple-600 mt-1" aria-hidden="true">✓</span>
+                <span>Able to adapt thinking when presented with new insights.</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-purple-600 mt-1" aria-hidden="true">✓</span>
+                <span>Not just dreamers — focused on solving real, meaningful problems.</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-purple-600 mt-1" aria-hidden="true">✓</span>
+                <span>Energetic and open to working with others collaboratively.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right: What We Teach -->
+          <div role="region" aria-labelledby="teach-heading">
+            <h4 class="text-2xl font-semibold text-gray-800 mb-4">What We Teach</h4>
+            <ul class="space-y-4 text-gray-700 text-lg">
+              <li class="flex items-start space-x-2">
+                <span class="text-blue-600 mt-1" aria-hidden="true">★</span>
+                <span>First principle thinking — questioning assumptions to build from the ground up.</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-blue-600 mt-1" aria-hidden="true">★</span>
+                <span>Thinking from a business perspective — not just tech for tech’s sake.</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-blue-600 mt-1" aria-hidden="true">★</span>
+                <span>Leadership — inspiring and enabling others to join your mission.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Volunteer -->
+    <section id="volunteer" class="section-padding bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Volunteer With Us</h3>
+            <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+              Want to grow your skills, build your portfolio, or contribute to something meaningful? BetaBuilders is
+              your launchpad.
+            </p>
+            <div class="space-y-4" role="list" aria-label="Volunteer Benefits">
+              <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl">
+                <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-gray-800 font-medium">Work on real startup MVPs</span>
+              </div>
+              <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl">
+                <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-gray-800 font-medium">Collaborate with passionate founders</span>
+              </div>
+              <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl">
+                <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-gray-800 font-medium">Learn by doing, not just watching</span>
+              </div>
+              <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl">
+                <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-gray-800 font-medium">Get references, feedback, and networking support</span>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-blue-600 rounded-3xl transform -rotate-6">
+            </div>
+            <div class="relative bg-white p-8 rounded-3xl shadow-xl border border-gray-100">
+              <div class="text-center">
+                <div class="text-6xl mb-6">🚀</div>
+                <h4 class="text-2xl font-bold mb-4 text-gray-900">Ready to Start?</h4>
+                <p class="text-gray-600 mb-6">Join hundreds of volunteers building the future</p>
+                <a href="#contact"
+                  class="btn-primary text-white px-6 py-3 rounded-full font-semibold inline-flex items-center">
+                  Get Started
+                  <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section-padding bg-gray-900 text-white">
+      <div class="max-w-6xl mx-auto text-center">
+        <h3 class="text-4xl md:text-5xl font-bold mb-6">Connect With Us</h3>
+        <p class="text-xl mb-10 max-w-3xl mx-auto leading-relaxed opacity-90">
+          Questions? Ideas? Want to partner or get involved? Reach out to us on LinkedIn — we'd love to hear from you.
+        </p>
+        <a href="https://www.linkedin.com/company/beta-builders-club" target="_blank"
+          aria-label="Connect with BetaBuilders on LinkedIn"
+          class="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-700 transition transform hover:scale-105 shadow-lg">
+          <svg class="mr-3 w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>
+          Connect on LinkedIn
+          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+          </svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-black text-white py-8">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <!-- Logo and Title -->
+      <a href="https://www.linkedin.com/company/beta-builders-club/posts/?feedView=all" target="_blank"
+        class="flex items-center justify-center space-x-3 mb-4">
+        <img src="images/Logo.png" alt="BetaBuilders Logo"
+          class="w-12 h-12 object-contain rounded-full border-2 border-purple-200 shadow-lg" />
+        <span class="text-xl font-bold">BetaBuilders</span>
+      </a>
+
+
+      <!-- Social Media Links -->
+      <div class="flex justify-center space-x-6 mb-4">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/profile.php?id=61577926374535" target="_blank" aria-label="Facebook"
+          class="hover:text-blue-600 transition">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+            <path
+              d="M22.675 0h-21.35C.6 0 0 .6 0 1.337v21.326C0 23.4.6 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464.098 2.796.142v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.764v2.312h3.59l-.467 3.622h-3.123V24h6.116C23.4 24 24 23.4 24 22.673V1.327C24 .6 23.4 0 22.675 0z" />
+          </svg>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/betabuilders_org/" target="_blank" aria-label="Instagram"
+          class="hover:text-pink-500 transition">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+            <path
+              d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5a3.75 3.75 0 003.75-3.75v-8.5A3.75 3.75 0 0016.25 4h-8.5zm8.75 2.75a1 1 0 110 2 1 1 0 010-2zm-4.25 1a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z" />
+          </svg>
+        </a>
+
+        <!-- X (Twitter) -->
+        <a href="https://x.com/BetaBuildersOrg" target="_blank" aria-label="X"
+          class="hover:text-blue-400 transition text-2xl font-bold flex items-center justify-center w-6 h-6">
+          X
+        </a>
+      </div>
+
+      <!-- Copyright -->
+      <p class="text-gray-400">
+        &copy; 2025 BetaBuilders. Built with ❤️ by volunteers.
+      </p>
+    </div>
+  </footer>
+
+
+  <script>
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+
+    mobileMenuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
       });
-    
-      mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          mobileMenu.classList.add('hidden');
-        });
-      });
-    </script>
-    
-  </body>
+    });
+  </script>
+
+</body>
+
 </html>
