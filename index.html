@@ -134,8 +134,8 @@
 
     @media (min-width: 640px) {
       .card-fixed {
-        width: 505.5px;
-        height: 220px;
+        width: 590.3px;
+        height: 250px;
       }
     }
   
@@ -531,14 +531,13 @@
           <div class="flex flex-col gap-8 items-center">
             
             <!-- Job Search Works -->
-
             <div 
-              class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 mx-auto w-full h-auto sm:block card-fixed"
+              class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col  gap-6 mx-auto w-full h-auto sm:block card-fixed"
             >
               <!-- Top Row: Left & Right side -->
               <div class="flex flex-row gap-6">
                 <!-- Left: Logo & Title -->
-                <div class="flex flex-col items-start gap-2 min-w-[5rem]">
+                <div class="flex flex-col items-center justify-center text-center gap-2">
                   <a href="https://jobsearch.works/" target="_blank">
                     <img src="images/JobSearch_Logo.png" alt="Job Search Works Logo" class="w-16 h-16 object-contain" />
                   </a>
@@ -547,28 +546,27 @@
 
                 <!-- Right: Description -->
                 <div class="flex flex-col justify-center text-left flex-1">
-
-                  <p class="text-gray-700 text-base leading-snug text-justify">
-
+                  <p class="text-gray-700 text-sm leading-relaxed text-left mt-1">
                     Apply once — we handle the rest. AI finds jobs, tailors your resume, submits applications, and tracks progress. No contracts, pay per application.
                   </p>
                 </div>
               </div>
 
               <!-- Bottom: Progress Bar full width -->
-              <div class="w-full max-w-4xl mx-auto mt-4">
-                <div class="flex justify-between text-xs text-gray-500 mb-1">
-                  <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
+              <div class="flex items-center h-28 w-full max-w-4xl mx-auto">
+                <div class="w-full">
+                  <div class="flex justify-between text-xs text-gray-500 mb-1">
+                    <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
+                  </div>
+                  <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
+                    <!-- Gradient progress bar up to Go Live (61%) -->
+                    <div class="h-2" style="width: 61%; background: linear-gradient(to right, #3b82f6, #8b5cf6);"></div>
+                    <!-- Remaining -->
+                    <div class="bg-gray-300 h-2" style="width: 39%;"></div>
+                  </div>
+                  <div class="text-xs text-blue-600 mt-1 font-semibold text-center">Go Live</div>
                 </div>
-                <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
-                  <!-- Gradient progress bar up to Go Live (61%) -->
-                  <div class="h-2" style="width: 61%; background: linear-gradient(to right, #3b82f6, #8b5cf6);"></div>
-                  <!-- Remaining -->
-                  <div class="bg-gray-300 h-2" style="width: 39%;"></div>
-                </div>
-                <div class="text-xs text-blue-600 mt-1 font-semibold text-center">Go Live</div>
               </div>
-              
             </div>
 
             
@@ -579,7 +577,7 @@
               <!-- Top Row: Left & Right -->
               <div class="flex flex-row gap-6">
                 <!-- Left: Logo & Title -->
-                <div class="flex flex-col items-start gap-2 w-36 sm:w-40">
+                <div class="flex flex-col items-center justify-center text-center gap-2">
                   <a href="https://quicksite.space/" target="_blank">
                     <img src="images/Quicksite_Logo.png" alt="QuickSite Logo" class="w-16 h-16 object-contain" />
                   </a>
@@ -589,7 +587,7 @@
                 <!-- Right: Description -->
                 <div class="flex flex-col justify-center text-left flex-1">
 
-                  <p class="text-gray-700 text-base leading-snug text-justify">
+                  <p class="text-gray-700 text-sm leading-relaxed text-left mt-1">
 
                     Launch your website in minutes — no coding needed. AI-powered setup with fast, secure hosting and one-click deployment.
                   </p> <!-- Optional: Add real description here -->
@@ -597,17 +595,19 @@
               </div>
 
               <!-- Bottom: Progress Bar full width -->
-              <div class="w-full max-w-4xl mx-auto mt-4">
-                <div class="flex justify-between text-xs text-gray-500 mb-1">
-                  <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
+              <div class="flex items-center h-24 w-full max-w-4xl mx-auto">
+                <div class="w-full">
+                  <div class="flex justify-between text-xs text-gray-500 mb-1">
+                    <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
+                  </div>
+                  <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
+                    <!-- Gradient progress bar up to MVP (51%) -->
+                    <div class="h-2" style="width: 51%; background: linear-gradient(to right, #34D399, #059669);"></div>
+                    <!-- Remaining -->
+                    <div class="bg-gray-300 h-2" style="width: 49%;"></div>
+                  </div>
+                  <div class="text-xs text-green-600 mt-1 font-semibold text-center">MVP</div>
                 </div>
-                <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
-                  <!-- Gradient progress bar up to Go Live (71%) -->
-                  <div class="h-2" style="width: 51%; background: linear-gradient(to right, #34D399, #059669);"></div>
-                  <!-- Remaining -->
-                  <div class="bg-gray-300 h-2" style="width: 49%;"></div>
-                </div>
-                <div class="text-xs text-green-600 mt-1 font-semibold text-center">MVP</div>
               </div>
             </div>
             
@@ -619,7 +619,7 @@
               <!-- Top Row: Left & Right -->
               <div class="flex flex-row gap-6">
                 <!-- Left: Logo & Title -->
-                <div class="flex flex-col items-start gap-2 w-36 sm:w-40">
+                <div class="flex flex-col items-center justify-center text-center gap-2">
                   <a href="https://talenthub.show/" target="_blank">
                     <img src="images/talent_hub_logo.png" alt="Job Search Works Logo" class="w-16 h-16 object-contain rounded-full" />
                   </a>
@@ -629,26 +629,27 @@
                 <!-- Right: Description -->
                 <div class="flex flex-col justify-center text-left flex-1">
 
-                  <p class="text-gray-700 text-base leading-snug text-justify">
-
+                  <p class="text-gray-700 text-sm leading-relaxed text-left mt-1">
                     Showcase your skills with video intros and a living profile. AI analyzes your interviews to highlight strengths. Connect directly with top employers for faster, smarter hiring.
                   </p>
                 </div>
               </div>
 
-              <!-- Bottom: Progress Bar full width -->
-              <div class="w-full max-w-4xl mx-auto mt-2">
+             <!-- Bottom: Progress Bar full width -->
+            <div class="flex items-center h-24 w-full max-w-4xl mx-auto">
+              <div class="w-full">
                 <div class="flex justify-between text-xs text-gray-500 mb-1">
                   <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
                 </div>
                 <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
-                  <!-- Gradient progress bar up to Go Live (71%) -->
+                  <!-- Gradient progress bar up to MVP (50%) -->
                   <div class="h-2" style="width: 50%; background: linear-gradient(to right, #ec4899, #a855f7);"></div>
                   <!-- Remaining -->
                   <div class="bg-gray-300 h-2" style="width: 50%;"></div>
                 </div>
                 <div class="text-xs text-pink-600 mt-1 font-semibold text-center">MVP</div>
-              </div>              
+              </div>
+            </div>                   
             </div>
             
 
@@ -659,7 +660,7 @@
               <!-- Top Row: Left & Right -->
               <div class="flex flex-row gap-6">
                 <!-- Left: Logo & Title -->
-                <div class="flex flex-col items-start gap-2 w-36 sm:w-40">
+                <div class="flex flex-col items-center justify-center text-center gap-2">
                   <a href="https://artout.site/" target="_blank">
                     <img src="images/artout_logo.png" alt="Job Search Works Logo" class="w-16 h-16 object-contain rounded-full" />
                   </a>
@@ -668,28 +669,27 @@
 
                 <!-- Right: Description -->
                 <div class="flex flex-col justify-center text-left flex-1">
-
-                  <p class="text-gray-700 text-base leading-snug text-justify">
-
+                  <p class="text-gray-700 text-sm leading-relaxed text-left mt-1">
                     Capture street art live — no uploads or filters. Snap and geotag graffiti and murals instantly. Join a global map to preserve and explore urban creativity worldwide.
                   </p> <!-- Add description if needed -->
                 </div>
               </div>
 
               <!-- Bottom: Progress Bar full width -->
-              <div class="w-full max-w-4xl mx-auto mt-4">
-                <div class="flex justify-between text-xs text-gray-500 mb-1">
-                  <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
+              <div class="flex items-center h-24 w-full max-w-4xl mx-auto">
+                <div class="w-full">
+                  <div class="flex justify-between text-xs text-gray-500 mb-1">
+                    <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
+                  </div>
+                  <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
+                    <!-- Gradient progress bar up to Prototype (21%) -->
+                    <div class="h-2" style="width: 21%; background: linear-gradient(to right, #a78bfa, #7c3aed);"></div>
+                    <!-- Remaining -->
+                    <div class="bg-gray-300 h-2" style="width: 79%;"></div>
+                  </div>
+                  <div class="text-xs text-purple-600 mt-1 font-semibold text-center">Prototype</div>
                 </div>
-                <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
-                  <!-- Gradient progress bar up to Go Live (71%) -->
-                  <div class="h-2" style="width: 21%; background: linear-gradient(to right, #a78bfa, #7c3aed);"></div>
-                  <!-- Remaining -->
-                  <div class="bg-gray-300 h-2" style="width: 79%;"></div>
-                </div>
-                <div class="text-xs text-purple-600 mt-1 font-semibold text-center">Prototype</div>
               </div>
-              
             </div>
             
 
@@ -700,37 +700,35 @@
               <!-- Top Row: Left & Right -->
               <div class="flex flex-row gap-6">
                 <!-- Left: Logo & Title -->
-                <div class="flex flex-col items-start gap-2 w-36 sm:w-40">
+                <div class="flex flex-col items-center justify-center text-center gap-2">
                   <a href="https://grasskarma.website/" target="_blank">
                     <img src="images/grasskarma_Logo.png" alt="GrassKarma logo" class="w-16 h-16 object-contain" />
                   </a>
                   <a href="https://grasskarma.website/" target="_blank" class="text-lg font-semibold text-gradient">GrassKarma</a>
                 </div>
-
                 <!-- Right: Description -->
                 <div class="flex flex-col justify-center text-left flex-1">
-
-                  <p class="text-gray-700 text-base leading-snug text-justify">
-
+                  <p class="text-gray-700 text-sm leading-relaxed text-left mt-1">
                     Share the mow, grow the karma. Team up with neighbors, split costs, and keep lawns sharp with reminders and group deals.
                   </p>                  
                 </div>
               </div>
 
-              <!-- Bottom: Progress Bar full width -->
-              <div class="w-full max-w-4xl mx-auto mt-4">
+             <!-- Bottom: Progress Bar full width -->
+            <div class="flex items-center h-24 w-full max-w-4xl mx-auto">
+              <div class="w-full">
                 <div class="flex justify-between text-xs text-gray-500 mb-1">
                   <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
                 </div>
                 <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
-                  <!-- Gradient progress bar up to Go Live (71%) -->
+                  <!-- Gradient progress bar up to Prototype (21%) -->
                   <div class="h-2" style="width: 21%; background: linear-gradient(to right, #34d399, #059669);"></div>
                   <!-- Remaining -->
                   <div class="bg-gray-300 h-2" style="width: 79%;"></div>
                 </div>
                 <div class="text-xs text-green-600 mt-1 font-semibold text-center">Prototype</div>
               </div>
-              
+            </div>
             </div>
 
             <!-- SeedStart -->
@@ -740,37 +738,34 @@
               <!-- Top Row: Left & Right -->
               <div class="flex flex-row gap-6">
                 <!-- Left: Logo & Title -->
-                <div class="flex flex-col items-start gap-2 w-36 sm:w-40">
+                <div class="flex flex-col items-center justify-center text-center gap-2">
                   <a href="https://seedstart.world/" target="_blank">
                     <img src="images/seedstart_logo.png" alt="Job Search Works Logo" class="w-16 h-16 object-contain rounded-full" />
                   </a>
                   <a href="https://seedstart.world/" target="_blank" class="text-lg font-semibold text-gradient">SeedStart</a>
                 </div>
-
                 <!-- Right: Description -->
                 <div class="flex flex-col justify-center text-left flex-1">
-
-                  <p class="text-gray-700 text-base leading-snug text-justify">
-
+                  <p class="text-gray-700 text-sm leading-relaxed text-left mt-1">
                     Turn ideas into reality with SeedSite. Build your team, use expert tools, and launch fast — with support every step.
                   </p>                                   
                 </div>
               </div>
-
               <!-- Bottom: Progress Bar full width -->
-              <div class="w-full max-w-4xl mx-auto mt-4">
-                <div class="flex justify-between text-xs text-gray-500 mb-1">
-                  <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
+              <div class="flex items-center h-24 w-full max-w-4xl mx-auto">
+                <div class="w-full">
+                  <div class="flex justify-between text-xs text-gray-500 mb-1">
+                    <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
+                  </div>
+                  <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
+                    <!-- Gradient progress bar up to MVP (45%) -->
+                    <div class="h-2" style="width: 45%; background: linear-gradient(to right, #60a5fa, #10b981);"></div>
+                    <!-- Remaining -->
+                    <div class="bg-gray-300 h-2" style="width: 55%;"></div>
+                  </div>
+                  <div class="text-xs text-blue-600 mt-1 font-semibold text-center">MVP</div>
                 </div>
-                <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
-                  <!-- Gradient progress bar up to Go Live (71%) -->
-                  <div class="h-2" style="width: 45%; background: linear-gradient(to right, #60a5fa, #10b981);"></div>
-                  <!-- Remaining -->
-                  <div class="bg-gray-300 h-2" style="width: 55%;"></div>
-                </div>
-                <div class="text-xs text-blue-600 mt-1 font-semibold text-center">MVP</div>
               </div>
-              
             </div>
 
             
@@ -781,39 +776,35 @@
             <!-- Top Row: Left & Right -->
             <div class="flex flex-row gap-6">
               <!-- Left: Logo & Title -->
-              <div class="flex flex-col items-start gap-2 w-36 sm:w-40">
+              <div class="flex flex-col items-center justify-center text-center gap-2">
                 <a href="https://freedates.app/" target="_blank">
                   <img src="images/freedates_Logo.png" alt="freedates.app logo" class="w-18 h-16 object-contain rounded-full" />
                 </a>
                 <a href="https://freedates.app/" target="_blank" class="text-lg font-semibold text-gradient">Free Dates</a>
               </div>
-
               <!-- Right: Description -->
               <div class="flex flex-col justify-center text-left flex-1">
-
-                <p class="text-gray-700 text-base leading-snug text-justify">
-
+                <p class="text-gray-700 text-sm leading-relaxed text-left mt-1">
                   Earn attention, not buy it. SMS only, no bots. 100% free. Heart-based, no ghosting. Build, earn, rise in the Hearts Economy.
                 </p>                               
               </div>
             </div>
-
             <!-- Bottom: Progress Bar full width -->
-            <div class="w-full mx-auto mt-4">
-              <div class="flex justify-between text-xs text-gray-500 mb-1">
-                <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
+            <div class="flex items-center h-24 w-full mx-auto">
+              <div class="w-full">
+                <div class="flex justify-between text-xs text-gray-500 mb-1">
+                  <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
+                </div>
+                <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
+                  <!-- Gradient progress bar up to MVP (45%) -->
+                  <div class="h-2" style="width: 45%; background: linear-gradient(to right, #f87171, #e13030);"></div>
+                  <!-- Remaining -->
+                  <div class="bg-gray-300 h-2" style="width: 55%;"></div>
+                </div>
+                <div class="text-xs text-red-600 mt-1 font-semibold text-center">MVP</div>
               </div>
-              <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
-                <!-- Gradient progress bar up to Go Live (71%) -->
-                <div class="h-2" style="width: 45%; background: linear-gradient(to right, #f87171, #e13030);"></div>
-                <!-- Remaining -->
-                <div class="bg-gray-300 h-2" style="width: 55%;"></div>
-              </div>
-              <div class="text-xs text-red-600 mt-1 font-semibold text-center">MVP</div>
             </div>
             </div>
-
-            
           </div>
         </div>
       </section>
