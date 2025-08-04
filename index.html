@@ -137,6 +137,9 @@
       .card-fixed {
         width: 649.33px;
         height: 312.5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
       }
     }
   
@@ -656,8 +659,7 @@
             
             <!-- Job Search Works -->
             <div 
-              class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col  gap-8 mx-auto w-full h-auto sm:block card-fixed"
-            >
+              class="bg-gradient-to-br from-blue-50 to-purple-20 rounded-2xl p-8 card-hover border border-blue-100 card-fixed">
               <!-- Top Row: Left & Right side -->
               <div class="flex flex-row gap-6">
                 <!-- Left: Logo & Title -->
@@ -697,7 +699,7 @@
               </div>
 
               <!-- Bottom: Progress Bar full width -->
-              <div class="flex items-center h-28 w-full max-w-4xl mx-auto">
+              <div class="mt-6">
                 <div class="w-full">
                   <div class="flex justify-between text-xs text-gray-500 mb-1">
                     <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
@@ -716,10 +718,10 @@
             
             <!-- QuickSite -->
             <div 
-              class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 mx-auto w-full h-auto sm:block card-fixed"
+              class="bg-gradient-to-br from-green-20 to-green-10 rounded-2xl p-8 card-hover border border-blue-100 card-fixed"
             >
               <!-- Top Row: Left & Right -->
-              <div class="flex flex-row gap-6">
+              <div class="flex flex-row gap-6 flex-row">
                 <!-- Left: Logo & Title -->
                 <div class="flex flex-col items-center justify-center text-center gap-2">
                   <a href="https://quicksite.space/" target="_blank">
@@ -754,26 +756,22 @@
               </div>
 
               <!-- Bottom: Progress Bar full width -->
-              <div class="flex items-center h-28 w-full max-w-4xl mx-auto">
-                <div class="w-full">
-                  <div class="flex justify-between text-xs text-gray-500 mb-1">
-                    <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
-                  </div>
-                  <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
-                    <!-- Gradient progress bar up to MVP (51%) -->
-                    <div class="h-2" style="width: 51%; background: linear-gradient(to right, #34D399, #059669);"></div>
-                    <!-- Remaining -->
-                    <div class="bg-gray-300 h-2" style="width: 49%;"></div>
-                  </div>
-                  <div class="text-xs text-green-600 mt-1 font-semibold text-center">MVP</div>
+              <div class="w-full pt-1">
+                <div class="flex justify-between text-xs text-gray-500 mb-1">
+                  <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
                 </div>
+                <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
+                  <div class="h-2" style="width: 51%; background: linear-gradient(to right, #34D399, #059669);"></div>
+                  <div class="bg-gray-300 h-2" style="width: 49%;"></div>
+                </div>
+                <div class="text-xs text-green-600 mt-1 font-semibold text-center">MVP</div>
               </div>
             </div>
             
 
             <!-- TalentHub.Show -->
             <div 
-              class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 mx-auto w-full h-auto sm:block card-fixed"
+              class="bg-gradient-to-br from-pink-50 to-purple-20 rounded-2xl p-8 card-hover border border-blue-100 card-fixed"
             >
               <!-- Top Row: Left & Right -->
               <div class="flex flex-row gap-6">
@@ -811,7 +809,7 @@
               </div>
 
              <!-- Bottom: Progress Bar full width -->
-            <div class="flex items-center h-28 w-full max-w-4xl mx-auto">
+             <div class="mt-6">
               <div class="w-full">
                 <div class="flex justify-between text-xs text-gray-500 mb-1">
                   <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
@@ -830,7 +828,7 @@
 
             <!-- ArtOut -->
             <div 
-              class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 mx-auto w-full h-auto sm:block card-fixed"
+              class="bg-gradient-to-br from-purple-50 to-blue-20 rounded-2xl p-8 card-hover border border-blue-100 card-fixed"
             >
               <!-- Top Row: Left & Right -->
               <div class="flex flex-row gap-6">
@@ -868,7 +866,7 @@
               </div>
 
               <!-- Bottom: Progress Bar full width -->
-              <div class="flex items-center h-28 w-full max-w-4xl mx-auto">
+              <div class="mt-6">
                 <div class="w-full">
                   <div class="flex justify-between text-xs text-gray-500 mb-1">
                     <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
@@ -887,7 +885,7 @@
 
             <!-- GrassKarma -->
             <div 
-              class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 mx-auto w-full h-auto sm:block card-fixed"
+              class="bg-gradient-to-br from-green-50 to-green-20 rounded-2xl p-8 card-hover border border-blue-100 card-fixed"
             >
               <!-- Top Row: Left & Right -->
               <div class="flex flex-row gap-6">
@@ -924,7 +922,7 @@
               </div>
 
              <!-- Bottom: Progress Bar full width -->
-            <div class="flex items-center h-28 w-full max-w-4xl mx-auto">
+             <div class="mt-6">
               <div class="w-full">
                 <div class="flex justify-between text-xs text-gray-500 mb-1">
                   <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
@@ -940,50 +938,48 @@
             </div>
             </div>
 
-            <!-- SeedStart -->
-            <div 
-            class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 mx-auto w-full h-auto sm:block card-fixed"
-            >
-            <!-- Top Row: Left & Right -->
-            <div class="flex flex-row gap-6">
-              <!-- Left: Logo & Title -->
-              <div class="flex flex-col items-center justify-center text-center gap-2">
-                <a href="https://seedstart.world/" target="_blank" rel="noopener noreferrer">
-                  <img src="images/seedstart_logo.png" alt="SeedStart logo" class="w-16 h-16 object-contain rounded-full" />
-                </a>
-                <a href="https://seedstart.world/" target="_blank" rel="noopener noreferrer" class="text-lg font-semibold text-gradient">
-                  SeedStart
-                </a>
-              </div>
 
-              <!-- Right: Description with tick list -->
-              <div class="flex flex-col justify-center text-left flex-1">
-                <ul class="space-y-2 text-gray-700 text-sm leading-normal">
-                  <li class="flex items-start space-x-3">
-                    <svg class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                    </svg>
-                    <span>Turn ideas into reality with SeedSite</span>
-                  </li>
-                  <li class="flex items-start space-x-3">
-                    <svg class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                    </svg>
-                    <span>Build your team and use expert tools</span>
-                  </li>
-                  <li class="flex items-start space-x-3">
-                    <svg class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                    </svg>
-                    <span>Launch fast with support every step of the way</span>
-                  </li>
-                </ul>
+            <!--Seedstart-->
+            <div class="bg-gradient-to-br from-blue-50 to-teal-50 rounded-2xl p-8 card-hover border border-blue-100 card-fixed">
+              <!-- Top Row: Left & Right -->
+              <div class="flex flex-row gap-6">
+                <!-- Left: Logo & Title -->
+                <div class="flex flex-col items-center justify-center text-center gap-2">
+                  <a href="https://seedstart.world/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/seedstart_logo.png" alt="SeedStart logo" class="w-16 h-16 object-contain rounded-full" />
+                  </a>
+                  <a href="https://seedstart.world/" target="_blank" rel="noopener noreferrer" class="text-lg font-semibold text-gradient">
+                    SeedStart
+                  </a>
+                </div>
+            
+                <!-- Right: Description -->
+                <div class="flex flex-col justify-center text-left flex-1">
+                  <ul class="space-y-3 text-gray-700 text-base leading-relaxed">
+                    <li class="flex items-start space-x-3">
+                      <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                      </svg>
+                      <span>Turn ideas into reality with SeedSite</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                      <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                      </svg>
+                      <span>Build your team and use expert tools</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                      <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                      </svg>
+                      <span>Launch fast with support every step of the way</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
-
-            <!-- Bottom: Progress Bar full width -->
-            <div class="flex items-center h-28 w-full max-w-4xl mx-auto">
-              <div class="w-full">
+            
+              <!-- Bottom: Progress Bar full width -->
+              <div class="mt-6">
                 <div class="flex justify-between text-xs text-gray-500 mb-1">
                   <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
                 </div>
@@ -996,62 +992,58 @@
                 <div class="text-xs text-blue-600 mt-1 font-semibold text-center">MVP</div>
               </div>
             </div>
-            </div>
-
-
             
-            <!-- freedates.app -->
-            <div 
-              class="bg-white rounded-2xl p-6 card-hover shadow-lg flex flex-col gap-6 mx-auto w-full h-auto sm:block card-fixed"
-            >
-            <!-- Top Row: Left & Right -->
-            <div class="flex flex-row gap-6">
-              <!-- Left: Logo & Title -->
-              <div class="flex flex-col items-center justify-center text-center gap-2">
-                <a href="https://freedates.app/" target="_blank">
-                  <img src="images/freedates_Logo.png" alt="freedates.app logo" class="w-18 h-16 object-contain rounded-full" />
-                </a>
-                <a href="https://freedates.app/" target="_blank" class="text-lg font-semibold text-gradient">Free Dates</a>
+
+
+            <!--Free Dates-->
+            <div class="bg-gradient-to-br from-pink-50 to-orange-50 rounded-2xl p-8 card-hover border border-pink-100 card-fixed">
+              <!-- Top Row: Left & Right -->
+              <div class="flex flex-row gap-6">
+                <!-- Left: Logo & Title -->
+                <div class="flex flex-col items-center justify-center text-center gap-2">
+                  <a href="https://freedates.app/" target="_blank">
+                    <img src="images/freedates_Logo.png" alt="freedates.app logo" class="w-18 h-16 object-contain rounded-full" />
+                  </a>
+                  <a href="https://freedates.app/" target="_blank" class="text-lg font-semibold text-gradient">Free Dates</a>
+                </div>
+                <!-- Right: Description -->
+                <div class="flex flex-col justify-center text-left flex-1">
+                  <ul class="space-y-3 text-gray-700 text-base leading-relaxed">
+                    <li class="flex items-start space-x-3">
+                      <svg class="w-5 h-5 text-pink-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                      </svg>
+                      <span>Earn attention, not buy it — SMS only, no bots</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                      <svg class="w-5 h-5 text-pink-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                      </svg>
+                      <span>100% free and heart-based, no ghosting</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                      <svg class="w-5 h-5 text-pink-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                      </svg>
+                      <span>Build, earn, and rise in the Hearts Economy</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <!-- Right: Description -->
-              <div class="flex flex-col justify-center text-left flex-1">
-                <ul class="space-y-2 text-gray-700 text-sm leading-normal">
-                  <li class="flex items-start space-x-3">
-                    <svg class="w-5 h-5 text-pink-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                    </svg>
-                    <span>Earn attention, not buy it — SMS only, no bots</span>
-                  </li>
-                  <li class="flex items-start space-x-3">
-                    <svg class="w-5 h-5 text-pink-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                    </svg>
-                    <span>100% free and heart-based, no ghosting</span>
-                  </li>
-                  <li class="flex items-start space-x-3">
-                    <svg class="w-5 h-5 text-pink-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                    </svg>
-                    <span>Build, earn, and rise in the Hearts Economy</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <!-- Bottom: Progress Bar full width -->
-            <div class="flex items-center h-28 w-full mx-auto">
-              <div class="w-full">
+            
+              <!-- Bottom: Progress Bar full width -->
+              <div class="mt-6">
                 <div class="flex justify-between text-xs text-gray-500 mb-1">
                   <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
                 </div>
                 <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
-                  <!-- Gradient progress bar up to MVP (45%) -->
                   <div class="h-2" style="width: 45%; background: linear-gradient(to right, #f87171, #e13030);"></div>
-                  <!-- Remaining -->
                   <div class="bg-gray-300 h-2" style="width: 55%;"></div>
                 </div>
                 <div class="text-xs text-red-600 mt-1 font-semibold text-center">MVP</div>
               </div>
             </div>
+            
             </div>
           </div>
         </div>
