@@ -629,7 +629,16 @@
     <section id="events" class="section-padding bg-gradient-to-br from-purple-600 to-blue-600 text-white">
       <div class="max-w-6xl mx-auto text-center">
         <h3 class="text-4xl md:text-5xl font-bold mb-6">Events</h3>
-        <p class="text-xl mb-10 max-w-3xl mx-auto leading-relaxed opacity-90">
+        <p class="text-xl mb-6 max-w-3xl mx-auto leading-relaxed opacity-90">
+          Whether you're a founder or entrepreneur looking to turn your idea into reality,
+        </p>
+        <p class="text-xl mb-6 max-w-3xl mx-auto leading-relaxed opacity-90">
+          A developer ready to start your journey in web development, or someone eager to extend your network—our events are for you.       
+        </p>
+        <p class="text-xl mb-6 max-w-3xl mx-auto leading-relaxed opacity-90">
+          Learn, connect, and grow with a community of like-minded founders and developers in a supportive and collaborative space.
+        </p>
+        <p class="text-xl mb-6 max-w-3xl mx-auto leading-relaxed opacity-90">
           We host weekly events where startup founders pitch their ideas to a live audience of volunteers. Join us to
           brainstorm, collaborate, and get involved.
         </p>
@@ -645,6 +654,7 @@
       </div>
     </section>
 
+
     <!-- Featured Startups -->
     <section id="featured-startups" class="section-padding bg-gray-50">
         <div class="max-w-7xl mx-auto">
@@ -658,62 +668,108 @@
           <div class="flex flex-col gap-12 items-center">
             
             <!-- Job Search Works -->
-            <div 
-              class="bg-gradient-to-br from-blue-50 to-purple-20 rounded-2xl p-8 card-hover border border-blue-100 card-fixed">
-              <!-- Top Row: Left & Right side -->
-              <div class="flex flex-row gap-6">
-                <!-- Left: Logo & Title -->
-                <div class="flex flex-col items-center justify-center text-center gap-2">
-                  <a href="https://jobsearch.works/" target="_blank">
-                    <div class="bg-purple-100 p-4 rounded-xl shadow-md">
-                      <img src="images/JobSearch_Logo.png" alt="Job Search Works Logo" class="w-16 h-16 object-contain" />
-                    </div>
-                  </a>
-                  <a href="https://jobsearch.works/" target="_blank" class="text-lg font-semibold text-gradient">JobSearchWorks</a>
-                </div>
-
-                <!-- Right: Description -->
-                <div class="flex flex-col justify-center text-left flex-1 pl-6">
-                  <ul class="space-y-5 text-gray-700 text-sm leading-loose">
-                    <li class="flex items-start space-x-3">
-                      <svg class="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                      </svg>
-                      <span>Apply once — we handle the rest</span>
-                    </li>
-                    <li class="flex items-start space-x-3">
-                      <svg class="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                      </svg>
-                      <span>AI finds jobs, tailors your resume, and submits applications</span>
-                    </li>
-                    <li class="flex items-start space-x-3">
-                      <svg class="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                      </svg>
-                      <span>No contracts, pay per application, and track progress</span>
-                    </li>
-                  </ul>
-                </div>
-                
+            <div
+            class="bg-gradient-to-br from-blue-50 to-purple-20 rounded-2xl p-6 sm:p-8 border border-blue-100 card-hover max-w-4xl w-full card-fixed"
+            >
+            <!-- Top Row: flex-col on mobile, flex-row on sm+ -->
+            <div class="flex flex-col sm:flex-row gap-6">
+              <!-- Left: Logo & Title -->
+              <div class="flex flex-col items-center justify-center text-center gap-2 sm:w-40 flex-shrink-0">
+                <a href="https://jobsearch.works/" target="_blank">
+                  <div class="bg-purple-100 p-4 rounded-xl shadow-md">
+                    <img
+                      src="images/JobSearch_Logo.png"
+                      alt="Job Search Works Logo"
+                      class="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+                    />
+                  </div>
+                </a>
+                <a
+                  href="https://jobsearch.works/"
+                  target="_blank"
+                  class="text-lg sm:text-xl font-semibold text-gradient"
+                  >JobSearchWorks</a
+                >
               </div>
 
-              <!-- Bottom: Progress Bar full width -->
-              <div class="mt-6">
-                <div class="w-full">
-                  <div class="flex justify-between text-xs text-gray-500 mb-1">
-                    <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
-                  </div>
-                  <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
-                    <!-- Gradient progress bar up to Go Live (61%) -->
-                    <div class="h-2" style="width: 61%; background: linear-gradient(to right, #3b82f6, #8b5cf6);"></div>
-                    <!-- Remaining -->
-                    <div class="bg-gray-300 h-2" style="width: 39%;"></div>
-                  </div>
-                  <div class="text-xs text-blue-600 mt-1 font-semibold text-center">Go Live</div>
-                </div>
+              <!-- Right: Description -->
+              <div class="flex flex-col justify-center text-left flex-1 sm:pl-6 text-sm sm:text-base">
+                <ul class="space-y-4 text-gray-700 leading-relaxed">
+                  <li class="flex items-start space-x-3">
+                    <svg
+                      class="w-5 h-5 text-blue-500 mt-1 flex-shrink-0"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    <span>Apply once — we handle the rest</span>
+                  </li>
+                  <li class="flex items-start space-x-3">
+                    <svg
+                      class="w-5 h-5 text-blue-500 mt-1 flex-shrink-0"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    <span
+                      >AI finds jobs, tailors your resume, and submits applications</span
+                    >
+                  </li>
+                  <li class="flex items-start space-x-3">
+                    <svg
+                      class="w-5 h-5 text-blue-500 mt-1 flex-shrink-0"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    <span
+                      >No contracts, pay per application, and track progress</span
+                    >
+                  </li>
+                </ul>
               </div>
             </div>
+
+            <!-- Bottom: Progress Bar full width -->
+            <div class="mt-6 w-full">
+              <div class="flex justify-between text-xs text-gray-500 mb-1 px-1 sm:px-0">
+                <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
+              </div>
+              <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
+                <!-- Gradient progress bar up to Go Live (61%) -->
+                <div
+                  class="h-2"
+                  style="width: 61%; background: linear-gradient(to right, #3b82f6, #8b5cf6);"
+                ></div>
+                <!-- Remaining -->
+                <div class="bg-gray-300 h-2" style="width: 39%;"></div>
+              </div>
+              <div
+                class="text-xs text-blue-600 mt-1 font-semibold text-center sm:text-sm"
+              >
+                Go Live
+              </div>
+            </div>
+            </div>
+
 
             
             <!-- QuickSite -->
@@ -1190,7 +1246,16 @@
     <section id="contact" class="section-padding bg-gray-900 text-white">
       <div class="max-w-6xl mx-auto text-center">
         <h3 class="text-4xl md:text-5xl font-bold mb-6">Connect With Us</h3>
-        <p class="text-xl mb-10 max-w-3xl mx-auto leading-relaxed opacity-90">
+        
+        <p class="text-xl mb-6 max-w-3xl mx-auto leading-relaxed opacity-90">
+          Are you a founder looking to find like-minded people to move forward with your vision? 
+          Developers eager to sharpen your skills and collaborate? 
+        </p>
+        <p class="text-xl mb-6 max-w-3xl mx-auto leading-relaxed opacity-90">
+          Or someone seeking a team at the early stages of a project? 
+          We provide a vibrant community to connect, build, and grow together.
+        </p>
+        <p class="text-xl mb-6 max-w-3xl mx-auto leading-relaxed opacity-90">
           Questions? Ideas? Want to partner or get involved? Reach out to us on LinkedIn — we'd love to hear from you.
         </p>
         <a href="https://www.linkedin.com/company/beta-builders-club" target="_blank"
@@ -1208,6 +1273,7 @@
         </a>
       </div>
     </section>
+    
   </main>
 
   <footer class="bg-black text-white py-8">
