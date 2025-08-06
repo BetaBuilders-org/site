@@ -762,101 +762,109 @@
                 <!-- Remaining -->
                 <div class="bg-gray-300 h-2" style="width: 39%;"></div>
               </div>
-              <div
-                class="text-xs text-blue-600 mt-1 font-semibold text-center sm:text-sm"
-              >
-                Go Live
-              </div>
             </div>
-            </div>
+          </div>
 
-
-            
             <!-- QuickSite -->
             <div 
-              class="bg-gradient-to-br from-green-20 to-green-10 rounded-2xl p-8 card-hover border border-blue-100 card-fixed"
+              class="bg-gradient-to-br from-green-20 to-green-10 rounded-2xl p-6 sm:p-8 card-hover border border-blue-100 card-fixed max-w-4xl w-full"
             >
-              <!-- Top Row: Left & Right -->
-              <div class="flex flex-row gap-6 flex-row">
+              <!-- Top Row: Responsive layout -->
+              <div class="flex flex-col sm:flex-row gap-6">
                 <!-- Left: Logo & Title -->
-                <div class="flex flex-col items-center justify-center text-center gap-2">
+                <div class="flex flex-col items-center justify-center text-center gap-2 sm:w-40 flex-shrink-0">
                   <a href="https://quicksite.space/" target="_blank">
-                    <img src="images/Quicksite_Logo.png" alt="QuickSite Logo" class="w-16 h-16 object-contain" />
+                    <div class="bg-green-100 p-4 rounded-xl shadow-md">
+                      <img 
+                        src="images/Quicksite_Logo.png" 
+                        alt="QuickSite Logo" 
+                        class="w-16 h-16 sm:w-20 sm:h-20 object-contain" 
+                      />
+                    </div>
                   </a>
-                  <a href="https://quicksite.space/" target="_blank" class="text-lg font-semibold text-gradient">QuickSite</a>
+                  <a href="https://quicksite.space/" target="_blank" class="text-lg sm:text-xl font-semibold text-gradient">
+                    QuickSite
+                  </a>
                 </div>
 
-               <!-- Right: Description with tick list -->
-               <div class="flex flex-col justify-center text-left flex-1 ml-12">
-                <ul class="space-y-5 text-gray-700 text-base leading-relaxed">
-                  <li class="flex items-start space-x-3">
-                    <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                    </svg>
-                    <span>Launch your website in minutes — no coding needed</span>
-                  </li>
-                  <li class="flex items-start space-x-3">
-                    <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                    </svg>
-                    <span>AI-powered setup with fast, secure hosting</span>
-                  </li>
-                  <li class="flex items-start space-x-3">
-                    <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                    </svg>
-                    <span>One-click deployment for instant go-live</span>
-                  </li>
-                </ul>
-              </div>
+                <!-- Right: Description -->
+                <div class="flex flex-col justify-center text-left flex-1 sm:pl-6 text-sm sm:text-base">
+                  <ul class="space-y-4 text-gray-700 leading-relaxed">
+                    <li class="flex items-start space-x-3">
+                      <svg class="w-5 h-5 text-green-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                      </svg>
+                      <span>Launch your website in minutes — no coding needed</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                      <svg class="w-5 h-5 text-green-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                      </svg>
+                      <span>AI-powered setup with fast, secure hosting</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                      <svg class="w-5 h-5 text-green-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                      </svg>
+                      <span>One-click deployment for instant go-live</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
 
-              <!-- Bottom: Progress Bar full width -->
-              <div class="w-full pt-1">
-                <div class="flex justify-between text-xs text-gray-500 mb-1">
+              <!-- Bottom: Progress Bar -->
+              <div class="mt-6 w-full">
+                <div class="flex justify-between text-xs text-gray-500 mb-1 px-1 sm:px-0">
                   <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
                 </div>
                 <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
                   <div class="h-2" style="width: 51%; background: linear-gradient(to right, #34D399, #059669);"></div>
                   <div class="bg-gray-300 h-2" style="width: 49%;"></div>
                 </div>
-                <div class="text-xs text-green-600 mt-1 font-semibold text-center">MVP</div>
               </div>
             </div>
-            
 
-            <!-- TalentHub.Show -->
+          
+            
+            <!--TalenHub-->
             <div 
-              class="bg-gradient-to-br from-pink-50 to-purple-20 rounded-2xl p-8 card-hover border border-blue-100 card-fixed"
+              class="bg-gradient-to-br from-pink-50 to-purple-20 rounded-2xl p-6 sm:p-8 card-hover border border-blue-100 card-fixed max-w-4xl w-full"
             >
-              <!-- Top Row: Left & Right -->
-              <div class="flex flex-row gap-6">
+              <!-- Top Row: Responsive layout -->
+              <div class="flex flex-col sm:flex-row gap-6">
                 <!-- Left: Logo & Title -->
-                <div class="flex flex-col items-center justify-center text-center gap-2">
+                <div class="flex flex-col items-center justify-center text-center gap-2 sm:w-40 flex-shrink-0">
                   <a href="https://talenthub.show/" target="_blank">
-                    <img src="images/talent_hub_logo.png" alt="Job Search Works Logo" class="w-16 h-16 object-contain rounded-full" />
+                    <div class="bg-pink-100 p-4 rounded-full shadow-md">
+                      <img 
+                        src="images/talent_hub_logo.png" 
+                        alt="TalentHub Logo" 
+                        class="w-16 h-16 sm:w-20 sm:h-20 object-contain rounded-full"
+                      />
+                    </div>
                   </a>
-                  <a href="https://talenthub.show/" target="_blank" class="text-lg font-semibold text-gradient">TalentHub</a>
+                  <a href="https://talenthub.show/" target="_blank" class="text-lg sm:text-xl font-semibold text-gradient">
+                    TalentHub
+                  </a>
                 </div>
 
-                <!-- Right: Description with tick list -->
-                <div class="flex flex-col justify-center text-left flex-1 ml-12">
-
-                  <ul class="space-y-4 text-gray-700 text-sm leading-loose">
+                <!-- Right: Description -->
+                <div class="flex flex-col justify-center text-left flex-1 sm:pl-6 text-sm sm:text-base">
+                  <ul class="space-y-4 text-gray-700 leading-relaxed">
                     <li class="flex items-start space-x-3">
-                      <svg class="w-5 h-5 text-pink-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                      <svg class="w-5 h-5 text-pink-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                       </svg>
                       <span>Showcase your skills with video intros and a living profile</span>
                     </li>
                     <li class="flex items-start space-x-3">
-                      <svg class="w-5 h-5 text-pink-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                      <svg class="w-5 h-5 text-pink-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                       </svg>
                       <span>AI analyzes your interviews to highlight strengths</span>
                     </li>
                     <li class="flex items-start space-x-3">
-                      <svg class="w-5 h-5 text-pink-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                      <svg class="w-5 h-5 text-pink-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                       </svg>
                       <span>Connect directly with top employers for faster, smarter hiring</span>
@@ -865,10 +873,9 @@
                 </div>
               </div>
 
-             <!-- Bottom: Progress Bar full width -->
-             <div class="mt-6">
-              <div class="w-full">
-                <div class="flex justify-between text-xs text-gray-500 mb-1">
+              <!-- Bottom: Progress Bar -->
+              <div class="mt-6 w-full">
+                <div class="flex justify-between text-xs text-gray-500 mb-1 px-1 sm:px-0">
                   <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
                 </div>
                 <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
@@ -877,233 +884,233 @@
                   <!-- Remaining -->
                   <div class="bg-gray-300 h-2" style="width: 50%;"></div>
                 </div>
-                <div class="text-xs text-pink-600 mt-1 font-semibold text-center">MVP</div>
-              </div>
-            </div>                   
-            </div>
-            
-
-            <!-- ArtOut -->
-            <div 
-              class="bg-gradient-to-br from-purple-50 to-blue-20 rounded-2xl p-8 card-hover border border-blue-100 card-fixed"
-            >
-              <!-- Top Row: Left & Right -->
-              <div class="flex flex-row gap-6">
-                <!-- Left: Logo & Title -->
-                <div class="flex flex-col items-center justify-center text-center gap-2">
-                  <a href="https://artout.site/" target="_blank">
-                    <img src="images/artout_logo.png" alt="Job Search Works Logo" class="w-16 h-16 object-contain rounded-full" />
-                  </a>
-                  <a href="https://artout.site/" target="_blank" class="text-lg font-semibold text-gradient">ArtOut</a>
-                </div>
-
-                <!-- Right: Description with tick list -->
-                <div class="flex flex-col justify-center text-left flex-1 ml-12">
-
-                  <ul class="space-y-4 text-gray-700 text-base leading-loose">
-                    <li class="flex items-start space-x-3">
-                      <svg class="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                      </svg>
-                      <span>Capture street art live — no uploads or filters</span>
-                    </li>
-                    <li class="flex items-start space-x-3">
-                      <svg class="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                      </svg>
-                      <span>Snap and geotag graffiti and murals instantly</span>
-                    </li>
-                    <li class="flex items-start space-x-3">
-                      <svg class="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                      </svg>
-                      <span>Join a global map to preserve and explore urban creativity worldwide</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <!-- Bottom: Progress Bar full width -->
-              <div class="mt-6">
-                <div class="w-full">
-                  <div class="flex justify-between text-xs text-gray-500 mb-1">
-                    <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
-                  </div>
-                  <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
-                    <!-- Gradient progress bar up to Prototype (21%) -->
-                    <div class="h-2" style="width: 21%; background: linear-gradient(to right, #a78bfa, #7c3aed);"></div>
-                    <!-- Remaining -->
-                    <div class="bg-gray-300 h-2" style="width: 79%;"></div>
-                  </div>
-                  <div class="text-xs text-purple-600 mt-1 font-semibold text-center">Prototype</div>
-                </div>
               </div>
             </div>
-            
 
-            <!-- GrassKarma -->
+            <!--ArtOut-->
             <div 
-              class="bg-gradient-to-br from-green-50 to-green-20 rounded-2xl p-8 card-hover border border-blue-100 card-fixed"
-            >
-              <!-- Top Row: Left & Right -->
-              <div class="flex flex-row gap-6">
-                <!-- Left: Logo & Title -->
-                <div class="flex flex-col items-center justify-center text-center gap-2">
-                  <a href="https://grasskarma.website/" target="_blank">
-                    <img src="images/grasskarma_Logo.png" alt="GrassKarma logo" class="w-16 h-16 object-contain" />
-                  </a>
-                  <a href="https://grasskarma.website/" target="_blank" class="text-lg font-semibold text-gradient">GrassKarma</a>
+          class="bg-gradient-to-br from-purple-50 to-blue-20 rounded-2xl p-6 sm:p-8 card-hover border border-blue-100 card-fixed max-w-4xl w-full"
+        >
+          <!-- Top Row: Responsive layout -->
+          <div class="flex flex-col sm:flex-row gap-6">
+            <!-- Left: Logo & Title -->
+            <div class="flex flex-col items-center justify-center text-center gap-2 sm:w-40 flex-shrink-0">
+              <a href="https://artout.site/" target="_blank">
+                <div class="bg-purple-100 p-4 rounded-full shadow-md">
+                  <img 
+                    src="images/artout_logo.png" 
+                    alt="ArtOut Logo" 
+                    class="w-16 h-16 sm:w-20 sm:h-20 object-contain rounded-full"
+                  />
                 </div>
-                <!-- Right: Description with tick list -->
-                <div class="flex flex-col justify-center text-left flex-1 ml-12">
-                  <ul class="space-y-4 text-gray-700 text-base leading-loose">
-                    <li class="flex items-start space-x-3">
-                      <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                      </svg>
-                      <span>Share the mow and grow the karma</span>
-                    </li>
-                    <li class="flex items-start space-x-3">
-                      <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                      </svg>
-                      <span>Team up with neighbors and split costs</span>
-                    </li>
-                    <li class="flex items-start space-x-3">
-                      <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                      </svg>
-                      <span>Keep lawns sharp with reminders and group deals</span>
-                    </li>
-                  </ul>
-                </div>
+              </a>
+              <a href="https://artout.site/" target="_blank" class="text-lg sm:text-xl font-semibold text-gradient">
+                ArtOut
+              </a>
+            </div>
+
+            <!-- Right: Description -->
+            <div class="flex flex-col justify-center text-left flex-1 sm:pl-6 text-sm sm:text-base">
+              <ul class="space-y-4 text-gray-700 leading-relaxed">
+                <li class="flex items-start space-x-3">
+                  <svg class="w-5 h-5 text-purple-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Capture street art live — no uploads or filters</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <svg class="w-5 h-5 text-purple-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Snap and geotag graffiti and murals instantly</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <svg class="w-5 h-5 text-purple-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Join a global map to preserve and explore urban creativity worldwide</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Bottom: Progress Bar -->
+          <div class="mt-6 w-full">
+            <div class="flex justify-between text-xs text-gray-500 mb-1 px-1 sm:px-0">
+              <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
+            </div>
+            <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
+              <div class="h-2" style="width: 21%; background: linear-gradient(to right, #a78bfa, #7c3aed);"></div>
+              <div class="bg-gray-300 h-2" style="width: 79%;"></div>
+            </div>
+          </div>
+        </div>
+
+          <!-- GrassKarma -->
+          <div 
+          class="bg-gradient-to-br from-green-50 to-green-20 rounded-2xl p-8 card-hover border border-blue-100 card-fixed"
+          >
+          <!-- Top Row: Logo + Description -->
+          <div class="flex flex-col sm:flex-row gap-6">
+            <!-- Left: Logo + Title -->
+            <div class="flex flex-col items-center justify-center text-center gap-2">
+              <a href="https://grasskarma.website/" target="_blank">
+                <img src="images/grasskarma_Logo.png" alt="GrassKarma logo" class="w-16 h-16 object-contain" />
+              </a>
+              <a href="https://grasskarma.website/" target="_blank" class="text-lg font-semibold text-gradient">GrassKarma</a>
+            </div>
+
+            <!-- Right: Tick List -->
+            <div class="flex flex-col justify-center text-left flex-1 ml-12">
+              <ul class="space-y-4 text-gray-700 text-base leading-loose">
+                <li class="flex items-start space-x-3">
+                  <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Share the mow and grow the karma</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Team up with neighbors and split costs</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Keep lawns sharp with reminders and group deals</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Bottom: Progress Bar -->
+          <div class="mt-6">
+            <div class="w-full">
+              <div class="flex justify-between text-xs text-gray-500 mb-1">
+                <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
+              </div>
+              <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
+                <!-- Progress: 21% up to Prototype -->
+                <div class="h-2" style="width: 21%; background: linear-gradient(to right, #34d399, #059669);"></div>
+                <div class="bg-gray-300 h-2" style="width: 79%;"></div>
+              </div>
+            </div>
+          </div>
+          </div>
+
+
+
+          <!-- SeedStart -->
+          <div class="bg-gradient-to-br from-blue-50 to-teal-50 rounded-2xl p-8 card-hover border border-blue-100 card-fixed">
+            <!-- Top Row: Logo and Description -->
+            <div class="flex flex-col sm:flex-row gap-6">
+              <!-- Left: Logo & Title -->
+              <div class="flex flex-col items-center justify-center text-center gap-2">
+                <a href="https://seedstart.world/" target="_blank" rel="noopener noreferrer">
+                  <img src="images/seedstart_logo.png" alt="SeedStart logo" class="w-16 h-16 object-contain rounded-full" />
+                </a>
+                <a href="https://seedstart.world/" target="_blank" rel="noopener noreferrer" class="text-lg font-semibold text-gradient">
+                  SeedStart
+                </a>
               </div>
 
-             <!-- Bottom: Progress Bar full width -->
-             <div class="mt-6">
+              <!-- Right: Description with tick list -->
+              <div class="flex flex-col justify-center text-left flex-1 ml-12">
+                <ul class="space-y-4 text-gray-700 text-base leading-loose">
+                  <li class="flex items-start space-x-3">
+                    <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    <span>Turn ideas into reality with SeedSite</span>
+                  </li>
+                  <li class="flex items-start space-x-3">
+                    <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    <span>Build your team and use expert tools</span>
+                  </li>
+                  <li class="flex items-start space-x-3">
+                    <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    <span>Launch fast with support every step of the way</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Bottom: Progress Bar -->
+            <div class="mt-6">
+              <div class="flex justify-between text-xs text-gray-500 mb-1">
+                <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
+              </div>
+              <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
+                <!-- Gradient progress bar up to MVP (45%) -->
+                <div class="h-2" style="width: 45%; background: linear-gradient(to right, #60a5fa, #10b981);"></div>
+                <!-- Remaining -->
+                <div class="bg-gray-300 h-2" style="width: 55%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Free Dates -->
+          <div class="bg-gradient-to-br from-pink-50 to-orange-50 rounded-2xl p-8 card-hover border border-pink-100 card-fixed">
+            <!-- Top Row: Left & Right -->
+            <div class="flex flex-col sm:flex-row gap-6">
+              <!-- Left: Logo & Title -->
+              <div class="flex flex-col items-center justify-center text-center gap-2">
+                <a href="https://freedates.app/" target="_blank" rel="noopener noreferrer">
+                  <img src="images/freedates_Logo.png" alt="Free Dates logo" class="w-16 h-16 object-contain rounded-full" />
+                </a>
+                <a href="https://freedates.app/" target="_blank" rel="noopener noreferrer" class="text-lg font-semibold text-gradient">
+                  Free Dates
+                </a>
+              </div>
+
+              <!-- Right: Description with tick list -->
+              <div class="flex flex-col justify-center text-left flex-1 ml-12">
+                <ul class="space-y-4 text-gray-700 text-base leading-loose">
+                  <li class="flex items-start space-x-3">
+                    <svg class="w-5 h-5 text-pink-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    <span>Earn attention, not buy it — SMS only, no bots</span>
+                  </li>
+                  <li class="flex items-start space-x-3">
+                    <svg class="w-5 h-5 text-pink-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    <span>100% free and heart-based, no ghosting</span>
+                  </li>
+                  <li class="flex items-start space-x-3">
+                    <svg class="w-5 h-5 text-pink-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    <span>Build, earn, and rise in the Hearts Economy</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Bottom: Progress Bar full width -->
+            <div class="mt-6">
               <div class="w-full">
                 <div class="flex justify-between text-xs text-gray-500 mb-1">
                   <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
                 </div>
                 <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
-                  <!-- Gradient progress bar up to Prototype (21%) -->
-                  <div class="h-2" style="width: 21%; background: linear-gradient(to right, #34d399, #059669);"></div>
-                  <!-- Remaining -->
-                  <div class="bg-gray-300 h-2" style="width: 79%;"></div>
-                </div>
-                <div class="text-xs text-green-600 mt-1 font-semibold text-center">Prototype</div>
-              </div>
-            </div>
-            </div>
-
-
-            <!--Seedstart-->
-            <div class="bg-gradient-to-br from-blue-50 to-teal-50 rounded-2xl p-8 card-hover border border-blue-100 card-fixed">
-              <!-- Top Row: Left & Right -->
-              <div class="flex flex-row gap-6">
-                <!-- Left: Logo & Title -->
-                <div class="flex flex-col items-center justify-center text-center gap-2">
-                  <a href="https://seedstart.world/" target="_blank" rel="noopener noreferrer">
-                    <img src="images/seedstart_logo.png" alt="SeedStart logo" class="w-16 h-16 object-contain rounded-full" />
-                  </a>
-                  <a href="https://seedstart.world/" target="_blank" rel="noopener noreferrer" class="text-lg font-semibold text-gradient">
-                    SeedStart
-                  </a>
-                </div>
-            
-                <!-- Right: Description -->
-                <div class="flex flex-col justify-center text-left flex-1 ml-12">
-                  <ul class="space-y-5 text-gray-700 text-base leading-loose">
-                    <li class="flex items-start space-x-3">
-                      <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                      </svg>
-                      <span>Turn ideas into reality with SeedSite</span>
-                    </li>
-                    <li class="flex items-start space-x-3">
-                      <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                      </svg>
-                      <span>Build your team and use expert tools</span>
-                    </li>
-                    <li class="flex items-start space-x-3">
-                      <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                      </svg>
-                      <span>Launch fast with support every step of the way</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            
-              <!-- Bottom: Progress Bar full width -->
-              <div class="mt-6">
-                <div class="flex justify-between text-xs text-gray-500 mb-1">
-                  <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
-                </div>
-                <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
                   <!-- Gradient progress bar up to MVP (45%) -->
-                  <div class="h-2" style="width: 45%; background: linear-gradient(to right, #60a5fa, #10b981);"></div>
+                  <div class="h-2" style="width: 45%; background: linear-gradient(to right, #f87171, #e13030);"></div>
                   <!-- Remaining -->
                   <div class="bg-gray-300 h-2" style="width: 55%;"></div>
                 </div>
-                <div class="text-xs text-blue-600 mt-1 font-semibold text-center">MVP</div>
               </div>
             </div>
-            
-
-
-            <!--Free Dates-->
-            <div class="bg-gradient-to-br from-pink-50 to-orange-50 rounded-2xl p-8 card-hover border border-pink-100 card-fixed">
-              <!-- Top Row: Left & Right -->
-              <div class="flex flex-row gap-6">
-                <!-- Left: Logo & Title -->
-                <div class="flex flex-col items-center justify-center text-center gap-2">
-                  <a href="https://freedates.app/" target="_blank">
-                    <img src="images/freedates_Logo.png" alt="freedates.app logo" class="w-18 h-16 object-contain rounded-full" />
-                  </a>
-                  <a href="https://freedates.app/" target="_blank" class="text-lg font-semibold text-gradient">Free Dates</a>
-                </div>
-                <!-- Right: Description -->
-                <div class="flex flex-col justify-center text-left flex-1 ml-12">
-                  <ul class="space-y-5 text-gray-700 text-base leading-loose">
-                    <li class="flex items-start space-x-3">
-                      <svg class="w-5 h-5 text-pink-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                      </svg>
-                      <span>Earn attention, not buy it — SMS only, no bots</span>
-                    </li>
-                    <li class="flex items-start space-x-3">
-                      <svg class="w-5 h-5 text-pink-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                      </svg>
-                      <span>100% free and heart-based, no ghosting</span>
-                    </li>
-                    <li class="flex items-start space-x-3">
-                      <svg class="w-5 h-5 text-pink-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                      </svg>
-                      <span>Build, earn, and rise in the Hearts Economy</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            
-              <!-- Bottom: Progress Bar full width -->
-              <div class="mt-6">
-                <div class="flex justify-between text-xs text-gray-500 mb-1">
-                  <span>Idea</span><span>Prototype</span><span>Team</span><span>MVP</span><span>Go Live</span><span>First Client</span><span>Revenue</span>
-                </div>
-                <div class="flex w-full h-2 rounded overflow-hidden bg-gray-200">
-                  <div class="h-2" style="width: 45%; background: linear-gradient(to right, #f87171, #e13030);"></div>
-                  <div class="bg-gray-300 h-2" style="width: 55%;"></div>
-                </div>
-                <div class="text-xs text-red-600 mt-1 font-semibold text-center">MVP</div>
-              </div>
-            </div>
-            
-            </div>
+          </div>  
           </div>
+        </div>
         </div>
       </section>
 
