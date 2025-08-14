@@ -57,6 +57,11 @@
       }
     }
 
+    header img {
+      margin-top: -2px; /* nudge logo up to align better */
+    }
+    
+
     .glass-effect {
       backdrop-filter: blur(20px);
       background: rgba(255, 255, 255, 0.1);
@@ -147,11 +152,18 @@
           transform: scale(0.5);
           transform-origin: left center;
           display: inline-block;
-          margin-left: 0.05rem;  /* smaller left margin */
+          margin-left: 0.15rem;  /* smaller left margin */
         }
       }
-      
-      
+
+      /* Desktop spacing for tagline */
+      @media (min-width: 1024px) {
+        header .tagline {
+          margin-left: 2.5rem; /* or more, adjust until it looks right */
+          display: flex;
+          align-items: center; /* vertically center with logo */
+        }
+      }
 
     }
   
@@ -160,19 +172,19 @@
 
 <body class="bg-gray-50 text-gray-800">
   <header class="bg-white backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-gray-100">
-    <div class="max-w-7xl mx-auto px-4 py- sm:px-6 sm:py-2">
+    <div class="max-w-7xl mx-auto px-2 py-1 sm:px-6 sm:py-1">
       <div class="flex items-center justify-between flex-wrap">
-        <div class="flex items-center justify-between flex-wrap md:flex-nowrap md:space-x-6">
-          <a href="/" class="flex items-center space-x-2 sm:space-x-4">
+        <div class="flex items-center justify-between flex-wrap md:flex-nowrap">
+          <a href="/" class="flex items-center">
             <img
               src="images/betabuilder_gold2.png"
               alt="BetaBuilders Logo"
-              class="w-6 h-6 sm:w-12 sm:h-12 object-contain origin-left transition-transform duration-200 group-hover:scale-[1.55] sm:group-hover:scale-[1.55]"
-              style="transform: scaleX(1.275) scaleY(1.275); background: transparent;"
+              class="w-8 h-8 sm:w-14 sm:h-14 object-contain origin-left transition-transform duration-200"
+              style="transform: scaleX(1.25) scaleY(1.25); background: transparent;"
             />
           </a>
           <span
-            class="ml-3 text-xs leading-none text-gradient font-medium tracking-wide whitespace-nowrap inline-block sm:ml-10"
+            class="ml-10 sm:ml-10 text-sm sm:text-lg leading-none text-gradient font-semibold tracking-wide whitespace-nowrap inline-block"
           >
             First Pre-Startup Accelerator
           </span>
@@ -1242,7 +1254,7 @@
       <!-- Pitch to Build -->
       <div class="bg-white text-gray-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl group">
         <div class="overflow-hidden">
-          <img src="images/meetup1.jpg" alt="Pitch to Build Event" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+          <img src="images/meetup2.jpg" alt="Pitch to Build Event" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
         </div>
         <div class="p-4">
           <h4 class="text-lg font-semibold mb-2 group-hover:text-purple-600 transition-colors duration-300">Pitch to Build</h4>
@@ -1253,7 +1265,7 @@
       <!-- Founder Interview -->
       <div class="bg-white text-gray-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl group">
         <div class="overflow-hidden">
-          <img src="images/meetup2.jpg" alt="Founder Interview" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+          <img src="images/meetup4.jpeg" alt="Founder Interview" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
         </div>
         <div class="p-4">
           <h4 class="text-lg font-semibold mb-2 group-hover:text-purple-600 transition-colors duration-300">Founder Spotlight</h4>
@@ -1264,7 +1276,7 @@
       <!-- Masterclass -->
       <div class="bg-white text-gray-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl group">
         <div class="overflow-hidden">
-          <img src="images/meetup3.jpg" alt="Startup Masterclass" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+          <img src="images/meetup5.jpeg" alt="Startup Masterclass" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
         </div>
         <div class="p-4">
           <h4 class="text-lg font-semibold mb-2 group-hover:text-purple-600 transition-colors duration-300">Startup Masterclass</h4>
