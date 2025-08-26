@@ -322,6 +322,16 @@
         z-index: 10;
       }
     }
+
+    /* Fix scroll offset for sticky header */
+    html {
+      scroll-padding-top: 20px;
+    }
+
+    /* Alternative scroll margin for sections */
+    #about, #events, #startups, #founders, #volunteers, #contact, #meetup-events {
+      scroll-margin-top: 30px;
+    }
   
   </style>
 </head>
@@ -535,7 +545,7 @@
     </section>
 
     <!-- Meetup Info Section -->
-    <section id="events" class="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-12" style="scroll-margin-top: 80px;">
+    <section id="events" class="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-12">
       <div class="max-w-6xl mx-auto px-6 text-center">
         <h2 class="text-3xl md:text-4xl font-bold mb-6">Join Our Weekly Meetups</h2>
         <p class="text-xl mb-8 max-w-3xl mx-auto leading-relaxed opacity-90">
@@ -1494,7 +1504,7 @@
     </section>
 
     <!-- Meetup Events -->
-    <section id="events" class="section-padding bg-gradient-to-br from-purple-600 to-blue-600 text-white">
+    <section id="meetup-events" class="section-padding bg-gradient-to-br from-purple-600 to-blue-600 text-white">
       <div class="max-w-6xl mx-auto text-center">
         <h3 class="text-4xl md:text-5xl font-bold mb-6">Meetup Events</h3>
 
