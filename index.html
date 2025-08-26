@@ -300,18 +300,19 @@
 
     /* Mobile menu transitions */
     #mobile-menu {
-      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+      transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+      transform-origin: top right;
     }
 
     #mobile-menu.hidden {
       opacity: 0;
-      transform: translateY(-10px);
+      transform: scale(0.95) translateY(-8px);
       pointer-events: none;
     }
 
     #mobile-menu:not(.hidden) {
       opacity: 1;
-      transform: translateY(0);
+      transform: scale(1) translateY(0);
     }
 
     /* Ensure mobile menu toggle is properly positioned */
@@ -357,41 +358,39 @@
         </nav>
   
         <!-- Mobile Menu Toggle -->
-        <button
-          id="mobile-menu-toggle"
-          class="lg:hidden p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
-          aria-label="Toggle mobile menu"
-          aria-expanded="false"
-        >
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            ></path>
-          </svg>
-        </button>
+        <div class="lg:hidden relative">
+          <button
+            id="mobile-menu-toggle"
+            class="p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+            aria-label="Toggle mobile menu"
+            aria-expanded="false"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+          
+          <!-- Mobile Menu -->
+          <div id="mobile-menu" class="hidden absolute top-full right-0 mt-2 z-40 bg-white rounded-lg shadow-xl border border-gray-200 w-auto min-w-[200px]">
+            <nav class="flex flex-col py-2 px-2">
+              <a href="#about" class="nav-link text-gray-700 hover:text-purple-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors text-sm text-center">About</a>
+              <a href="#events" class="nav-link text-gray-700 hover:text-purple-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors text-sm text-center">Events</a>
+              <a href="#startups" class="nav-link text-gray-700 hover:text-purple-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors text-sm text-center">Startups</a>
+              <a href="#founders" class="nav-link text-gray-700 hover:text-purple-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors text-sm text-center">Founders</a>
+              <a href="#volunteers" class="nav-link text-gray-700 hover:text-purple-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors text-sm text-center">Volunteers</a>
+              <a href="#contact" class="nav-link text-gray-700 hover:text-purple-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors text-sm text-center">Connect</a>
+            </nav>
+          </div>
+        </div>
       </div>
     </div>
   </header>
     
-
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="lg:hidden hidden fixed top-[72px] left-0 right-0 z-40 bg-white border-b border-gray-200 shadow-lg">
-    <nav class="flex flex-col py-4 px-6 space-y-3">
-      <a href="#about" class="nav-link text-gray-700 hover:text-purple-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors">About</a>
-      <a href="#events" class="nav-link text-gray-700 hover:text-purple-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors">Events</a>
-      <a href="#startups" class="nav-link text-gray-700 hover:text-purple-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors">Startups</a>
-      <a href="#founders" class="nav-link text-gray-700 hover:text-purple-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors">Founders</a>
-      <a href="#volunteers" class="nav-link text-gray-700 hover:text-purple-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors">Volunteers</a>
-      <a href="#contact" class="nav-link text-gray-700 hover:text-purple-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors">Connect</a>
-    </nav>
-  </div>
-  
-  
-  
-
   <main>
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden" role="banner" aria-labelledby="hero-heading">
