@@ -78,6 +78,7 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="style.css" />
 
     <!-- Google tag (gtag.js) -->
     <script
@@ -197,204 +198,7 @@
       }
     </script>
 
-    <style>
-      * {
-        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
-          Roboto, sans-serif;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      .animated-gradient-bg {
-        position: absolute;
-        inset: 0;
-        z-index: 0;
-        background: linear-gradient(
-          135deg,
-          #4facfe 0%,
-          #667eea 20%,
-          #764ba2 40%,
-          #f093fb 60%,
-          #f5576c 80%,
-          #ffd700 100%
-        );
-        background-size: 400% 400%;
-        animation: gradientMove 12s ease-in-out infinite;
-        opacity: 0.9;
-      }
-
-      @keyframes gradientMove {
-        0% {
-          background-position: 0% 50%;
-        }
-
-        25% {
-          background-position: 100% 50%;
-        }
-
-        50% {
-          background-position: 100% 100%;
-        }
-
-        75% {
-          background-position: 0% 100%;
-        }
-
-        100% {
-          background-position: 0% 50%;
-        }
-      }
-
-      header img {
-        margin-top: -2px; /* nudge logo up to align better */
-      }
-
-      .glass-effect {
-        backdrop-filter: blur(20px);
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-      }
-
-      .card-hover {
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-
-      .card-hover:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-      }
-
-      .text-gradient {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-
-      .btn-primary {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px 0 rgba(102, 126, 234, 0.4);
-      }
-
-      .btn-primary:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 25px 0 rgba(102, 126, 234, 0.6);
-      }
-
-      .section-padding {
-        padding: 5rem 1rem;
-      }
-
-      @media (max-width: 768px) {
-        .section-padding {
-          padding: 3rem 1rem;
-        }
-      }
-      /* 
-      .feature-icon {
-        width: 4rem;
-        height: 4rem;
-        border-radius: 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem;
-      } */
-
-      .nav-link {
-        position: relative;
-        transition: all 0.3s ease;
-      }
-
-      .nav-link::after {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: -4px;
-        left: 50%;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        transition: all 0.3s ease;
-        transform: translateX(-50%);
-      }
-
-      .nav-link:hover::after {
-        width: 100%;
-      }
-
-      @media (min-width: 640px) {
-        .card-fixed {
-          width: 649.33px;
-          height: 312.5px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-        }
-      }
-
-      @media (max-width: 640px) {
-        .tagline-scale {
-          transform: scale(0.5);
-          transform-origin: left center;
-          display: inline-block;
-          margin-left: 0.15rem; /* smaller left margin */
-        }
-      }
-
-      /* Desktop spacing for tagline */
-      @media (min-width: 1024px) {
-        header .tagline {
-          margin-left: 2.5rem; /* or more, adjust until it looks right */
-          display: flex;
-          align-items: center; /* vertically center with logo */
-        }
-      }
-
-      /* Mobile menu transitions */
-      #mobile-menu {
-        transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
-        transform-origin: top right;
-      }
-
-      #mobile-menu.hidden {
-        opacity: 0;
-        transform: scale(0.95) translateY(-8px);
-        pointer-events: none;
-      }
-
-      #mobile-menu:not(.hidden) {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-      }
-
-      /* Ensure mobile menu toggle is properly positioned */
-      @media (max-width: 1023px) {
-        #mobile-menu-toggle {
-          position: relative;
-          z-index: 10;
-        }
-      }
-
-      /* Fix scroll offset for sticky header */
-      html {
-        scroll-padding-top: 20px;
-      }
-
-      /* Alternative scroll margin for sections */
-      #about,
-      #events,
-      #startups,
-      #founders,
-      #volunteers,
-      #contact,
-      #meetup-events {
-        scroll-margin-top: 30px;
-      }
-    </style>
+     
   </head>
 
   <body class="bg-gray-50 text-gray-800">
@@ -438,7 +242,7 @@
               >Events</a
             >
             <a
-              href="#startups"
+              href="startup.html"
               class="nav-link text-gray-700 hover:text-purple-600 font-medium"
               >Startups</a
             >
@@ -1302,13 +1106,13 @@
       </section>
 
       <!-- Featured Startups -->
-      <section
+      <!-- <section
         id="startups"
         class="relative py-24 bg-gradient-to-b from-gray-50 to-gray-100 overflow-hidden"
         role="region"
         aria-labelledby="startups-heading"
       >
-        <!-- Decorative Shapes -->
+
         <div
           class="absolute -top-32 -left-20 w-80 h-80 bg-yellow-200 opacity-20 rounded-full animate-pulse-slow"
         ></div>
@@ -1317,7 +1121,7 @@
         ></div>
 
         <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <!-- Header -->
+  
           <div class="text-center mb-20">
             <h2
               id="startups-heading"
@@ -1334,9 +1138,7 @@
             </p>
           </div>
 
-          <!-- Startups Grid -->
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            <!-- 1. JobSearchWorks -->
             <div
               class="group relative bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500"
             >
@@ -1436,7 +1238,6 @@
               </div>
             </div>
 
-            <!-- 2. QuickSite -->
             <div
               class="group relative bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500"
             >
@@ -1531,7 +1332,6 @@
               </div>
             </div>
 
-            <!-- 3. TalentHub -->
             <div
               class="group relative bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500"
             >
@@ -1634,7 +1434,6 @@
               </div>
             </div>
 
-            <!-- 4. ArtOut -->
             <div
               class="group relative bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500"
             >
@@ -1732,7 +1531,6 @@
               </div>
             </div>
 
-            <!-- 5. GrassKarma -->
             <div
               class="group relative bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500"
             >
@@ -1831,7 +1629,6 @@
               </div>
             </div>
 
-            <!-- 6. HeartFull -->
             <div
               class="group relative bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500"
             >
@@ -1930,7 +1727,6 @@
               </div>
             </div>
 
-            <!-- 7. SeedStart -->
             <div
               class="group relative bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500"
             >
@@ -2025,7 +1821,6 @@
               </div>
             </div>
 
-            <!-- 8. Buildless -->
             <div
               class="group relative bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500"
             >
@@ -2130,7 +1925,6 @@
               </div>
             </div>
 
-            <!-- 9. Peacock Dating -->
             <div
               class="group relative bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500"
             >
@@ -2236,7 +2030,6 @@
               </div>
             </div>
 
-            <!-- 10. GotJob -->
             <div
               class="group relative bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500"
             >
@@ -2248,7 +2041,6 @@
               >
                 <a href="https://gotjob.online/" target="_blank" class="mb-4">
                   <div class="bg-indigo-100 p-6 rounded-full shadow-md">
-                    <!--  <img src="images/gotjob.png" alt="GotJob Logo" class="w-24 h-24 object-contain rounded-full" /> -->
 
                     <div
                       class="bg-amber-50 p-6 rounded-full flex items-center justify-center w-24 h-24"
@@ -2335,7 +2127,6 @@
               </div>
             </div>
 
-            <!-- 11. Scrumforce -->
             <div
               class="group relative bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500"
             >
@@ -2437,7 +2228,6 @@
               </div>
             </div>
 
-            <!-- 12. CarAds -->
             <div
               class="group relative bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500"
             >
@@ -2534,7 +2324,6 @@
               </div>
             </div>
 
-            <!-- 13. DatasetLab -->
             <div
               class="group relative bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500"
             >
@@ -2634,7 +2423,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- Vacancies Section -->
       <section

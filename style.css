@@ -1,0 +1,215 @@
+* {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.animated-gradient-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    135deg,
+    #4facfe 0%,
+    #667eea 20%,
+    #764ba2 40%,
+    #f093fb 60%,
+    #f5576c 80%,
+    #ffd700 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease-in-out infinite;
+  opacity: 0.9;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  25% {
+    background-position: 100% 50%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  75% {
+    background-position: 0% 100%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+header img {
+  margin-top: -2px; /* nudge logo up to align better */
+}
+
+.glass-effect {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-icon-box {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ede9fe;
+    background: #ffffff;
+    overflow: hidden;
+    padding: 8px;
+  }
+  
+  .card-icon-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px 0 rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px 0 rgba(102, 126, 234, 0.6);
+}
+
+.section-padding {
+  padding: 5rem 1rem;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 3rem 1rem;
+  }
+}
+/* 
+.feature-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+} */
+
+.nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .card-fixed {
+    width: 649.33px;
+    height: 312.5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 640px) {
+  .tagline-scale {
+    transform: scale(0.5);
+    transform-origin: left center;
+    display: inline-block;
+    margin-left: 0.15rem; /* smaller left margin */
+  }
+}
+
+/* Desktop spacing for tagline */
+@media (min-width: 1024px) {
+  header .tagline {
+    margin-left: 2.5rem; /* or more, adjust until it looks right */
+    display: flex;
+    align-items: center; /* vertically center with logo */
+  }
+}
+
+/* Mobile menu transitions */
+#mobile-menu {
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  transform-origin: top right;
+}
+
+#mobile-menu.hidden {
+  opacity: 0;
+  transform: scale(0.95) translateY(-8px);
+  pointer-events: none;
+}
+
+#mobile-menu:not(.hidden) {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* Ensure mobile menu toggle is properly positioned */
+@media (max-width: 1023px) {
+  #mobile-menu-toggle {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+/* Fix scroll offset for sticky header */
+html {
+  scroll-padding-top: 20px;
+}
+
+/* Alternative scroll margin for sections */
+#about,
+#events,
+#startups,
+#founders,
+#volunteers,
+#contact,
+#meetup-events {
+  scroll-margin-top: 30px;
+}

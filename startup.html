@@ -1,0 +1,2460 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BetaBuilders — Featured Startups</title>
+
+    <!-- Fonts & Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/betabuilder_favicon.png" type="image/png" />
+
+    <!-- ── style.css (provided) ── -->
+    <style>
+      * {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          sans-serif;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .animated-gradient-bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background: linear-gradient(
+          135deg,
+          #4facfe 0%,
+          #667eea 20%,
+          #764ba2 40%,
+          #f093fb 60%,
+          #f5576c 80%,
+          #ffd700 100%
+        );
+        background-size: 400% 400%;
+        animation: gradientMove 12s ease-in-out infinite;
+        opacity: 0.9;
+      }
+
+      @keyframes gradientMove {
+        0% {
+          background-position: 0% 50%;
+        }
+        25% {
+          background-position: 100% 50%;
+        }
+        50% {
+          background-position: 100% 100%;
+        }
+        75% {
+          background-position: 0% 100%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      header img {
+        margin-top: -2px;
+      }
+
+      .glass-effect {
+        backdrop-filter: blur(20px);
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .card-hover {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      }
+
+      .text-gradient {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px 0 rgba(102, 126, 234, 0.4);
+      }
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px 0 rgba(102, 126, 234, 0.6);
+      }
+
+      .section-padding {
+        padding: 5rem 1rem;
+      }
+      @media (max-width: 768px) {
+        .section-padding {
+          padding: 3rem 1rem;
+        }
+      }
+
+      .nav-link {
+        position: relative;
+        transition: all 0.3s ease;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 50%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      @media (min-width: 640px) {
+        .card-fixed {
+          width: 649.33px;
+          height: 312.5px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .tagline-scale {
+          transform: scale(0.5);
+          transform-origin: left center;
+          display: inline-block;
+          margin-left: 0.15rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        header .tagline {
+          margin-left: 2.5rem;
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      #mobile-menu {
+        transition:
+          opacity 0.2s ease-in-out,
+          transform 0.2s ease-in-out;
+        transform-origin: top right;
+      }
+      #mobile-menu.hidden {
+        opacity: 0;
+        transform: scale(0.95) translateY(-8px);
+        pointer-events: none;
+      }
+      #mobile-menu:not(.hidden) {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+
+      @media (max-width: 1023px) {
+        #mobile-menu-toggle {
+          position: relative;
+          z-index: 10;
+        }
+      }
+
+      html {
+        scroll-padding-top: 20px;
+      }
+
+      #about,
+      #events,
+      #startups,
+      #founders,
+      #volunteers,
+      #contact,
+      #meetup-events {
+        scroll-margin-top: 30px;
+      }
+
+      /* ── Extra styles for the startups page ── */
+
+      /* Page hero banner */
+      .startups-hero {
+        background: linear-gradient(135deg, #f8f7ff 0%, #f0edff 100%);
+        border-bottom: 1px solid #e8e3ff;
+        padding: 4rem 1rem 3rem;
+        text-align: center;
+      }
+
+      .startups-hero h1 {
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        font-weight: 800;
+        color: #1a1333;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+      }
+
+      .startups-hero p {
+        color: #6b7280;
+        font-size: 1.1rem;
+        max-width: 580px;
+        margin: 0 auto 2rem;
+        line-height: 1.7;
+      }
+
+      /* Filter bar */
+      .filter-bar {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 0;
+      }
+
+      .filter-btn {
+        font-size: 0.8rem;
+        font-weight: 600;
+        padding: 7px 18px;
+        border-radius: 100px;
+        border: 1.5px solid #d1c9f0;
+        background: transparent;
+        color: #5b4db5;
+        cursor: pointer;
+        transition: all 0.2s;
+        letter-spacing: 0.02em;
+      }
+      .filter-btn:hover,
+      .filter-btn.active {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        border-color: transparent;
+        color: #fff;
+      }
+
+      /* Section wrapper */
+      .startups-section {
+        background: #f9f8fc;
+        padding: 4rem 1rem 5rem;
+      }
+
+      /* Startup card — full expanded layout */
+      .startup-card-full {
+        background: #ffffff;
+        border: 1px solid #ede9fe;
+        border-radius: 20px;
+        overflow: hidden;
+        transition:
+          box-shadow 0.3s,
+          transform 0.3s;
+        margin-bottom: 28px;
+      }
+      .startup-card-full:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 50px -10px rgba(102, 71, 234, 0.15);
+      }
+
+      /* Card top accent bar */
+      .card-accent-bar {
+        height: 4px;
+        width: 100%;
+      }
+
+      /* Card inner layout */
+      .card-body {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        gap: 0;
+      }
+      @media (max-width: 768px) {
+        .card-body {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Left identity panel */
+      .card-left {
+        border-right: 1px solid #f0ebff;
+        padding: 28px 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+        background: #fdfcff;
+      }
+      @media (max-width: 768px) {
+        .card-left {
+          border-right: none;
+          border-bottom: 1px solid #f0ebff;
+          flex-direction: row;
+          flex-wrap: wrap;
+          text-align: left;
+          justify-content: flex-start;
+        }
+      }
+
+      .card-icon-box {
+        width: 64px;
+        height: 64px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        border: 1px solid #ede9fe;
+        flex-shrink: 0;
+      }
+
+      .card-num {
+        font-size: 0.65rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        color: #a89fcc;
+        text-transform: uppercase;
+      }
+
+      .card-name-text {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #1a1333;
+        line-height: 1.3;
+      }
+
+      .card-category-badge {
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        border-radius: 100px;
+        border: 1.5px solid currentColor;
+      }
+
+      .visit-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 9px 20px;
+        border-radius: 100px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: #fff;
+        transition:
+          opacity 0.2s,
+          transform 0.2s;
+        box-shadow: 0 4px 14px rgba(102, 126, 234, 0.3);
+      }
+      .visit-btn:hover {
+        opacity: 0.88;
+        transform: translateY(-1px);
+      }
+
+      /* Right content panel */
+      .card-right {
+        padding: 28px 32px 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      @media (max-width: 768px) {
+        .card-right {
+          padding: 24px 20px;
+        }
+      }
+
+      .card-headline {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #1a1333;
+        line-height: 1.4;
+      }
+
+      .card-description {
+        font-size: 0.92rem;
+        color: #4b4568;
+        line-height: 1.8;
+      }
+
+      /* Problem box */
+      .problem-box {
+        background: linear-gradient(135deg, #fdf8ff, #f5f0ff);
+        border-left: 3px solid #764ba2;
+        border-radius: 0 10px 10px 0;
+        padding: 14px 18px;
+      }
+      .problem-box .problem-label {
+        font-size: 0.65rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #764ba2;
+        margin-bottom: 6px;
+        display: block;
+      }
+      .problem-box p {
+        font-size: 0.87rem;
+        color: #4b4568;
+        line-height: 1.7;
+      }
+
+      /* Features grid */
+      .features-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      @media (max-width: 640px) {
+        .features-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .feature-chip {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        background: #f8f6ff;
+        border: 1px solid #ede9fe;
+        border-radius: 10px;
+        padding: 12px 14px;
+      }
+
+      .feature-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        margin-top: 5px;
+      }
+
+      .feature-chip-text strong {
+        display: block;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: #1a1333;
+        margin-bottom: 2px;
+      }
+      .feature-chip-text span {
+        font-size: 0.8rem;
+        color: #6b7280;
+        line-height: 1.5;
+      }
+
+      /* Stage tracker */
+      .stage-tracker {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-top: 4px;
+      }
+
+      .stage-chip {
+        font-size: 0.68rem;
+        font-weight: 600;
+        padding: 4px 11px;
+        border-radius: 100px;
+        letter-spacing: 0.04em;
+      }
+      .stage-chip.done {
+        background: #1a1333;
+        color: #fff;
+      }
+      .stage-chip.current {
+        border: 1.5px solid #667eea;
+        color: #667eea;
+        background: transparent;
+      }
+      .stage-chip.next {
+        background: #f0ebff;
+        color: #a89fcc;
+      }
+
+      .stage-arrow {
+        font-size: 0.65rem;
+        color: #c4b8e8;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 text-gray-800">
+    <!-- ════════════════ HEADER (exact from index.html) ════════════════ -->
+    <header
+      class="bg-white backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-gray-100"
+    >
+      <div class="max-w-7xl mx-auto px-4 py-2 sm:px-6 sm:py-2">
+        <div class="flex items-center justify-between">
+          <!-- Logo and Tagline -->
+          <div class="flex items-center">
+            <a href="/" class="flex items-center">
+              <img
+                src="images/betabuilder_gold2.png"
+                alt="BetaBuilders Logo"
+                class="w-8 h-8 sm:w-12 sm:h-12 md:w-14 md:h-14 object-contain origin-left transition-transform duration-200"
+                style="
+                  transform: scaleX(1.25) scaleY(1.25);
+                  background: transparent;
+                "
+              />
+            </a>
+            <span
+              class="ml-14 sm:ml-16 md:ml-18 text-sm sm:text-base md:text-lg leading-none text-gradient font-semibold tracking-wide whitespace-nowrap"
+            >
+              First Pre-Startup Accelerator
+            </span>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav
+            class="hidden lg:flex space-x-6 xl:space-x-8 items-center text-sm"
+          >
+            <a
+              href="index.html#about"
+              class="nav-link text-gray-700 hover:text-purple-600 font-medium"
+              >About</a
+            >
+            <a
+              href="index.html#events"
+              class="nav-link text-gray-700 hover:text-purple-600 font-medium"
+              >Events</a
+            >
+            <a
+              href="#startups"
+              class="nav-link text-gray-700 hover:text-purple-600 font-medium"
+              >Startups</a
+            >
+            <a
+              href="index.html#vacancies"
+              class="nav-link text-gray-700 hover:text-purple-600 font-medium"
+              >Vacancies</a
+            >
+            <a
+              href="index.html#founders"
+              class="nav-link text-gray-700 hover:text-purple-600 font-medium"
+              >Founders</a
+            >
+            <a
+              href="index.html#volunteers"
+              class="nav-link text-gray-700 hover:text-purple-600 font-medium"
+              >Volunteers</a
+            >
+            <a
+              href="index.html#contact"
+              class="nav-link text-gray-700 hover:text-purple-600 font-medium"
+              >Connect</a
+            >
+          </nav>
+
+          <!-- Mobile Menu Toggle -->
+          <div class="lg:hidden relative">
+            <button
+              id="mobile-menu-toggle"
+              class="p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+              aria-label="Toggle mobile menu"
+              aria-expanded="false"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+            <div
+              id="mobile-menu"
+              class="hidden absolute top-full right-0 mt-2 z-40 bg-white rounded-lg shadow-xl border border-gray-200 w-auto min-w-[200px]"
+            >
+              <nav class="flex flex-col py-2 px-2">
+                <a
+                  href="index.html#about"
+                  class="nav-link text-gray-700 hover:text-purple-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors text-sm text-center"
+                  >About</a
+                >
+                <a
+                  href="index.html#events"
+                  class="nav-link text-gray-700 hover:text-purple-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors text-sm text-center"
+                  >Events</a
+                >
+                <a
+                  href="#startups"
+                  class="nav-link text-gray-700 hover:text-purple-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors text-sm text-center"
+                  >Startups</a
+                >
+                <a
+                  href="index.html#vacancies"
+                  class="nav-link text-gray-700 hover:text-purple-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors text-sm text-center"
+                  >Vacancies</a
+                >
+                <a
+                  href="index.html#founders"
+                  class="nav-link text-gray-700 hover:text-purple-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors text-sm text-center"
+                  >Founders</a
+                >
+                <a
+                  href="index.html#volunteers"
+                  class="nav-link text-gray-700 hover:text-purple-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors text-sm text-center"
+                  >Volunteers</a
+                >
+                <a
+                  href="index.html#contact"
+                  class="nav-link text-gray-700 hover:text-purple-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors text-sm text-center"
+                  >Connect</a
+                >
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ════════════════ END HEADER ════════════════ -->
+
+    <main>
+      <section class="relative overflow-hidden py-24">
+        <!-- Animated Background -->
+        <div class="animated-gradient-bg absolute inset-0"></div>
+
+        <!-- Content -->
+        <div
+          class="relative z-10 max-w-6xl mx-auto px-6 text-center text-white"
+        >
+          <!-- Small Label -->
+          <p
+            class="text-xs font-bold tracking-widest text-purple-300 uppercase mb-4"
+          >
+            BetaBuilders Portfolio
+          </p>
+
+          <!-- Heading -->
+          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+            Featured
+            <span
+              class="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent"
+            >
+              Startups
+            </span>
+          </h1>
+
+          <!-- Description -->
+          <p
+            class="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-12"
+          >
+            Meet the 15 innovative startups currently building with BetaBuilders
+            — from AI job tools to fashion technology, urban art, and
+            sustainable living.
+          </p>
+
+          <!-- Filter Tabs -->
+          <div class="filter-bar">
+            <button class="filter-btn active" data-cat="all">All (15)</button>
+            <button class="filter-btn" data-cat="ai">🤖 AI & Automation</button>
+            <button class="filter-btn" data-cat="career">
+              💼 Career & Hiring
+            </button>
+            <button class="filter-btn" data-cat="devtools">🛠 Dev Tools</button>
+            <button class="filter-btn" data-cat="lifestyle">
+              ✨ Lifestyle
+            </button>
+            <button class="filter-btn" data-cat="social">💬 Social</button>
+            <button class="filter-btn" data-cat="sustainability">
+              🌱 Sustainability
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- ── Page Hero ── -->
+
+      <!-- ── Startups Section ── -->
+      <section id="startups" class="startups-section">
+        <div class="max-w-5xl mx-auto" id="startups-list">
+          <!-- ─── 1. JobSearchWorks ─── -->
+          <div class="startup-card-full" data-cat="ai career">
+            <div
+              class="card-accent-bar"
+              style="background: linear-gradient(90deg, #3b82f6, #667eea)"
+            ></div>
+            <div class="card-body">
+              <div class="card-left">
+                <span class="card-num">01</span>
+                <div class="card-icon-box">
+                  <img
+                    src="images/JobSearch_Logo.png"
+                    alt="JobSearchWorks Logo"
+                  />
+                </div>
+                <div class="card-name-text">JobSearch<br />Works</div>
+                <span class="card-category-badge" style="color: #3b82f6"
+                  >AI Job Search</span
+                >
+                <a
+                  href="https://jobsearch.works/"
+                  target="_blank"
+                  class="visit-btn"
+                  >Visit Site ↗</a
+                >
+              </div>
+              <div class="card-right">
+                <div class="card-headline">
+                  Apply once — AI tailors your resume, finds matches, and
+                  submits applications for you.
+                </div>
+                <p class="card-description">
+                  JobSearchWorks is an AI-powered job application engine.
+                  Instead of spending hours copying and pasting across job
+                  boards and tweaking your resume for every role, you set your
+                  profile once and the platform takes over. It scans listings
+                  that match your skills, customises your resume and cover
+                  letter per role, and auto-submits — freeing you to focus
+                  entirely on interview preparation.
+                </p>
+                <div class="problem-box">
+                  <span class="problem-label">🎯 The Problem It Solves</span>
+                  <p>
+                    Job hunting is repetitive and demoralising. Most applicants
+                    send identical resumes to dozens of roles and hear nothing
+                    back. JobSearchWorks ensures every application is tailored,
+                    timely, and targeted — dramatically improving match rates
+                    without the manual grind.
+                  </p>
+                </div>
+                <div class="features-grid">
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #3b82f6"></div>
+                    <div class="feature-chip-text">
+                      <strong>Auto-Apply Engine</strong
+                      ><span
+                        >Finds matching jobs and submits on your behalf across
+                        multiple platforms.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #3b82f6"></div>
+                    <div class="feature-chip-text">
+                      <strong>Resume Tailoring</strong
+                      ><span
+                        >AI rewrites your resume to match each job description
+                        automatically.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #3b82f6"></div>
+                    <div class="feature-chip-text">
+                      <strong>Application Tracker</strong
+                      ><span
+                        >Monitor every application — status, follow-up dates,
+                        timelines — in one dashboard.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #3b82f6"></div>
+                    <div class="feature-chip-text">
+                      <strong>Pay Per Application</strong
+                      ><span
+                        >No monthly subscriptions or lock-in contracts — pay
+                        only for what you use.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="stage-tracker">
+                  <span class="stage-chip done">Idea</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">Prototype</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">Team</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">MVP</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip current">Go Live</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">First Client</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">Revenue</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ─── 2. QuickSite ─── -->
+          <div class="startup-card-full" data-cat="ai devtools">
+            <div
+              class="card-accent-bar"
+              style="background: linear-gradient(90deg, #10b981, #06b6d4)"
+            ></div>
+            <div class="card-body">
+              <div class="card-left">
+                <span class="card-num">02</span>
+                <div class="card-icon-box">
+                  <img src="images/Quicksite_Logo.png" alt="QuickSite Logo" />
+                </div>
+                <div class="card-name-text">Quick<br />Site</div>
+                <span class="card-category-badge" style="color: #10b981"
+                  >Website Builder</span
+                >
+                <a
+                  href="https://quicksite.space/"
+                  target="_blank"
+                  class="visit-btn"
+                  >Visit Site ↗</a
+                >
+              </div>
+              <div class="card-right">
+                <div class="card-headline">
+                  A professional website live in minutes — no code, no
+                  complexity, no friction whatsoever.
+                </div>
+                <p class="card-description">
+                  QuickSite is the fastest way for businesses, freelancers, and
+                  creators to get online. Powered by AI, the platform handles
+                  site structure, content suggestions, and design — letting you
+                  launch a polished, mobile-ready website without writing a
+                  single line of code. Fast hosting and one-click deployment
+                  mean you can go live in the very same session you start
+                  building.
+                </p>
+                <div class="problem-box">
+                  <span class="problem-label">🎯 The Problem It Solves</span>
+                  <p>
+                    Small businesses and independent creators need an online
+                    presence but lack the technical skills or budget for custom
+                    development. Existing builders are feature-bloated and slow.
+                    QuickSite strips it back to what matters: get online fast,
+                    look great, stay live.
+                  </p>
+                </div>
+                <div class="features-grid">
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #10b981"></div>
+                    <div class="feature-chip-text">
+                      <strong>AI-Powered Setup</strong
+                      ><span
+                        >Answer a few questions and your full site structure is
+                        built automatically.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #10b981"></div>
+                    <div class="feature-chip-text">
+                      <strong>Fast Secure Hosting</strong
+                      ><span
+                        >Every site is hosted on high-performance infrastructure
+                        with SSL included.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #10b981"></div>
+                    <div class="feature-chip-text">
+                      <strong>One-Click Deploy</strong
+                      ><span
+                        >Go from editing to live in seconds — no FTP, no DNS
+                        headaches required.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #10b981"></div>
+                    <div class="feature-chip-text">
+                      <strong>No-Code Editor</strong
+                      ><span
+                        >Visual drag-and-drop interface that anyone can use
+                        without any prior training.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="stage-tracker">
+                  <span class="stage-chip done">Idea</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">Prototype</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">Team</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip current">MVP</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">Go Live</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">First Client</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">Revenue</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ─── 3. TalentHub ─── -->
+          <div class="startup-card-full" data-cat="ai career">
+            <div
+              class="card-accent-bar"
+              style="background: linear-gradient(90deg, #f59e0b, #f97316)"
+            ></div>
+            <div class="card-body">
+              <div class="card-left">
+                <span class="card-num">03</span>
+                <div class="card-icon-box">
+                  <img src="images/talent_hub_logo.png" alt="TalentHub Logo" />
+                </div>
+                <div class="card-name-text">Talent<br />Hub</div>
+                <span class="card-category-badge" style="color: #f59e0b"
+                  >Talent Platform</span
+                >
+                <a
+                  href="https://talenthub.show/"
+                  target="_blank"
+                  class="visit-btn"
+                  >Visit Site ↗</a
+                >
+              </div>
+              <div class="card-right">
+                <div class="card-headline">
+                  Show who you really are — not just what's on paper. AI-powered
+                  profiles that get you hired.
+                </div>
+                <p class="card-description">
+                  TalentHub reimagines how professionals present themselves to
+                  employers. Instead of static CVs, candidates create living
+                  profiles with video introductions that capture personality,
+                  communication style, and real presence. An AI layer then
+                  analyses your recorded interviews to surface your core
+                  strengths — giving recruiters rich signal beyond keywords and
+                  job titles.
+                </p>
+                <div class="problem-box">
+                  <span class="problem-label">🎯 The Problem It Solves</span>
+                  <p>
+                    Traditional hiring is broken — great candidates get filtered
+                    out by keyword-matching algorithms before a human ever sees
+                    them. TalentHub puts the human back into hiring by letting
+                    personality and skill shine through video, while AI does the
+                    heavy lifting of matching and analysis.
+                  </p>
+                </div>
+                <div class="features-grid">
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #f59e0b"></div>
+                    <div class="feature-chip-text">
+                      <strong>Video Intro Profiles</strong
+                      ><span
+                        >Short video intros that convey personality and real
+                        communication ability.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #f59e0b"></div>
+                    <div class="feature-chip-text">
+                      <strong>AI Strength Analysis</strong
+                      ><span
+                        >AI reviews your video responses and highlights your
+                        most standout qualities.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #f59e0b"></div>
+                    <div class="feature-chip-text">
+                      <strong>Living Skill Portfolio</strong
+                      ><span
+                        >Profile auto-updates as you gain new experience and
+                        credentials over time.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #f59e0b"></div>
+                    <div class="feature-chip-text">
+                      <strong>Direct Employer Connect</strong
+                      ><span
+                        >Skip middlemen — get matched and contacted by top
+                        companies directly.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="stage-tracker">
+                  <span class="stage-chip done">Idea</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">Prototype</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">Team</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip current">MVP</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">Go Live</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">First Client</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">Revenue</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ─── 4. ArtOut ─── -->
+          <div class="startup-card-full" data-cat="social lifestyle">
+            <div
+              class="card-accent-bar"
+              style="background: linear-gradient(90deg, #f97316, #ef4444)"
+            ></div>
+            <div class="card-body">
+              <div class="card-left">
+                <span class="card-num">04</span>
+                <div class="card-icon-box">
+                  <img src="images/artout_logo.png" alt="ArtOut Logo" />
+                </div>
+                <div class="card-name-text">Art<br />Out</div>
+                <span class="card-category-badge" style="color: #f97316"
+                  >Urban Art Map</span
+                >
+                <a href="https://artout.site/" target="_blank" class="visit-btn"
+                  >Visit Site ↗</a
+                >
+              </div>
+              <div class="card-right">
+                <div class="card-headline">
+                  The world's living map of street art — snap, tag, and preserve
+                  urban creativity in real time.
+                </div>
+                <p class="card-description">
+                  ArtOut is a community-powered platform that documents and
+                  celebrates street art, graffiti, and murals globally. Users
+                  photograph public art they encounter, geotag the location
+                  instantly, and contribute to a growing world map of urban
+                  expression. No filters, no uploads required — the moment you
+                  spot it, you preserve it. ArtOut turns anyone with a phone
+                  into a guardian of public creativity.
+                </p>
+                <div class="problem-box">
+                  <span class="problem-label">🎯 The Problem It Solves</span>
+                  <p>
+                    Street art is inherently transient — pieces get painted
+                    over, walls demolished, or weathered away. There's no
+                    permanent crowd-sourced archive of this cultural heritage.
+                    ArtOut creates that record while building a passionate
+                    community who can explore art trails anywhere in the world.
+                  </p>
+                </div>
+                <div class="features-grid">
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #f97316"></div>
+                    <div class="feature-chip-text">
+                      <strong>Live Capture</strong
+                      ><span
+                        >Photograph and tag art instantly without uploads or any
+                        post-processing steps.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #f97316"></div>
+                    <div class="feature-chip-text">
+                      <strong>Geotag & Map</strong
+                      ><span
+                        >Every piece is pinned on an interactive global map for
+                        discovery and exploration.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #f97316"></div>
+                    <div class="feature-chip-text">
+                      <strong>Art Trails</strong
+                      ><span
+                        >Curated walking routes through neighbourhoods with the
+                        richest street art scenes.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #f97316"></div>
+                    <div class="feature-chip-text">
+                      <strong>Community Archive</strong
+                      ><span
+                        >A permanent, searchable record of street art history
+                        preserved for future generations.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="stage-tracker">
+                  <span class="stage-chip done">Idea</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">Prototype</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip current">Team</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">MVP</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">Go Live</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">First Client</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">Revenue</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ─── 5. GrassKarma ─── -->
+          <div
+            class="startup-card-full"
+            data-cat="sustainability social lifestyle"
+          >
+            <div
+              class="card-accent-bar"
+              style="background: linear-gradient(90deg, #22c55e, #84cc16)"
+            ></div>
+            <div class="card-body">
+              <div class="card-left">
+                <span class="card-num">05</span>
+                <div class="card-icon-box">
+                  <img src="images/grasskarma_logo.png" alt="GrassKarma Logo" />
+                </div>
+                <div class="card-name-text">Grass<br />Karma</div>
+                <span class="card-category-badge" style="color: #22c55e"
+                  >Community App</span
+                >
+                <a
+                  href="https://grasskarma.website/"
+                  target="_blank"
+                  class="visit-btn"
+                  >Visit Site ↗</a
+                >
+              </div>
+              <div class="card-right">
+                <div class="card-headline">
+                  Neighbourhood lawn care reimagined — share the mow, split the
+                  cost, grow the community karma.
+                </div>
+                <p class="card-description">
+                  GrassKarma is a hyper-local app that turns lawn maintenance
+                  into a collaborative neighbourhood activity. Instead of every
+                  household paying full price for individual lawn care,
+                  GrassKarma helps neighbours coordinate, share equipment, pool
+                  resources, and split costs. A karma points system rewards
+                  helpful neighbours — building genuine reciprocity and
+                  community goodwill.
+                </p>
+                <div class="problem-box">
+                  <span class="problem-label">🎯 The Problem It Solves</span>
+                  <p>
+                    Lawn care is expensive when every household goes it alone,
+                    and scheduling is chaotic. GrassKarma reduces cost through
+                    group bookings, eliminates the hassle with automated
+                    reminders, and turns a mundane chore into a reason for
+                    neighbours to connect and help each other.
+                  </p>
+                </div>
+                <div class="features-grid">
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #22c55e"></div>
+                    <div class="feature-chip-text">
+                      <strong>Group Bookings</strong
+                      ><span
+                        >Neighbours pool together to book shared lawn services
+                        at reduced group rates.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #22c55e"></div>
+                    <div class="feature-chip-text">
+                      <strong>Cost Splitting</strong
+                      ><span
+                        >Automatic cost division across participating households
+                        — no awkward conversations.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #22c55e"></div>
+                    <div class="feature-chip-text">
+                      <strong>Karma Points</strong
+                      ><span
+                        >Earn and redeem points for contributing to your
+                        neighbours' lawn care efforts.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #22c55e"></div>
+                    <div class="feature-chip-text">
+                      <strong>Smart Reminders</strong
+                      ><span
+                        >Seasonal and weather-based alerts to keep your lawn
+                        schedule perfectly on track.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="stage-tracker">
+                  <span class="stage-chip done">Idea</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">Prototype</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip current">Team</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">MVP</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">Go Live</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">First Client</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">Revenue</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ─── 6. HeartFull ─── -->
+          <div class="startup-card-full" data-cat="social">
+            <div
+              class="card-accent-bar"
+              style="background: linear-gradient(90deg, #ec4899, #f43f5e)"
+            ></div>
+            <div class="card-body">
+              <div class="card-left">
+                <span class="card-num">06</span>
+                <div class="card-icon-box">
+                  <img src="images/heart_logo.png" alt="HeartFull Logo" />
+                </div>
+                <div class="card-name-text">Heart<br />Full</div>
+                <span class="card-category-badge" style="color: #ec4899"
+                  >Social Economy</span
+                >
+                <a
+                  href="https://heartfull.online/"
+                  target="_blank"
+                  class="visit-btn"
+                  >Visit Site ↗</a
+                >
+              </div>
+              <div class="card-right">
+                <div class="card-headline">
+                  A social platform where attention is earned — not bought. Real
+                  connections, zero bots, no ghosting.
+                </div>
+                <p class="card-description">
+                  HeartFull is a radical rethink of social interaction online.
+                  Built on a "Hearts Economy," it replaces algorithmic feeds and
+                  paid promotion with a system where meaningful engagement earns
+                  you real visibility. SMS-only connectivity keeps interactions
+                  human and eliminates bots entirely. You rise by being
+                  genuinely helpful and present — not by paying for ads or
+                  gaming algorithms.
+                </p>
+                <div class="problem-box">
+                  <span class="problem-label">🎯 The Problem It Solves</span>
+                  <p>
+                    Social media today rewards performance over substance. Bots
+                    flood platforms, ghosting is rampant, and the loudest voices
+                    are those who pay the most. HeartFull resets the rules —
+                    your reputation is built by the quality of your engagement,
+                    not your advertising budget.
+                  </p>
+                </div>
+                <div class="features-grid">
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #ec4899"></div>
+                    <div class="feature-chip-text">
+                      <strong>Hearts Economy</strong
+                      ><span
+                        >A reputation currency earned through genuine, valued
+                        interactions — never purchased.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #ec4899"></div>
+                    <div class="feature-chip-text">
+                      <strong>SMS-Only Connections</strong
+                      ><span
+                        >Real phone-verified identities eliminate bots and fake
+                        accounts entirely from the platform.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #ec4899"></div>
+                    <div class="feature-chip-text">
+                      <strong>Anti-Ghosting Design</strong
+                      ><span
+                        >Platform mechanics actively discourage ignoring
+                        connections you've already made.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #ec4899"></div>
+                    <div class="feature-chip-text">
+                      <strong>100% Free to Use</strong
+                      ><span
+                        >No ads, no pay-to-play — the entire value system is
+                        built on authentic engagement only.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="stage-tracker">
+                  <span class="stage-chip done">Idea</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">Prototype</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">Team</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">MVP</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip current">Go Live</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">First Client</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">Revenue</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ─── 7. SeedStart ─── -->
+          <div class="startup-card-full" data-cat="devtools ai">
+            <div
+              class="card-accent-bar"
+              style="background: linear-gradient(90deg, #16a34a, #4ade80)"
+            ></div>
+            <div class="card-body">
+              <div class="card-left">
+                <span class="card-num">07</span>
+                <div class="card-icon-box">
+                  <img src="images/seedstart_space.png" alt="SeedStart Logo" />
+                </div>
+                <div class="card-name-text">Seed<br />Start</div>
+                <span class="card-category-badge" style="color: #16a34a"
+                  >Startup Toolkit</span
+                >
+                <a
+                  href="https://seedstart.space/"
+                  target="_blank"
+                  class="visit-btn"
+                  >Visit Site ↗</a
+                >
+              </div>
+              <div class="card-right">
+                <div class="card-headline">
+                  From napkin sketch to live product — every tool, team
+                  resource, and expert support in one place.
+                </div>
+                <p class="card-description">
+                  SeedStart is an all-in-one launchpad designed specifically for
+                  earliest-stage founders. It combines a landing-page builder
+                  (SeedSite), a team-building toolkit, expert-curated playbooks,
+                  and structured support at every milestone. Whether you have a
+                  rough idea or a working prototype, SeedStart provides the
+                  scaffolding to move forward confidently without needing a
+                  technical co-founder or venture funding.
+                </p>
+                <div class="problem-box">
+                  <span class="problem-label">🎯 The Problem It Solves</span>
+                  <p>
+                    Most founders with genuine ideas fail not because the idea
+                    is bad, but because they don't know their next step.
+                    SeedStart removes that uncertainty with a proven
+                    step-by-step framework that takes you from concept to
+                    launched product — with expert support baked in at each
+                    phase.
+                  </p>
+                </div>
+                <div class="features-grid">
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #16a34a"></div>
+                    <div class="feature-chip-text">
+                      <strong>SeedSite Builder</strong
+                      ><span
+                        >Create a launch-ready startup website to attract users,
+                        investors, and team members.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #16a34a"></div>
+                    <div class="feature-chip-text">
+                      <strong>Team Builder</strong
+                      ><span
+                        >Find co-founders and early team members who are aligned
+                        with your vision and stage.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #16a34a"></div>
+                    <div class="feature-chip-text">
+                      <strong>Expert Playbooks</strong
+                      ><span
+                        >Curated startup frameworks and guides from founders
+                        who've already been through it.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #16a34a"></div>
+                    <div class="feature-chip-text">
+                      <strong>Milestone Support</strong
+                      ><span
+                        >Structured check-ins and resources at each stage from
+                        initial idea all the way to revenue.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="stage-tracker">
+                  <span class="stage-chip done">Idea</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">Prototype</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">Team</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip current">MVP</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">Go Live</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">First Client</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">Revenue</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ─── 8. Buildless ─── -->
+          <div class="startup-card-full" data-cat="devtools">
+            <div
+              class="card-accent-bar"
+              style="background: linear-gradient(90deg, #3b82f6, #06b6d4)"
+            ></div>
+            <div class="card-body">
+              <div class="card-left">
+                <span class="card-num">08</span>
+                <div class="card-icon-box">
+                  <img src="images/builders.png" alt="Buildless Logo" />
+                </div>
+                <div class="card-name-text">Build<br />less</div>
+                <span class="card-category-badge" style="color: #3b82f6"
+                  >Dev Framework</span
+                >
+                <a
+                  href="https://buildless.online/"
+                  target="_blank"
+                  class="visit-btn"
+                  >Visit Site ↗</a
+                >
+              </div>
+              <div class="card-right">
+                <div class="card-headline">
+                  Build full web apps with JSON and JavaScript — no HTML, no
+                  build tools, no configuration at all.
+                </div>
+                <p class="card-description">
+                  Buildless is a developer framework that strips web application
+                  development back to its essentials. Developers describe their
+                  UI in JSON and logic in plain JavaScript — the platform
+                  handles the rest. Authentication, real-time data syncing, and
+                  storage are all built-in with zero setup. It's designed for
+                  developers who want to ship ideas at idea speed, without the
+                  ceremony of modern frontend stacks.
+                </p>
+                <div class="problem-box">
+                  <span class="problem-label">🎯 The Problem It Solves</span>
+                  <p>
+                    Modern web development has become intimidatingly complex —
+                    choosing a framework, configuring build pipelines, managing
+                    auth libraries, and wiring up databases takes days before
+                    you write a single feature. Buildless collapses this entire
+                    setup to near-zero, letting developers prototype and ship
+                    immediately.
+                  </p>
+                </div>
+                <div class="features-grid">
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #3b82f6"></div>
+                    <div class="feature-chip-text">
+                      <strong>JSON-Driven UI</strong
+                      ><span
+                        >Describe your entire interface in JSON — no HTML markup
+                        required whatsoever.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #3b82f6"></div>
+                    <div class="feature-chip-text">
+                      <strong>Built-in Auth</strong
+                      ><span
+                        >Authentication is ready out of the box — no external
+                        library configuration needed.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #3b82f6"></div>
+                    <div class="feature-chip-text">
+                      <strong>Real-Time Data</strong
+                      ><span
+                        >Live data syncing built in — no external WebSocket or
+                        polling configuration required.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #3b82f6"></div>
+                    <div class="feature-chip-text">
+                      <strong>Zero Build Tools</strong
+                      ><span
+                        >No webpack, no bundlers, no transpilers — just write
+                        your code and run it directly.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="stage-tracker">
+                  <span class="stage-chip done">Idea</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">Prototype</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">Team</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip current">MVP</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">Go Live</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">First Client</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">Revenue</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ─── 9. Peacock Dating ─── -->
+          <div class="startup-card-full" data-cat="social lifestyle">
+            <div
+              class="card-accent-bar"
+              style="background: linear-gradient(90deg, #06b6d4, #22c55e)"
+            ></div>
+            <div class="card-body">
+              <div class="card-left">
+                <span class="card-num">09</span>
+                <div class="card-icon-box">
+                  <img src="images/peacock_logo.png" alt="Peacock Dating Logo" />
+                </div>
+                <div class="card-name-text">Peacock<br />Dating</div>
+                <span class="card-category-badge" style="color: #06b6d4"
+                  >Dating App</span
+                >
+                <a
+                  href="https://peacockdating.online/"
+                  target="_blank"
+                  class="visit-btn"
+                  >Visit Site ↗</a
+                >
+              </div>
+              <div class="card-right">
+                <div class="card-headline">
+                  Ditch the filter. Show up as yourself — video-first dating
+                  that matches on personality, not poses.
+                </div>
+                <p class="card-description">
+                  Peacock Dating is an authenticity-first platform that replaces
+                  staged profile photos and shallow swiping with video-first
+                  profiles that let your real self come through. Users record
+                  short videos that capture their humour, energy, and
+                  communication style. The platform then surfaces compatible
+                  matches based on genuine personality signals — connecting
+                  people who'll actually appreciate who you really are.
+                </p>
+                <div class="problem-box">
+                  <span class="problem-label">🎯 The Problem It Solves</span>
+                  <p>
+                    Most dating apps create anxiety about how you look in a 2D
+                    photo rather than whether you'll actually click with
+                    someone. Catfishing, misleading profiles, and swiping
+                    fatigue are rampant. Peacock resets expectations by making
+                    authenticity the core feature — what you see is genuinely
+                    what you get.
+                  </p>
+                </div>
+                <div class="features-grid">
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #06b6d4"></div>
+                    <div class="feature-chip-text">
+                      <strong>Video-First Profiles</strong
+                      ><span
+                        >Short intro videos showing personality, voice, and real
+                        energy — not just static photos.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #06b6d4"></div>
+                    <div class="feature-chip-text">
+                      <strong>Personality Matching</strong
+                      ><span
+                        >Compatibility signals drawn from communication style,
+                        not just stated profile preferences.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #06b6d4"></div>
+                    <div class="feature-chip-text">
+                      <strong>No Filter Culture</strong
+                      ><span
+                        >Platform norms actively encourage unedited, genuine
+                        self-presentation from every user.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #06b6d4"></div>
+                    <div class="feature-chip-text">
+                      <strong>Style Appreciation</strong
+                      ><span
+                        >Match with people who specifically value and appreciate
+                        your unique aesthetic and personality.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="stage-tracker">
+                  <span class="stage-chip done">Idea</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">Prototype</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">Team</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip current">MVP</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">Go Live</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">First Client</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">Revenue</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ─── 10. GotJob ─── -->
+          <div class="startup-card-full" data-cat="ai career">
+            <div
+              class="card-accent-bar"
+              style="background: linear-gradient(90deg, #6c47ff, #8b5cf6)"
+            ></div>
+            <div class="card-body">
+              <div class="card-left">
+                <span class="card-num">10</span>
+                <div class="card-icon-box">
+                  <img src="images/gotjob_online_logo.jpg" alt="GotJob Logo" />
+                </div>
+                <div class="card-name-text">Got<br />Job</div>
+                <span class="card-category-badge" style="color: #8b5cf6"
+                  >Career Platform</span
+                >
+                <a
+                  href="https://gotjob.online/"
+                  target="_blank"
+                  class="visit-btn"
+                  >Visit Site ↗</a
+                >
+              </div>
+              <div class="card-right">
+                <div class="card-headline">
+                  Land a job in 7 days — or your money back. AI matching,
+                  personal coaching, and full interview prep.
+                </div>
+                <p class="card-description">
+                  GotJob is a results-guaranteed career platform that backs its
+                  AI-powered job matching with a bold promise: get hired within
+                  7 days or receive a full refund. The platform combines
+                  intelligent job matching with personalised career coaching and
+                  comprehensive interview preparation — so it's not just about
+                  finding the right role, it's about making absolutely sure
+                  you're ready to land it when it comes.
+                </p>
+                <div class="problem-box">
+                  <span class="problem-label">🎯 The Problem It Solves</span>
+                  <p>
+                    Job seekers spend months applying with no feedback loop, no
+                    coaching, and no guarantee of outcome. GotJob flips this
+                    with accountability baked into the business model — if it
+                    doesn't work, you don't pay. This forces the platform to
+                    deliver quality matches and real preparation, not just
+                    application volume.
+                  </p>
+                </div>
+                <div class="features-grid">
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #8b5cf6"></div>
+                    <div class="feature-chip-text">
+                      <strong>7-Day Guarantee</strong
+                      ><span
+                        >Get hired in a week or receive your full money back —
+                        no questions asked, ever.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #8b5cf6"></div>
+                    <div class="feature-chip-text">
+                      <strong>AI Job Matching</strong
+                      ><span
+                        >Intelligent role matching based on your skills,
+                        experience level, and career trajectory.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #8b5cf6"></div>
+                    <div class="feature-chip-text">
+                      <strong>Career Coaching</strong
+                      ><span
+                        >Personalised 1:1 guidance from experienced career
+                        coaches throughout your entire journey.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #8b5cf6"></div>
+                    <div class="feature-chip-text">
+                      <strong>Interview Prep</strong
+                      ><span
+                        >Role-specific mock interviews and detailed feedback
+                        loops to sharpen your performance.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="stage-tracker">
+                  <span class="stage-chip done">Idea</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">Prototype</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">Team</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip current">MVP</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">Go Live</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">First Client</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">Revenue</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ─── 11. Scrumforce ─── -->
+          <div class="startup-card-full" data-cat="ai devtools">
+            <div
+              class="card-accent-bar"
+              style="background: linear-gradient(90deg, #22c55e, #3b82f6)"
+            ></div>
+            <div class="card-body">
+              <div class="card-left">
+                <span class="card-num">11</span>
+                <div class="card-icon-box">
+                  <img src="images/scrum_force.png" alt="Scrumforce Logo" />
+                </div>
+                <div class="card-name-text">Scrum<br />force</div>
+                <span class="card-category-badge" style="color: #22c55e"
+                  >Agile Tools</span
+                >
+                <a
+                  href="https://scrumforce.online/"
+                  target="_blank"
+                  class="visit-btn"
+                  >Visit Site ↗</a
+                >
+              </div>
+              <div class="card-right">
+                <div class="card-headline">
+                  AI-powered agile management that predicts bottlenecks before
+                  they can ever derail your sprint.
+                </div>
+                <p class="card-description">
+                  Scrumforce supercharges agile development teams with an AI
+                  layer on top of traditional scrum workflows. Rather than just
+                  tracking tasks, the platform analyses sprint velocity, team
+                  capacity, and historical patterns to automate planning,
+                  surface risks early, and prevent last-minute scrambles that
+                  derail delivery. It's designed for teams who've outgrown basic
+                  kanban boards but don't want enterprise project management
+                  complexity.
+                </p>
+                <div class="problem-box">
+                  <span class="problem-label">🎯 The Problem It Solves</span>
+                  <p>
+                    Most agile tools are reactive — they show you what went
+                    wrong after a sprint ends. Scrumforce is proactive. Its
+                    predictive engine flags blockers before they become crises,
+                    helping teams actually ship on time instead of just
+                    retrospecting on why they didn't.
+                  </p>
+                </div>
+                <div class="features-grid">
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #22c55e"></div>
+                    <div class="feature-chip-text">
+                      <strong>Predictive Analytics</strong
+                      ><span
+                        >AI flags sprint risks and blockers before they have any
+                        impact on your delivery.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #22c55e"></div>
+                    <div class="feature-chip-text">
+                      <strong>Auto Sprint Planning</strong
+                      ><span
+                        >Automatically generates sprint plans based on velocity
+                        data and team capacity.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #22c55e"></div>
+                    <div class="feature-chip-text">
+                      <strong>Velocity Tracking</strong
+                      ><span
+                        >Visual dashboards showing team output trends and
+                        forecast accuracy over time.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #22c55e"></div>
+                    <div class="feature-chip-text">
+                      <strong>AI Insights Feed</strong
+                      ><span
+                        >Continuous plain-English recommendations to keep your
+                        team productive and unblocked.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="stage-tracker">
+                  <span class="stage-chip done">Idea</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">Prototype</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">Team</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip current">MVP</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">Go Live</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">First Client</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">Revenue</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ─── 12. CarAds ─── -->
+          <div class="startup-card-full" data-cat="lifestyle social">
+            <div
+              class="card-accent-bar"
+              style="background: linear-gradient(90deg, #3b82f6, #2563eb)"
+            ></div>
+            <div class="card-body">
+              <div class="card-left">
+                <span class="card-num">12</span>
+                <div class="card-icon-box">
+                  <img src="images/car_ads.png" alt="CarAds Logo" />
+                </div>
+                <div class="card-name-text">Car<br />Ads</div>
+                <span class="card-category-badge" style="color: #3b82f6"
+                  >P2P Car Rental</span
+                >
+                <a
+                  href="https://carads.online/"
+                  target="_blank"
+                  class="visit-btn"
+                  >Visit Site ↗</a
+                >
+              </div>
+              <div class="card-right">
+                <div class="card-headline">
+                  Rent a car from your neighbour. Earn money when yours sits
+                  idle. Local, instant, and fully verified.
+                </div>
+                <p class="card-description">
+                  CarAds is a peer-to-peer car rental marketplace connecting
+                  local car owners with drivers who need a vehicle — at prices
+                  far below traditional rental agencies. Owners list their cars
+                  during idle periods and earn passive income. Renters get
+                  instant access to a verified, diverse local fleet. No agency
+                  markup, no corporate overhead — just community-powered
+                  mobility that works for everyone.
+                </p>
+                <div class="problem-box">
+                  <span class="problem-label">🎯 The Problem It Solves</span>
+                  <p>
+                    Traditional car rental is expensive, impersonal, and
+                    inconvenient. Meanwhile, privately owned cars sit unused for
+                    95% of their lives. CarAds closes this gap by turning idle
+                    assets into accessible, affordable mobility — creating value
+                    for both owners and renters in the same neighbourhood.
+                  </p>
+                </div>
+                <div class="features-grid">
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #3b82f6"></div>
+                    <div class="feature-chip-text">
+                      <strong>Instant Booking</strong
+                      ><span
+                        >Browse nearby cars and book within minutes — no advance
+                        notice or reservation required.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #3b82f6"></div>
+                    <div class="feature-chip-text">
+                      <strong>Verified Owners</strong
+                      ><span
+                        >Every owner and vehicle is ID-verified before being
+                        listed on the platform for safety.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #3b82f6"></div>
+                    <div class="feature-chip-text">
+                      <strong>Passive Income</strong
+                      ><span
+                        >Car owners earn money on every booking whenever their
+                        vehicle isn't in active use.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #3b82f6"></div>
+                    <div class="feature-chip-text">
+                      <strong>Local-First</strong
+                      ><span
+                        >Hyper-local search surfaces cars within walking
+                        distance whenever possible for renters.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="stage-tracker">
+                  <span class="stage-chip done">Idea</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">Prototype</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">Team</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip current">MVP</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">Go Live</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">First Client</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">Revenue</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ─── 13. DatasetLab ─── -->
+          <div class="startup-card-full" data-cat="ai devtools">
+            <div
+              class="card-accent-bar"
+              style="background: linear-gradient(90deg, #16a34a, #4ade80)"
+            ></div>
+            <div class="card-body">
+              <div class="card-left">
+                <span class="card-num">13</span>
+                <div class="card-icon-box">
+                  <img src="images/data_lab.png" alt="DatasetLab Logo" />
+                </div>
+                <div class="card-name-text">Dataset<br />Lab</div>
+                <span class="card-category-badge" style="color: #16a34a"
+                  >AI / Data</span
+                >
+                <a
+                  href="https://datasetlab.org/"
+                  target="_blank"
+                  class="visit-btn"
+                  >Visit Site ↗</a
+                >
+              </div>
+              <div class="card-right">
+                <div class="card-headline">
+                  The collaborative platform for creating, cleaning, validating,
+                  and monetizing AI training datasets.
+                </div>
+                <p class="card-description">
+                  DatasetLab is a purpose-built platform for AI teams who need
+                  high-quality training data. It combines AI-assisted data
+                  creation and cleaning tools with automated quality validation,
+                  scoring pipelines, and a community marketplace where teams can
+                  publish and monetize datasets. As AI development accelerates,
+                  the quality and availability of training data has become a
+                  critical bottleneck — DatasetLab directly addresses that gap.
+                </p>
+                <div class="problem-box">
+                  <span class="problem-label">🎯 The Problem It Solves</span>
+                  <p>
+                    Building quality AI training datasets is one of the most
+                    time-consuming and undervalued parts of machine learning
+                    development. Teams waste weeks on data wrangling,
+                    annotation, and quality checks. DatasetLab automates the
+                    tedious parts and creates a collaborative ecosystem where
+                    high-quality datasets can be shared, reused, and monetized.
+                  </p>
+                </div>
+                <div class="features-grid">
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #16a34a"></div>
+                    <div class="feature-chip-text">
+                      <strong>AI-Assisted Creation</strong
+                      ><span
+                        >Rapidly generate and curate labelled training data
+                        using AI-guided workflows.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #16a34a"></div>
+                    <div class="feature-chip-text">
+                      <strong>Auto Validation</strong
+                      ><span
+                        >Automated quality checks flag inconsistencies,
+                        duplicates, and labelling errors instantly.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #16a34a"></div>
+                    <div class="feature-chip-text">
+                      <strong>Quality Scoring</strong
+                      ><span
+                        >Every dataset receives a standardized score for
+                        reliable, trustworthy benchmarking.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #16a34a"></div>
+                    <div class="feature-chip-text">
+                      <strong>Data Marketplace</strong
+                      ><span
+                        >Publish and monetize your datasets — or access
+                        community-built ones for your projects.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="stage-tracker">
+                  <span class="stage-chip done">Idea</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">Prototype</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">Team</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip current">MVP</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">Go Live</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">First Client</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">Revenue</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ─── 14. MyLife ─── -->
+          <div class="startup-card-full" data-cat="lifestyle ai">
+            <div
+              class="card-accent-bar"
+              style="background: linear-gradient(90deg, #f59e0b, #10b981)"
+            ></div>
+            <div class="card-body">
+              <div class="card-left">
+                <span class="card-num">14</span>
+                <div class="card-icon-box">
+                  <img src="images/mylife.png" alt="Startup Name Logo" />
+                </div>
+                <div class="card-name-text">My<br />Life</div>
+                <span class="card-category-badge" style="color: #f59e0b"
+                  >Wellness & Goals</span
+                >
+                <a
+                  href="https://brightside-life.github.io/website/"
+                  target="_blank"
+                  class="visit-btn"
+                  >Visit Site ↗</a
+                >
+              </div>
+              <div class="card-right">
+                <div class="card-headline">
+                  See your life in real perspective — a live countdown that
+                  turns mortality awareness into daily motivation.
+                </div>
+                <p class="card-description">
+                  MyLife is a life visualisation and intentional-living platform
+                  that shows your remaining time as a live, ticking countdown —
+                  personalised to your age, country, gender, and health habits.
+                  Far from morbid, the experience is designed to be deeply
+                  motivating: when you can actually see time passing, you make
+                  better choices about how you spend it. Goal tracking with
+                  visual progress bars ensures your ambitions keep pace with
+                  your actual timeline.
+                </p>
+                <div class="problem-box">
+                  <span class="problem-label">🎯 The Problem It Solves</span>
+                  <p>
+                    Most people live as if they have unlimited time, constantly
+                    deferring goals and dreams to some abstract future. MyLife
+                    makes time tangible — not as a source of anxiety, but as a
+                    clarifying force. When you see 47 years, 3 months, and 21
+                    days remaining, the question "what am I actually doing with
+                    this?" becomes very real.
+                  </p>
+                </div>
+                <div class="features-grid">
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #f59e0b"></div>
+                    <div class="feature-chip-text">
+                      <strong>Live Life Timer</strong
+                      ><span
+                        >Real-time countdown of your estimated years, months,
+                        days, hours, and seconds remaining.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #f59e0b"></div>
+                    <div class="feature-chip-text">
+                      <strong>Goal Tracking</strong
+                      ><span
+                        >Set life goals with deadlines and see if your progress
+                        is keeping pace with time elapsed.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #f59e0b"></div>
+                    <div class="feature-chip-text">
+                      <strong>Health Personalisation</strong
+                      ><span
+                        >Adjust life expectancy by BMI, exercise frequency,
+                        smoking status, and lifestyle habits.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #f59e0b"></div>
+                    <div class="feature-chip-text">
+                      <strong>WHO Country Data</strong
+                      ><span
+                        >Life expectancy calculations using real WHO data across
+                        60+ countries and genders.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="stage-tracker">
+                  <span class="stage-chip done">Idea</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">Prototype</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">Team</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">MVP</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">Go Live</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip current">First Client</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">Revenue</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ─── 15. Shop Your Closet ─── -->
+          <div class="startup-card-full" data-cat="ai lifestyle sustainability">
+            <div
+              class="card-accent-bar"
+              style="background: linear-gradient(90deg, #ec4899, #8b5cf6)"
+            ></div>
+            <div class="card-body">
+              <div class="card-left">
+                <span class="card-num">15</span>
+                <div class="card-icon-box">
+                  <img src="images/shop_your_closet.png" alt="Shop Your Closet Logo" />
+                </div>
+                <div class="card-name-text">Shop Your<br />Closet</div>
+                <span class="card-category-badge" style="color: #ec4899"
+                  >Fashion AI</span
+                >
+                <a
+                  href="https://shopyourcloset.github.io/website/"
+                  target="_blank"
+                  class="visit-btn"
+                  >Visit Site ↗</a
+                >
+              </div>
+              <div class="card-right">
+                <div class="card-headline">
+                  Stop buying. Start wearing. AI finds amazing outfits you
+                  forgot you owned — saving money, time, and the planet.
+                </div>
+                <p class="card-description">
+                  Shop Your Closet is an AI-powered wardrobe styling platform
+                  that solves one of fashion's great paradoxes: full closets and
+                  nothing to wear. Users photograph their existing clothes and
+                  the platform's AI organises them into a digital wardrobe, then
+                  generates personalised daily outfit combinations based on
+                  style preferences, occasion, and even weather. No shopping
+                  links, no trend chasing — just smarter use of what you already
+                  own and a genuine reduction in fast fashion consumption.
+                </p>
+                <div class="problem-box">
+                  <span class="problem-label">🎯 The Problem It Solves</span>
+                  <p>
+                    The average person wears only 20% of their wardrobe
+                    regularly. The rest drives impulse purchases and mounting
+                    fashion waste. Shop Your Closet doesn't sell you more
+                    clothes — it helps you discover and love the ones you
+                    already have. Users save an average of $1,800/year and
+                    reduce their fashion footprint by 60%.
+                  </p>
+                </div>
+                <div class="features-grid">
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #ec4899"></div>
+                    <div class="feature-chip-text">
+                      <strong>Smart Cataloging</strong
+                      ><span
+                        >Snap photos and AI instantly categorises items by type,
+                        colour, and season automatically.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #ec4899"></div>
+                    <div class="feature-chip-text">
+                      <strong>AI Outfit Generator</strong
+                      ><span
+                        >Daily personalised outfit suggestions tailored to your
+                        style, occasion, and current weather.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #ec4899"></div>
+                    <div class="feature-chip-text">
+                      <strong>Wardrobe Analytics</strong
+                      ><span
+                        >See what you wear most, identify gaps, and make
+                        smarter, more intentional purchases.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="feature-chip">
+                    <div class="feature-dot" style="background: #ec4899"></div>
+                    <div class="feature-chip-text">
+                      <strong>Outfit Calendar</strong
+                      ><span
+                        >Plan your outfits a full week ahead — no more stressful
+                        morning decision paralysis ever.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="stage-tracker">
+                  <span class="stage-chip done">Idea</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">Prototype</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">Team</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip done">MVP</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip current">Go Live</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">First Client</span
+                  ><span class="stage-arrow">›</span>
+                  <span class="stage-chip next">Revenue</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /startups-list -->
+      </section>
+
+      <!-- CTA Strip -->
+      <section
+        class="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-14 text-center px-4"
+      >
+        <h2 class="text-2xl md:text-3xl font-bold mb-3">
+          Want to build the next one?
+        </h2>
+        <p class="text-white opacity-90 mb-6 max-w-xl mx-auto">
+          Join BetaBuilders as a volunteer or submit your own startup idea. Free
+          coaching, free team, free launch support.
+        </p>
+        <div class="flex gap-4 justify-center flex-wrap">
+          <a
+            href="https://betabuilders.org/#volunteers"
+            target="_blank"
+            class="btn-primary text-white px-7 py-3 rounded-full font-semibold inline-block"
+            >Start Volunteering →</a
+          >
+          <a
+            href="https://betabuilders.org/#founders"
+            target="_blank"
+            class="glass-effect text-white px-7 py-3 rounded-full font-semibold inline-block hover:bg-white hover:bg-opacity-20 transition"
+            >Submit Your Startup →</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <!-- ════════════════ FOOTER (exact from index.html) ════════════════ -->
+    <footer>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="text-center py-8 border-t border-gray-200 text-gray-500 text-sm"
+        >
+          <p>
+            © 2025 BetaBuilders. Built by volunteers. &nbsp;·&nbsp;
+            <a
+              href="https://www.linkedin.com/company/beta-builders-club"
+              target="_blank"
+              class="hover:text-purple-600 transition"
+              >LinkedIn</a
+            >
+            &nbsp;·&nbsp;
+            <a
+              href="https://www.meetup.com/it-volunteers-and-interns/"
+              target="_blank"
+              class="hover:text-purple-600 transition"
+              >Meetup</a
+            >
+            &nbsp;·&nbsp;
+            <a
+              href="https://www.instagram.com/betabuilders_org/"
+              target="_blank"
+              class="hover:text-purple-600 transition"
+              >Instagram</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- ════════════════ END FOOTER ════════════════ -->
+
+    <!-- Mobile menu JS (exact from index.html) -->
+    <script>
+      const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileLinks = mobileMenu.querySelectorAll("a");
+
+      mobileMenuToggle.addEventListener("click", () => {
+        const isHidden = mobileMenu.classList.contains("hidden");
+        if (isHidden) {
+          mobileMenu.classList.remove("hidden");
+          mobileMenuToggle.setAttribute("aria-expanded", "true");
+        } else {
+          mobileMenu.classList.add("hidden");
+          mobileMenuToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          mobileMenuToggle.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      document.addEventListener("click", (event) => {
+        if (
+          !mobileMenuToggle.contains(event.target) &&
+          !mobileMenu.contains(event.target)
+        ) {
+          mobileMenu.classList.add("hidden");
+          mobileMenuToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 1024) {
+          mobileMenu.classList.add("hidden");
+          mobileMenuToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      // Filter logic
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      const cards = document.querySelectorAll(".startup-card-full");
+
+      filterBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          filterBtns.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          const cat = btn.dataset.cat;
+          cards.forEach((card) => {
+            const cats = card.dataset.cat || "";
+            card.style.display =
+              cat === "all" || cats.includes(cat) ? "block" : "none";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
