@@ -57,18 +57,11 @@
     <meta name="twitter:site" content="@BetaBuildersOrg" />
 
     <!-- Additional SEO Meta Tags -->
-    <meta name="theme-color" content="#667eea" />
-    <meta name="msapplication-TileColor" content="#667eea" />
+    <meta name="theme-color" content="#EFEDE7" />
+    <meta name="msapplication-TileColor" content="#17160F" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="BetaBuilders" />
-
-    <!-- Material Symbols subset: add any new icon name to icon_names (alphabetical) or it renders as text -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=campaign,check_circle,groups,handshake,mic,public,rocket,rocket_launch,school,send,star,visibility&display=block"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
 
     <!-- Google tag (gtag.js) -->
     <script
@@ -94,30 +87,22 @@
     <!-- tailwind.css: purged Tailwind 2.2.19 build, rebuild with
          npx tailwindcss@2.2.19 -c tailwind.config.js -o tailwind.css --minify -->
     <link rel="stylesheet" href="tailwind.css" />
+    <link rel="stylesheet" href="style.css" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
       media="print"
       onload="this.media='all'"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-      media="print"
-      onload="this.media='all'"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
     <noscript>
       <link
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         rel="stylesheet"
       />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet"
-      />
     </noscript>
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" href="/brand/logo-mark.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
     <!-- Structured Data (JSON-LD) -->
@@ -128,7 +113,7 @@
         "name": "BetaBuilders",
         "alternateName": "The pre-startup accelerator",
         "url": "https://betabuilders.org",
-        "logo": "https://betabuilders.org/brand/logo-mark-512.png",
+        "logo": "https://betabuilders.org/brand/avatar-512.png",
         "description": "BetaBuilders is the pre-startup accelerator. Where ideas find their builders: volunteers build the first version of founders' products, free.",
         "foundingDate": "2024",
         "sameAs": [
@@ -158,245 +143,146 @@
     </script>
   </head>
 
-  <body class="bg-gray-50 text-gray-800">
-    <header
-      class="bg-white backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-gray-100"
-    >
-      <div class="max-w-7xl mx-auto px-4 py-2 sm:px-6 sm:py-2">
-        <div class="flex items-center justify-between">
-          <!-- Logo and Tagline -->
-          <div class="flex items-center">
-            <a href="/" class="flex items-center">
-              <img
-                src="brand/logo.svg"
-                width="481"
-                height="100"
-                alt="BetaBuilders"
-                class="h-7 sm:h-9 md:h-10 w-auto"
-              />
-            </a>
-            <span
-              class="hidden sm:inline lg:hidden xl:inline ml-4 pl-4 border-l border-gray-200 text-sm md:text-base leading-none text-gradient font-semibold tracking-wide whitespace-nowrap"
-            >
-              The pre-startup accelerator
-            </span>
-          </div>
+  <body class="">
+    <header class="bb-header">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="bb-header__bar">
+          <a href="/" class="bb-header__logo" aria-label="BetaBuilders.org home">
+            <img src="brand/a4-small.svg" width="257" height="32" alt="BetaBuilders.org" />
+          </a>
 
-          <!-- Desktop Navigation -->
-          <nav
-            class="hidden lg:flex space-x-6 xl:space-x-8 items-center text-sm"
-          >
-            <a
-              href="#about"
-              class="nav-link text-gray-700 hover:text-purple-600 font-medium"
-              >About</a
-            >
-            <a
-              href="#events"
-              class="nav-link text-gray-700 hover:text-purple-600 font-medium"
-              >Events</a
-            >
-            <a
-              href="startup.html"
-              class="nav-link text-gray-700 hover:text-purple-600 font-medium"
-              >Startups</a
-            >
-            <a
-              href="#vacancies"
-              class="nav-link text-gray-700 hover:text-purple-600 font-medium"
-              >Vacancies</a
-            >
-            <a
-              href="#founders"
-              class="nav-link text-gray-700 hover:text-purple-600 font-medium"
-              >Founders</a
-            >
-            <a
-              href="#volunteers"
-              class="nav-link text-gray-700 hover:text-purple-600 font-medium"
-              >Volunteers</a
-            >
-            <a
-              href="#contact"
-              class="nav-link text-gray-700 hover:text-purple-600 font-medium"
-              >Connect</a
-            >
+          <!-- Desktop navigation -->
+          <nav class="bb-nav" aria-label="Main">
+          <a href="#about">About</a>
+          <a href="#events">Events</a>
+          <a href="startup.html">Startups</a>
+          <a href="#vacancies">Vacancies</a>
+          <a href="#founders">Founders</a>
+          <a href="#volunteers">Volunteers</a>
+          <a href="#contact">Connect</a>
           </nav>
+          <a href="#founders" class="bb-btn bb-btn--compact bb-header__cta">
+            Pitch your idea
+            <svg class="bb-ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></svg>
+          </a>
 
-          <!-- Mobile Menu Toggle -->
-          <div class="lg:hidden relative">
+          <!-- Mobile menu toggle -->
+          <div class="bb-header__menu">
             <button
               id="mobile-menu-toggle"
-              class="p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+              class="bb-menu-toggle bb-label-strong"
               aria-label="Toggle mobile menu"
               aria-expanded="false"
+              aria-controls="mobile-menu"
             >
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                ></path>
-              </svg>
+              Menu
+              <svg class="bb-ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M228,128a12,12,0,0,1-12,12H40a12,12,0,0,1,0-24H216A12,12,0,0,1,228,128ZM40,76H216a12,12,0,0,0,0-24H40a12,12,0,0,0,0,24ZM216,180H40a12,12,0,0,0,0,24H216a12,12,0,0,0,0-24Z"/></svg>
             </button>
-
-            <!-- Mobile Menu -->
-            <div
-              id="mobile-menu"
-              class="hidden absolute top-full right-0 mt-2 z-40 bg-white rounded-lg shadow-xl border border-gray-200 w-auto min-w-[200px]"
-            >
-              <nav class="flex flex-col py-2 px-2">
-                <a
-                  href="#about"
-                  class="nav-link text-gray-700 hover:text-purple-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors text-sm text-center"
-                  >About</a
-                >
-                <a
-                  href="#events"
-                  class="nav-link text-gray-700 hover:text-purple-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors text-sm text-center"
-                  >Events</a
-                >
-                <a
-                  href="#startups"
-                  class="nav-link text-gray-700 hover:text-purple-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors text-sm text-center"
-                  >Startups</a
-                >
-                <a
-                  href="#vacancies"
-                  class="nav-link text-gray-700 hover:text-purple-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors text-sm text-center"
-                  >Vacancies</a
-                >
-                <a
-                  href="#founders"
-                  class="nav-link text-gray-700 hover:text-purple-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors text-sm text-center"
-                  >Founders</a
-                >
-                <a
-                  href="#volunteers"
-                  class="nav-link text-gray-700 hover:text-purple-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors text-sm text-center"
-                  >Volunteers</a
-                >
-                <a
-                  href="#contact"
-                  class="nav-link text-gray-700 hover:text-purple-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors text-sm text-center"
-                  >Connect</a
-                >
+            <div id="mobile-menu" class="hidden bb-mobile-menu">
+              <nav aria-label="Mobile">
+          <a href="#about" class="bb-menu-link">About</a>
+          <a href="#events" class="bb-menu-link">Events</a>
+          <a href="startup.html" class="bb-menu-link">Startups</a>
+          <a href="#vacancies" class="bb-menu-link">Vacancies</a>
+          <a href="#founders" class="bb-menu-link">Founders</a>
+          <a href="#volunteers" class="bb-menu-link">Volunteers</a>
+          <a href="#contact" class="bb-menu-link">Connect</a>
               </nav>
+              <a href="#founders" class="bb-btn">
+                Pitch your idea
+                <svg class="bb-ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></svg>
+              </a>
             </div>
           </div>
         </div>
       </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6"><div class="bb-ruler" aria-hidden="true"></div></div>
     </header>
 
     <main>
       <!-- Hero Section -->
-      <section
-        class="relative min-h-screen flex items-center justify-center overflow-hidden"
-        role="banner"
-        aria-labelledby="hero-heading"
-      >
-        <div class="animated-gradient-bg"></div>
-        <div class="relative z-10 text-center px-6 max-w-5xl mx-auto">
-          <h1
-            id="hero-heading"
-            class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
-          >
-            Where ideas find<br class="hidden sm:inline" />
-            <span class="text-yellow-300">their builders.</span>
-          </h1>
-          <p
-            class="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed"
-          >
-            BetaBuilders is a free pre-startup accelerator. Founders pitch an idea at our
-            weekly event. Developers, designers and product managers team up to
-            build the first version, and gain real experience doing it.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#founders"
-              class="btn-primary text-white px-8 py-4 rounded-full font-semibold text-lg inline-flex items-center justify-center"
-              aria-label="I have an idea: see how BetaBuilders supports founders"
-            >
-              I have an idea
-              <svg
-                class="ml-2 w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
+      <section class="bb-hero" role="banner" aria-labelledby="hero-heading">
+        <div class="bb-hero__grid">
+          <div>
+            <p class="bb-tape bb-label-strong">The pre-startup accelerator</p>
+            <h1 id="hero-heading" class="bb-display">
+              Where ideas find their <span class="bb-highlight">builders.</span>
+            </h1>
+            <p class="bb-hero__lead">
+              BetaBuilders is a free pre-startup accelerator. Founders pitch an idea at our
+              weekly event. Developers, designers and product managers team up to
+              build the first version, and gain real experience doing it.
+            </p>
+            <div class="bb-hero__ctas">
+              <a
+                href="#founders"
+                class="bb-btn"
+                aria-label="I have an idea: see how BetaBuilders supports founders"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M13 7l5 5m0 0l-5 5m5-5H6"
-                ></path>
-              </svg>
+                I have an idea
+                <svg class="bb-ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></svg>
+              </a>
+              <a
+                href="#volunteers"
+                class="bb-btn bb-btn--secondary"
+                aria-label="I want to build: volunteer with BetaBuilders"
+              >
+                I want to build
+                <svg class="bb-ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></svg>
+              </a>
+            </div>
+            <p class="bb-hero__meta bb-label">15 startups building with BetaBuilders volunteers right now</p>
+          </div>
+
+          <div class="bb-bench">
+            <p class="bb-label">On the bench</p>
+            <a href="startup.html" class="bb-ticket" aria-label="ArtOut, Urban Art Map: stage 3 of 7, Team. See all startups">
+              <span class="bb-ticket__tape" aria-hidden="true"></span>
+              <div class="bb-ticket__head"><span class="bb-label-strong">No. 04</span><span class="bb-label">Urban Art Map</span></div>
+              <h3 class="bb-h3">ArtOut</h3>
+              <ol class="bb-stages" aria-hidden="true"><li class="done"></li><li class="done"></li><li class="current"></li><li class=""></li><li class=""></li><li class=""></li><li class=""></li></ol>
+              <div class="bb-ticket__foot"><span class="bb-label">Stage 3/7</span><span class="bb-label-strong">Team</span></div>
             </a>
-            <a
-              href="#volunteers"
-              class="glass-effect text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition"
-              aria-label="I want to build: volunteer with BetaBuilders"
-            >
-              I want to build
+            <a href="startup.html" class="bb-ticket" aria-label="QuickSite, Website Builder: stage 4 of 7, MVP. See all startups">
+              <span class="bb-ticket__tape" aria-hidden="true"></span>
+              <div class="bb-ticket__head"><span class="bb-label-strong">No. 02</span><span class="bb-label">Website Builder</span></div>
+              <h3 class="bb-h3">QuickSite</h3>
+              <ol class="bb-stages" aria-hidden="true"><li class="done"></li><li class="done"></li><li class="done"></li><li class="current"></li><li class=""></li><li class=""></li><li class=""></li></ol>
+              <div class="bb-ticket__foot"><span class="bb-label">Stage 4/7</span><span class="bb-label-strong">MVP</span></div>
+            </a>
+            <a href="startup.html" class="bb-ticket" aria-label="JobSearchWorks, AI Job Search: stage 5 of 7, Go Live. See all startups">
+              <span class="bb-ticket__tape" aria-hidden="true"></span>
+              <div class="bb-ticket__head"><span class="bb-label-strong">No. 01</span><span class="bb-label">AI Job Search</span></div>
+              <h3 class="bb-h3">JobSearchWorks</h3>
+              <ol class="bb-stages" aria-hidden="true"><li class="done"></li><li class="done"></li><li class="done"></li><li class="done"></li><li class="current"></li><li class=""></li><li class=""></li></ol>
+              <div class="bb-ticket__foot"><span class="bb-label">Stage 5/7</span><span class="bb-label-strong">Go Live</span></div>
             </a>
           </div>
         </div>
-        <a href="#about" aria-label="Scroll to about section">
-          <div
-            class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer"
-          >
-            <svg
-              class="w-6 h-6 text-white"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              ></path>
-            </svg>
-          </div>
-        </a>
       </section>
 
       <!-- About Section -->
       <section
         id="about"
-        class="section-padding bg-gray-50 relative overflow-hidden"
+        class="section-padding relative overflow-hidden"
         role="region"
         aria-labelledby="about-heading"
       >
-        <div
-          class="absolute -top-20 -left-20 w-72 h-72 bg-yellow-200 opacity-30 rounded-full"
-        ></div>
 
         <div class="max-w-6xl mx-auto">
           <div class="text-center mb-16">
             <h2
               id="about-heading"
-              class="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+              class="bb-h2 mb-6"
             >
               About Us
             </h2>
-            <div
-              class="w-24 h-1 bg-gradient-to-r from-yellow-300 to-yellow-600 mx-auto mb-6 rounded-full"
-            ></div>
+            <div class="bb-ruler w-24 mx-auto mb-6" aria-hidden="true"></div>
           </div>
 
           <div class="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+              <p class="text-lg mb-6 leading-relaxed">
                 Founders come with an idea and leave with a working product.
                 Volunteers come for experience and leave with a portfolio piece,
                 references and a team they built something with.
@@ -404,63 +290,55 @@
               <ul class="space-y-4" role="list">
                 <li class="flex items-center space-x-3">
                   <div
-                    class="w-2 h-2 bg-purple-600 rounded-full"
+                    class="w-2 h-2 bg-ink"
                     aria-hidden="true"
                   ></div>
-                  <span class="text-gray-700"
+                  <span class=""
                     >Weekly <strong>Pitch to Build</strong> events</span
                   >
                 </li>
                 <li class="flex items-center space-x-3">
                   <div
-                    class="w-2 h-2 bg-purple-600 rounded-full"
+                    class="w-2 h-2 bg-ink"
                     aria-hidden="true"
                   ></div>
-                  <span class="text-gray-700"
+                  <span class=""
                     >Real-world experience for aspiring devs & designers</span
                   >
                 </li>
                 <li class="flex items-center space-x-3">
                   <div
-                    class="w-2 h-2 bg-purple-600 rounded-full"
+                    class="w-2 h-2 bg-ink"
                     aria-hidden="true"
                   ></div>
-                  <span class="text-gray-700"
+                  <span class=""
                     >Collaborative MVPs that make an impact</span
                   >
                 </li>
                 <li class="flex items-center space-x-3">
                   <div
-                    class="w-2 h-2 bg-purple-600 rounded-full"
+                    class="w-2 h-2 bg-ink"
                     aria-hidden="true"
                   ></div>
-                  <span class="text-gray-700"
+                  <span class=""
                     >Community-driven projects — no funding required</span
                   >
                 </li>
               </ul>
             </div>
             <div class="relative max-w-md mx-auto">
-              <!-- Gradient Background -->
-              <div
-                class="absolute inset-0 bg-gradient-to-br from-purple-400 to-blue-600 rounded-3xl transform rotate-6"
-              ></div>
 
               <!-- Card Content -->
-              <div class="relative bg-white p-8 rounded-3xl shadow-xl">
+              <div class="bb-card relative p-8">
                 <div class="text-center">
                   <!-- Material Icon -->
 
-                  <div
-                    class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-tr from-yellow-300 to-yellow-600 rounded-full mb-6 transition-transform duration-300 hover:scale-110"
-                  >
-                    <span class="material-symbols-outlined text-3xl text-white">
-                      rocket
-                    </span>
+                  <div class="bb-icon mb-6 mx-auto">
+                    <svg class="bb-ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M156,228a12,12,0,0,1-12,12H112a12,12,0,0,1,0-24h32A12,12,0,0,1,156,228ZM128,116a16,16,0,1,0-16-16A16,16,0,0,0,128,116Zm99.53,40.7-12.36,55.63a19.9,19.9,0,0,1-12.88,14.53A20.16,20.16,0,0,1,195.6,228a19.87,19.87,0,0,1-12.29-4.27L157.17,204H98.83L72.69,223.74A19.87,19.87,0,0,1,60.4,228a20.16,20.16,0,0,1-6.69-1.15,19.9,19.9,0,0,1-12.88-14.53L28.47,156.7a20.1,20.1,0,0,1,4.16-17.14l27.83-33.4A127,127,0,0,1,69.11,69.7c13.27-33.25,37-54.1,46.64-61.52a20,20,0,0,1,24.5,0c9.6,7.42,33.37,28.27,46.64,61.52a127,127,0,0,1,8.65,36.46l27.83,33.4A20.1,20.1,0,0,1,227.53,156.7ZM101.79,180h52.42c19.51-35.7,23-69.78,10.39-101.4C154.4,53,136.2,35.9,128,29.12,119.8,35.9,101.6,53,91.4,78.6,78.78,110.22,82.28,144.3,101.79,180Zm-22.55,8.72a168,168,0,0,1-16.92-47.3l-10,12,10.58,47.64Zm124.43-35.31-10-12a168,168,0,0,1-16.92,47.3l16.33,12.33Z"/></svg>
                   </div>
 
-                  <h3 class="text-xl font-semibold mb-2">Ready to Launch?</h3>
-                  <p class="text-gray-600">
+                  <h3 class="bb-h3 mb-2">Ready to Launch?</h3>
+                  <p class="text-muted">
                     Run by volunteers, free for founders. Pitch at this week's event.
                   </p>
                 </div>
@@ -475,21 +353,16 @@
         id="mission"
         role="region"
         aria-labelledby="mission-heading"
-        class="section-padding bg-gray-50 relative overflow-hidden"
+        class="section-padding relative overflow-hidden"
       >
-        <div
-          class="absolute -bottom-24 -right-24 w-96 h-96 bg-purple-200 opacity-20 rounded-full"
-        ></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <!-- Header -->
           <div class="text-center mb-20">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+            <h2 class="bb-h2 mb-4">
               Our Mission & Vision
             </h2>
-            <div
-              class="w-24 h-1 bg-gradient-to-r from-yellow-300 to-yellow-600 mx-auto mb-6 rounded-full"
-            ></div>
-            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            <div class="bb-ruler w-24 mx-auto mb-6" aria-hidden="true"></div>
+            <p class="text-lg text-muted max-w-2xl mx-auto">
               Building the future through collaboration and innovation
             </p>
           </div>
@@ -498,26 +371,22 @@
           <div class="grid md:grid-cols-2 gap-12 items-start">
             <!-- Mission Card -->
             <div
-              class="bg-white rounded-3xl p-12 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500"
+              class="bb-card p-12 border border-rule"
             >
-              <div
-                class="w-20 h-20 rounded-full bg-gradient-to-tr from-yellow-300 to-yellow-600 flex items-center justify-center shadow-lg mx-auto -mt-20 mb-6"
-              >
-                <span class="material-symbols-outlined text-3xl text-white"
-                  >rocket_launch</span
-                >
+              <div class="bb-icon mx-auto -mt-20 mb-6">
+                <svg class="bb-ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M227.85,46.89a20,20,0,0,0-18.74-18.74c-13.13-.77-46.65.42-74.48,28.24L131,60H74.36a19.83,19.83,0,0,0-14.14,5.86L25.87,100.19a20,20,0,0,0,11.35,33.95l37.14,5.18,42.32,42.32,5.19,37.18A19.88,19.88,0,0,0,135.34,235a20.13,20.13,0,0,0,6.37,1,19.9,19.9,0,0,0,14.1-5.87l34.34-34.35A19.85,19.85,0,0,0,196,181.64V125l3.6-3.59C227.43,93.54,228.62,60,227.85,46.89ZM76,84h31L75.75,115.28l-27.23-3.8ZM151.6,73.37A72.27,72.27,0,0,1,204,52a72.17,72.17,0,0,1-21.38,52.41L128,159,97,128ZM172,180l-27.49,27.49-3.8-27.23L172,149Zm-72,22c-8.71,11.85-26.19,26-60,26a12,12,0,0,1-12-12c0-33.84,14.12-51.32,26-60A12,12,0,1,1,68.18,175.3C62.3,179.63,55.51,187.8,53,203c15.21-2.51,23.37-9.3,27.7-15.18A12,12,0,1,1,100,202Z"/></svg>
               </div>
-              <h3 class="text-2xl font-bold text-gray-900 text-center mb-4">
+              <h3 class="bb-h3 text-center mb-4">
                 Our Mission
               </h3>
-              <p class="text-gray-700 text-center text-lg leading-relaxed">
+              <p class="text-center text-lg leading-relaxed">
                 BetaBuilders exists to turn courageous ideas into working
                 products while giving volunteers a place to learn, ship and
                 shine. We rally
-                <strong class="text-purple-600">builders</strong> and
-                <strong class="text-purple-600">founders</strong> around a
+                <strong class="">builders</strong> and
+                <strong class="">founders</strong> around a
                 single goal:
-                <em class="text-purple-600 font-semibold"
+                <em class="font-semibold"
                   >launch something that matters</em
                 >.
               </p>
@@ -525,22 +394,18 @@
 
             <!-- Vision Card -->
             <div
-              class="bg-white rounded-3xl p-12 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500"
+              class="bb-card p-12 border border-rule"
             >
-              <div
-                class="w-20 h-20 rounded-full bg-gradient-to-tr from-purple-400 to-blue-600 flex items-center justify-center shadow-lg mx-auto -mt-20 mb-6"
-              >
-                <span class="material-symbols-outlined text-3xl text-white"
-                  >visibility</span
-                >
+              <div class="bb-icon mx-auto -mt-20 mb-6">
+                <svg class="bb-ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M251,123.13c-.37-.81-9.13-20.26-28.48-39.61C196.63,57.67,164,44,128,44S59.37,57.67,33.51,83.52C14.16,102.87,5.4,122.32,5,123.13a12.08,12.08,0,0,0,0,9.75c.37.82,9.13,20.26,28.49,39.61C59.37,198.34,92,212,128,212s68.63-13.66,94.48-39.51c19.36-19.35,28.12-38.79,28.49-39.61A12.08,12.08,0,0,0,251,123.13Zm-46.06,33C183.47,177.27,157.59,188,128,188s-55.47-10.73-76.91-31.88A130.36,130.36,0,0,1,29.52,128,130.45,130.45,0,0,1,51.09,99.89C72.54,78.73,98.41,68,128,68s55.46,10.73,76.91,31.89A130.36,130.36,0,0,1,226.48,128,130.45,130.45,0,0,1,204.91,156.12ZM128,84a44,44,0,1,0,44,44A44.05,44.05,0,0,0,128,84Zm0,64a20,20,0,1,1,20-20A20,20,0,0,1,128,148Z"/></svg>
               </div>
-              <h3 class="text-2xl font-bold text-gray-900 text-center mb-4">
+              <h3 class="bb-h3 text-center mb-4">
                 Our Vision
               </h3>
-              <p class="text-gray-700 text-center text-lg leading-relaxed">
+              <p class="text-center text-lg leading-relaxed">
                 We imagine a world where
-                <strong class="text-blue-600">talent</strong> and
-                <strong class="text-blue-600">ambition</strong> are all you need
+                <strong class="">talent</strong> and
+                <strong class="">ambition</strong> are all you need
                 to build a startup — funding optional. Every volunteer leaves
                 with new skills, meaningful connections, and a portfolio piece
                 they're proud of.
@@ -553,10 +418,10 @@
       <!-- Events Section -->
       <section
         id="events"
-        class="bg-gradient-to-r from-purple-400 to-blue-600 text-white py-12"
+        class="bb-ink py-16"
       >
         <div class="max-w-6xl mx-auto px-6 text-center">
-          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          <h2 class="bb-h2 mb-6">
             Join Our Weekly Meetups
           </h2>
           <p class="text-xl mb-8 max-w-3xl mx-auto leading-relaxed opacity-90">
@@ -566,37 +431,37 @@
           </p>
 
           <div class="grid md:grid-cols-3 gap-6 mb-8">
-            <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+            <div class="p-6">
               <div
                 class="text-4xl mb-3 inline-flex items-center justify-center"
               >
-                <span class="material-symbols-outlined text-4xl">mic</span>
+                <svg class="bb-ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M128,180a52.06,52.06,0,0,0,52-52V64A52,52,0,0,0,76,64v64A52.06,52.06,0,0,0,128,180ZM100,64a28,28,0,0,1,56,0v64a28,28,0,0,1-56,0Zm40,155.22V240a12,12,0,0,1-24,0V219.22A92.14,92.14,0,0,1,36,128a12,12,0,0,1,24,0,68,68,0,0,0,136,0,12,12,0,0,1,24,0A92.14,92.14,0,0,1,140,219.22Z"/></svg>
               </div>
-              <h3 class="text-xl font-semibold mb-2">Pitch to Build</h3>
+              <h3 class="bb-h3 mb-2">Pitch to Build</h3>
               <p class="text-sm opacity-90">
                 Founders present ideas, volunteers join teams
               </p>
             </div>
 
-            <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+            <div class="p-6">
               <div
                 class="text-4xl mb-3 inline-flex items-center justify-center"
               >
-                <span class="material-symbols-outlined text-4xl">groups</span>
+                <svg class="bb-ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M164.38,181.1a52,52,0,1,0-72.76,0,75.89,75.89,0,0,0-30,28.89,12,12,0,0,0,20.78,12,53,53,0,0,1,91.22,0,12,12,0,1,0,20.78-12A75.89,75.89,0,0,0,164.38,181.1ZM100,144a28,28,0,1,1,28,28A28,28,0,0,1,100,144Zm147.21,9.59a12,12,0,0,1-16.81-2.39c-8.33-11.09-19.85-19.59-29.33-21.64a12,12,0,0,1-1.82-22.91,20,20,0,1,0-24.78-28.3,12,12,0,1,1-21-11.6,44,44,0,1,1,73.28,48.35,92.18,92.18,0,0,1,22.85,21.69A12,12,0,0,1,247.21,153.59Zm-192.28-24c-9.48,2.05-21,10.55-29.33,21.65A12,12,0,0,1,6.41,136.79,92.37,92.37,0,0,1,29.26,115.1a44,44,0,1,1,73.28-48.35,12,12,0,1,1-21,11.6,20,20,0,1,0-24.78,28.3,12,12,0,0,1-1.82,22.91Z"/></svg>
               </div>
-              <h3 class="text-xl font-semibold mb-2">Founder Spotlight</h3>
+              <h3 class="bb-h3 mb-2">Founder Spotlight</h3>
               <p class="text-sm opacity-90">
                 Learn from experienced entrepreneurs
               </p>
             </div>
 
-            <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+            <div class="p-6">
               <div
                 class="text-4xl mb-3 inline-flex items-center justify-center"
               >
-                <span class="material-symbols-outlined text-4xl">school</span>
+                <svg class="bb-ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M249.8,85.49l-116-64a12,12,0,0,0-11.6,0l-116,64a12,12,0,0,0,0,21l21.8,12v47.76a19.89,19.89,0,0,0,5.09,13.32C46.63,194.7,77,220,128,220a136.88,136.88,0,0,0,40-5.75V240a12,12,0,0,0,24,0V204.12a119.53,119.53,0,0,0,30.91-24.51A19.89,19.89,0,0,0,228,166.29V118.53l21.8-12a12,12,0,0,0,0-21ZM128,45.71,219.16,96,186,114.3a1.88,1.88,0,0,1-.18-.12l-52-28.69a12,12,0,0,0-11.6,21l39,21.49L128,146.3,36.84,96ZM128,196c-40.42,0-64.65-19.07-76-31.27v-33l70.2,38.74a12,12,0,0,0,11.6,0L168,151.64v37.23A110.46,110.46,0,0,1,128,196Zm76-31.27a93.21,93.21,0,0,1-12,10.81V138.39l12-6.62Z"/></svg>
               </div>
-              <h3 class="text-xl font-semibold mb-2">Startup Masterclass</h3>
+              <h3 class="bb-h3 mb-2">Startup Masterclass</h3>
               <p class="text-sm opacity-90">
                 Expert insights and practical frameworks
               </p>
@@ -607,7 +472,7 @@
             <a
               href="https://www.meetup.com/it-volunteers-and-interns/"
               target="_blank"
-              class="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition transform hover:scale-105 shadow-lg inline-flex items-center justify-center"
+              class="bb-btn"
               aria-label="View BetaBuilders events on Meetup"
             >
               <svg class="mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -620,7 +485,7 @@
             <a
               href="https://www.linkedin.com/company/beta-builders-club"
               target="_blank"
-              class="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition transform hover:scale-105 shadow-lg inline-flex items-center justify-center"
+              class="bb-btn bb-btn--secondary"
               aria-label="Connect with BetaBuilders on LinkedIn"
             >
               <svg class="mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -637,28 +502,20 @@
       <!-- How It Works -->
       <section
         id="how-it-works"
-        class="section-padding bg-gray-50 relative overflow-hidden"
+        class="section-padding relative overflow-hidden"
         role="region"
         aria-labelledby="how-it-works-heading"
       >
-        <div
-          class="absolute -top-20 -left-20 w-72 h-72 bg-pink-200 opacity-30 rounded-full"
-        ></div>
-        <div
-          class="absolute -bottom-24 -right-24 w-96 h-96 bg-green-200 opacity-20 rounded-full"
-        ></div>
         <div class="max-w-6xl mx-auto">
           <div class="text-center mb-12">
             <h2
               id="how-it-works-heading"
-              class="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+              class="bb-h2 mb-6"
             >
               How BetaBuilders Works
             </h2>
-            <div
-              class="w-24 h-1 bg-gradient-to-r from-yellow-300 to-yellow-600 mx-auto mb-6 rounded-full"
-            ></div>
-            <p class="text-lg text-gray-600 mt-4">
+            <div class="bb-ruler w-24 mx-auto mb-6" aria-hidden="true"></div>
+            <p class="text-lg text-muted mt-4">
               Our 3-step community-driven process helps early-stage startups
               move from pitch to product — with real-world collaboration and
               zero funding required.
@@ -668,15 +525,13 @@
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <!-- Step 1: Pitch -->
             <article
-              class="bg-gray-50 rounded-2xl p-6 text-center card-hover shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02]"
+              class="bb-card p-6 text-center border border-rule transform"
             >
-              <div
-                class="bg-gradient-to-tr from-yellow-300 to-yellow-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto text-white mb-6 transition-transform duration-300 hover:scale-110"
-              >
-                <span class="material-symbols-outlined">mic</span>
+              <div class="bb-icon mx-auto mb-6">
+                <svg class="bb-ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M128,180a52.06,52.06,0,0,0,52-52V64A52,52,0,0,0,76,64v64A52.06,52.06,0,0,0,128,180ZM100,64a28,28,0,0,1,56,0v64a28,28,0,0,1-56,0Zm40,155.22V240a12,12,0,0,1-24,0V219.22A92.14,92.14,0,0,1,36,128a12,12,0,0,1,24,0,68,68,0,0,0,136,0,12,12,0,0,1,24,0A92.14,92.14,0,0,1,140,219.22Z"/></svg>
               </div>
-              <h3 class="text-2xl font-semibold mb-3 text-3xl">Pitch</h3>
-              <p class="text-gray-700 leading-relaxed">
+              <h3 class="bb-h3 mb-3">Pitch</h3>
+              <p class="leading-relaxed">
                 Founders present real problems and bold ideas at our weekly
                 events.
               </p>
@@ -684,32 +539,26 @@
 
             <!-- Step 2: Team Up -->
             <article
-              class="bg-gray-50 rounded-2xl p-6 text-center card-hover shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02]"
+              class="bb-card p-6 text-center border border-rule transform"
             >
-              <div
-                class="bg-gradient-to-tr from-purple-400 to-blue-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto text-white mb-6 transition-transform duration-300 hover:scale-110"
-              >
-                <span class="material-symbols-outlined text-3xl">groups</span>
+              <div class="bb-icon mx-auto mb-6">
+                <svg class="bb-ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M164.38,181.1a52,52,0,1,0-72.76,0,75.89,75.89,0,0,0-30,28.89,12,12,0,0,0,20.78,12,53,53,0,0,1,91.22,0,12,12,0,1,0,20.78-12A75.89,75.89,0,0,0,164.38,181.1ZM100,144a28,28,0,1,1,28,28A28,28,0,0,1,100,144Zm147.21,9.59a12,12,0,0,1-16.81-2.39c-8.33-11.09-19.85-19.59-29.33-21.64a12,12,0,0,1-1.82-22.91,20,20,0,1,0-24.78-28.3,12,12,0,1,1-21-11.6,44,44,0,1,1,73.28,48.35,92.18,92.18,0,0,1,22.85,21.69A12,12,0,0,1,247.21,153.59Zm-192.28-24c-9.48,2.05-21,10.55-29.33,21.65A12,12,0,0,1,6.41,136.79,92.37,92.37,0,0,1,29.26,115.1a44,44,0,1,1,73.28-48.35,12,12,0,1,1-21,11.6,20,20,0,1,0-24.78,28.3,12,12,0,0,1-1.82,22.91Z"/></svg>
               </div>
-              <h3 class="text-2xl font-semibold mb-3">Team Up</h3>
-              <p class="text-gray-700 leading-relaxed">
+              <h3 class="bb-h3 mb-3">Team Up</h3>
+              <p class="leading-relaxed">
                 Volunteers join squads that match their skills and passions.
               </p>
             </article>
 
             <!-- Step 3: Build & Launch -->
             <article
-              class="bg-gray-50 rounded-2xl p-6 text-center card-hover shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02]"
+              class="bb-card p-6 text-center border border-rule transform"
             >
-              <div
-                class="bg-gradient-to-tr from-pink-400 to-red-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto text-white mb-6 transition-transform duration-300 hover:scale-110"
-              >
-                <span class="material-symbols-outlined text-3xl"
-                  >rocket_launch</span
-                >
+              <div class="bb-icon mx-auto mb-6">
+                <svg class="bb-ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M227.85,46.89a20,20,0,0,0-18.74-18.74c-13.13-.77-46.65.42-74.48,28.24L131,60H74.36a19.83,19.83,0,0,0-14.14,5.86L25.87,100.19a20,20,0,0,0,11.35,33.95l37.14,5.18,42.32,42.32,5.19,37.18A19.88,19.88,0,0,0,135.34,235a20.13,20.13,0,0,0,6.37,1,19.9,19.9,0,0,0,14.1-5.87l34.34-34.35A19.85,19.85,0,0,0,196,181.64V125l3.6-3.59C227.43,93.54,228.62,60,227.85,46.89ZM76,84h31L75.75,115.28l-27.23-3.8ZM151.6,73.37A72.27,72.27,0,0,1,204,52a72.17,72.17,0,0,1-21.38,52.41L128,159,97,128ZM172,180l-27.49,27.49-3.8-27.23L172,149Zm-72,22c-8.71,11.85-26.19,26-60,26a12,12,0,0,1-12-12c0-33.84,14.12-51.32,26-60A12,12,0,1,1,68.18,175.3C62.3,179.63,55.51,187.8,53,203c15.21-2.51,23.37-9.3,27.7-15.18A12,12,0,1,1,100,202Z"/></svg>
               </div>
-              <h3 class="text-2xl font-semibold mb-3">Build & Launch</h3>
-              <p class="text-gray-700 leading-relaxed">
+              <h3 class="bb-h3 mb-3">Build & Launch</h3>
+              <p class="leading-relaxed">
                 Together we ship MVPs, learn fast, and share success.
               </p>
             </article>
@@ -720,7 +569,7 @@
       <!-- Benefits Section-->
       <section
         id="benefits"
-        class="relative py-24 bg-gradient-to-br from-blue-50 to-purple-50"
+        class="relative py-24"
         role="region"
         aria-labelledby="benefits-heading"
       >
@@ -729,14 +578,12 @@
           <div class="text-center mb-16">
             <h2
               id="benefits-heading"
-              class="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
+              class="bb-h2 mb-4"
             >
               Benefits for Everyone
             </h2>
-            <div
-              class="w-24 h-1 bg-gradient-to-r from-yellow-300 to-yellow-600 mx-auto mb-6 rounded-full"
-            ></div>
-            <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+            <div class="bb-ruler w-24 mx-auto mb-6" aria-hidden="true"></div>
+            <p class="text-lg max-w-2xl mx-auto">
               Founders and volunteers both gain valuable experience and
               connections through BetaBuilders.
             </p>
@@ -746,81 +593,77 @@
           <div class="grid lg:grid-cols-2 gap-10 lg:gap-12">
             <!-- Founders Column -->
             <div
-              class="relative bg-white rounded-3xl shadow-xl p-10 hover:shadow-2xl transition duration-300"
+              class="bb-card relative p-10"
             >
-              <div
-                class="absolute -top-10 left-1/2 transform -translate-x-1/2 lg:left-10 lg:translate-x-0 w-20 h-20 bg-gradient-to-tr from-yellow-300 to-yellow-600 rounded-full flex items-center justify-center shadow-lg"
-              >
-                <span class="material-symbols-outlined text-white text-3xl"
-                  >rocket_launch</span
-                >
+              <div class="bb-icon absolute -top-10 left-1/2 transform -translate-x-1/2 lg:left-10 lg:translate-x-0">
+                <svg class="bb-ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M227.85,46.89a20,20,0,0,0-18.74-18.74c-13.13-.77-46.65.42-74.48,28.24L131,60H74.36a19.83,19.83,0,0,0-14.14,5.86L25.87,100.19a20,20,0,0,0,11.35,33.95l37.14,5.18,42.32,42.32,5.19,37.18A19.88,19.88,0,0,0,135.34,235a20.13,20.13,0,0,0,6.37,1,19.9,19.9,0,0,0,14.1-5.87l34.34-34.35A19.85,19.85,0,0,0,196,181.64V125l3.6-3.59C227.43,93.54,228.62,60,227.85,46.89ZM76,84h31L75.75,115.28l-27.23-3.8ZM151.6,73.37A72.27,72.27,0,0,1,204,52a72.17,72.17,0,0,1-21.38,52.41L128,159,97,128ZM172,180l-27.49,27.49-3.8-27.23L172,149Zm-72,22c-8.71,11.85-26.19,26-60,26a12,12,0,0,1-12-12c0-33.84,14.12-51.32,26-60A12,12,0,1,1,68.18,175.3C62.3,179.63,55.51,187.8,53,203c15.21-2.51,23.37-9.3,27.7-15.18A12,12,0,1,1,100,202Z"/></svg>
               </div>
-              <div class="mt-6 lg:ml-28 text-center lg:text-left">
-                <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+              <div class="mt-6 text-center lg:text-left">
+                <h3 class="bb-h3 mb-4">
                   For Founders
                 </h3>
-                <p class="text-gray-600 mb-6">
+                <p class="text-muted mb-6">
                   Grow your startup with the right team and gain valuable
                   exposure.
                 </p>
 
                 <!-- Pitch Meeting -->
-                <h4 class="text-lg font-semibold text-gray-800 mb-2">
+                <h4 class="bb-h4 mb-2">
                   Pitch Meeting
                 </h4>
                 <ul class="space-y-2 mb-4">
                   <li class="flex items-start gap-3">
-                    <span class="text-green-500 text-xl font-bold mt-0.5"
+                    <span class="text-xl font-bold mt-0.5"
                       >✓</span
                     >
-                    <span class="text-gray-700 font-medium"
+                    <span class="font-medium"
                       >Practice pitching your ideas</span
                     >
                   </li>
                   <li class="flex items-start gap-3">
-                    <span class="text-green-500 text-xl font-bold mt-0.5"
+                    <span class="text-xl font-bold mt-0.5"
                       >✓</span
                     >
-                    <span class="text-gray-700 font-medium"
+                    <span class="font-medium"
                       >Elaborate and refine your concept</span
                     >
                   </li>
                   <li class="flex items-start gap-3">
-                    <span class="text-green-500 text-xl font-bold mt-0.5"
+                    <span class="text-xl font-bold mt-0.5"
                       >✓</span
                     >
-                    <span class="text-gray-700 font-medium"
+                    <span class="font-medium"
                       >Find like-minded collaborators</span
                     >
                   </li>
                 </ul>
 
                 <!-- Social Media -->
-                <h4 class="text-lg font-semibold text-gray-800 mb-2">
+                <h4 class="bb-h4 mb-2">
                   Social Media
                 </h4>
                 <ul class="space-y-2">
                   <li class="flex items-start gap-3">
-                    <span class="text-green-500 text-xl font-bold mt-0.5"
+                    <span class="text-xl font-bold mt-0.5"
                       >✓</span
                     >
-                    <span class="text-gray-700 font-medium"
+                    <span class="font-medium"
                       >Discover talented volunteers</span
                     >
                   </li>
                   <li class="flex items-start gap-3">
-                    <span class="text-green-500 text-xl font-bold mt-0.5"
+                    <span class="text-xl font-bold mt-0.5"
                       >✓</span
                     >
-                    <span class="text-gray-700 font-medium"
+                    <span class="font-medium"
                       >Advertise open positions</span
                     >
                   </li>
                   <li class="flex items-start gap-3">
-                    <span class="text-green-500 text-xl font-bold mt-0.5"
+                    <span class="text-xl font-bold mt-0.5"
                       >✓</span
                     >
-                    <span class="text-gray-700 font-medium"
+                    <span class="font-medium"
                       >Network with other founders</span
                     >
                   </li>
@@ -830,81 +673,77 @@
 
             <!-- Volunteers Column -->
             <div
-              class="relative bg-white rounded-3xl shadow-xl p-10 hover:shadow-2xl transition duration-300"
+              class="bb-card relative p-10"
             >
-              <div
-                class="absolute -top-10 left-1/2 transform -translate-x-1/2 lg:left-10 lg:translate-x-0 w-20 h-20 bg-gradient-to-tr from-purple-400 to-blue-600 rounded-full flex items-center justify-center shadow-lg"
-              >
-                <span class="material-symbols-outlined text-white text-3xl"
-                  >handshake</span
-                >
+              <div class="bb-icon absolute -top-10 left-1/2 transform -translate-x-1/2 lg:left-10 lg:translate-x-0">
+                <svg class="bb-ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M253.88,108.11l-25.53-51a20,20,0,0,0-26.83-9L178.34,59.7,131.7,44.58a12.14,12.14,0,0,0-7.4,0L77.66,59.7,54.48,48.11a20,20,0,0,0-26.83,9L2.12,108.11a20,20,0,0,0,9,26.83l26.67,13.34,51.18,37.41A12.15,12.15,0,0,0,93,187.62l62,16a12.27,12.27,0,0,0,3,.38,12,12,0,0,0,8.48-3.52l52.62-52.62,25.83-12.92a20,20,0,0,0,8.95-26.83Zm-58.12,29.15-27.52-26a12,12,0,0,0-16.76.26c-9.66,9.74-25.06,16.81-40.81,9.55l38.19-37h22.72l25.81,51.63ZM47.32,71.37,60.59,78l-22,43.9-13.27-6.63Zm107,107.3L101.23,165l-42-30.66L85.17,82.5,128,68.61l1.69.55L90,107.68l-.13.12a20,20,0,0,0,3.4,31c20.95,13.39,46,12.07,66.33-2.73l19.2,18.15Zm63-56.77-22-43.9,13.27-6.63,21.95,43.9ZM118.55,219a12,12,0,0,1-14.62,8.62l-26.6-6.87a12,12,0,0,1-4.08-1.93L48.92,201a12,12,0,0,1,14.16-19.37l22.47,16.42,24.38,6.29A12,12,0,0,1,118.55,219Z"/></svg>
               </div>
-              <div class="mt-6 lg:ml-28 text-center lg:text-left">
-                <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+              <div class="mt-6 text-center lg:text-left">
+                <h3 class="bb-h3 mb-4">
                   For Volunteers
                 </h3>
-                <p class="text-gray-600 mb-6">
+                <p class="text-muted mb-6">
                   Join exciting projects and grow your skills while contributing
                   meaningfully.
                 </p>
 
                 <!-- Pitch Meeting -->
-                <h4 class="text-lg font-semibold text-gray-800 mb-2">
+                <h4 class="bb-h4 mb-2">
                   Pitch Meeting
                 </h4>
                 <ul class="space-y-2 mb-4">
                   <li class="flex items-start gap-3">
-                    <span class="text-green-500 text-xl font-bold mt-0.5"
+                    <span class="text-xl font-bold mt-0.5"
                       >✓</span
                     >
-                    <span class="text-gray-700 font-medium"
+                    <span class="font-medium"
                       >Discover startups to join</span
                     >
                   </li>
                   <li class="flex items-start gap-3">
-                    <span class="text-green-500 text-xl font-bold mt-0.5"
+                    <span class="text-xl font-bold mt-0.5"
                       >✓</span
                     >
-                    <span class="text-gray-700 font-medium"
+                    <span class="font-medium"
                       >Develop product thinking skills</span
                     >
                   </li>
                   <li class="flex items-start gap-3">
-                    <span class="text-green-500 text-xl font-bold mt-0.5"
+                    <span class="text-xl font-bold mt-0.5"
                       >✓</span
                     >
-                    <span class="text-gray-700 font-medium"
+                    <span class="font-medium"
                       >Build valuable connections</span
                     >
                   </li>
                 </ul>
 
                 <!-- Social Media -->
-                <h4 class="text-lg font-semibold text-gray-800 mb-2">
+                <h4 class="bb-h4 mb-2">
                   Social Media
                 </h4>
                 <ul class="space-y-2">
                   <li class="flex items-start gap-3">
-                    <span class="text-green-500 text-xl font-bold mt-0.5"
+                    <span class="text-xl font-bold mt-0.5"
                       >✓</span
                     >
-                    <span class="text-gray-700 font-medium"
+                    <span class="font-medium"
                       >Find open positions</span
                     >
                   </li>
                   <li class="flex items-start gap-3">
-                    <span class="text-green-500 text-xl font-bold mt-0.5"
+                    <span class="text-xl font-bold mt-0.5"
                       >✓</span
                     >
-                    <span class="text-gray-700 font-medium"
+                    <span class="font-medium"
                       >Connect with founders</span
                     >
                   </li>
                   <li class="flex items-start gap-3">
-                    <span class="text-green-500 text-xl font-bold mt-0.5"
+                    <span class="text-xl font-bold mt-0.5"
                       >✓</span
                     >
-                    <span class="text-gray-700 font-medium"
+                    <span class="font-medium"
                       >Grow your professional profile</span
                     >
                   </li>
@@ -918,32 +757,23 @@
       <!-- Services -->
       <section
         id="services"
-        class="section-padding bg-gray-50 relative overflow-hidden"
+        class="section-padding relative overflow-hidden"
         role="region"
         aria-labelledby="services-heading"
       >
-        <!-- Decorative background circles -->
-        <div
-          class="absolute -top-20 -left-20 w-72 h-72 bg-yellow-200 opacity-30 rounded-full"
-        ></div>
-        <div
-          class="absolute -bottom-24 -right-24 w-96 h-96 bg-purple-200 opacity-20 rounded-full"
-        ></div>
 
         <div class="max-w-7xl mx-auto relative z-10 px-4 sm:px-6 lg:px-8">
           <!-- Header -->
           <div class="text-center mb-20">
             <h2
               id="services-heading"
-              class="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
+              class="bb-h2 mb-4"
             >
               Our Services for Startups
             </h2>
-            <div
-              class="w-24 h-1 bg-gradient-to-r from-yellow-300 to-yellow-600 mx-auto mb-6 rounded-full"
-            ></div>
-            <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              <span class="font-bold text-gradient">Free</span> for founders who haven't
+            <div class="bb-ruler w-24 mx-auto mb-6" aria-hidden="true"></div>
+            <p class="text-xl max-w-3xl mx-auto leading-relaxed">
+              <span class="font-bold">Free</span> for founders who haven't
               raised money yet. We help with:
             </p>
           </div>
@@ -956,19 +786,17 @@
             >
               <!-- Coaching -->
               <div
-                class="bg-white rounded-3xl p-8 shadow-xl transform md:-translate-y-0 hover:shadow-2xl transition duration-300 flex-1"
+                class="bb-card p-8 transform md:-translate-y-0 flex-1"
               >
-                <div
-                  class="w-20 h-20 rounded-full bg-gradient-to-r from-yellow-300 to-yellow-600 flex items-center justify-center text-white mx-auto mb-6"
-                >
-                  <span class="material-symbols-outlined text-3xl">school</span>
+                <div class="bb-icon mx-auto mb-6">
+                  <svg class="bb-ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M249.8,85.49l-116-64a12,12,0,0,0-11.6,0l-116,64a12,12,0,0,0,0,21l21.8,12v47.76a19.89,19.89,0,0,0,5.09,13.32C46.63,194.7,77,220,128,220a136.88,136.88,0,0,0,40-5.75V240a12,12,0,0,0,24,0V204.12a119.53,119.53,0,0,0,30.91-24.51A19.89,19.89,0,0,0,228,166.29V118.53l21.8-12a12,12,0,0,0,0-21ZM128,45.71,219.16,96,186,114.3a1.88,1.88,0,0,1-.18-.12l-52-28.69a12,12,0,0,0-11.6,21l39,21.49L128,146.3,36.84,96ZM128,196c-40.42,0-64.65-19.07-76-31.27v-33l70.2,38.74a12,12,0,0,0,11.6,0L168,151.64v37.23A110.46,110.46,0,0,1,128,196Zm76-31.27a93.21,93.21,0,0,1-12,10.81V138.39l12-6.62Z"/></svg>
                 </div>
                 <h3
-                  class="text-2xl font-semibold text-gray-900 mb-3 text-center"
+                  class="bb-h3 mb-3 text-center"
                 >
                   Coaching
                 </h3>
-                <ul class="space-y-2 text-gray-700 text-center">
+                <ul class="space-y-2 text-center">
                   <li>How to go from a single person to a team</li>
                   <li>From prototype to MVP</li>
                   <li>From dev to prod</li>
@@ -978,21 +806,17 @@
 
               <!-- Marketing -->
               <div
-                class="bg-white rounded-3xl p-8 shadow-xl transform md:translate-y-6 hover:shadow-2xl transition duration-300 flex-1"
+                class="bb-card p-8 transform md:translate-y-6 flex-1"
               >
-                <div
-                  class="w-20 h-20 rounded-full bg-gradient-to-r from-purple-400 to-blue-500 flex items-center justify-center text-white mx-auto mb-6"
-                >
-                  <span class="material-symbols-outlined text-3xl"
-                    >campaign</span
-                  >
+                <div class="bb-icon mx-auto mb-6">
+                  <svg class="bb-ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M252,120a52.06,52.06,0,0,0-52-52H160.32c-3.44-.21-52.6-4-99.46-43.3A20,20,0,0,0,28,40V200a19.8,19.8,0,0,0,11.54,18.12,19.86,19.86,0,0,0,21.32-2.81A192.92,192.92,0,0,1,144,174.47v26.2a20,20,0,0,0,8.9,16.64,11.35,11.35,0,0,0,1.39.8l14.44,7.06A20,20,0,0,0,198.37,213l11.09-41.82A52.07,52.07,0,0,0,252,120ZM52,191.63V48.4c36.17,28.07,72.17,38.1,92,41.66V150C124.17,153.52,88.17,163.55,52,191.63ZM176.39,202.2,168,198.1V172h16.4ZM200,148H168V92h32a28,28,0,1,1,0,56Z"/></svg>
                 </div>
                 <h3
-                  class="text-2xl font-semibold text-gray-900 mb-3 text-center"
+                  class="bb-h3 mb-3 text-center"
                 >
                   Marketing
                 </h3>
-                <ul class="space-y-2 text-gray-700 text-center">
+                <ul class="space-y-2 text-center">
                   <li>
                     Create marketing assets that feel personal and authentic
                   </li>
@@ -1008,19 +832,17 @@
             >
               <!-- Website -->
               <div
-                class="bg-white rounded-3xl p-8 shadow-xl transform md:-translate-y-6 hover:shadow-2xl transition duration-300 flex-1"
+                class="bb-card p-8 transform md:-translate-y-6 flex-1"
               >
-                <div
-                  class="w-20 h-20 rounded-full bg-gradient-to-r from-pink-300 to-red-500 flex items-center justify-center text-white mx-auto mb-6"
-                >
-                  <span class="material-symbols-outlined text-3xl">public</span>
+                <div class="bb-icon mx-auto mb-6">
+                  <svg class="bb-ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M128,20A108,108,0,1,0,236,128,108.12,108.12,0,0,0,128,20Zm0,187a113.4,113.4,0,0,1-20.39-35h40.82a116.94,116.94,0,0,1-10,20.77A108.61,108.61,0,0,1,128,207Zm-26.49-59a135.42,135.42,0,0,1,0-40h53a135.42,135.42,0,0,1,0,40ZM44,128a83.49,83.49,0,0,1,2.43-20H77.25a160.63,160.63,0,0,0,0,40H46.43A83.49,83.49,0,0,1,44,128Zm84-79a113.4,113.4,0,0,1,20.39,35H107.59a116.94,116.94,0,0,1,10-20.77A108.61,108.61,0,0,1,128,49Zm50.73,59h30.82a83.52,83.52,0,0,1,0,40H178.75a160.63,160.63,0,0,0,0-40Zm20.77-24H173.71a140.82,140.82,0,0,0-15.5-34.36A84.51,84.51,0,0,1,199.52,84ZM97.79,49.64A140.82,140.82,0,0,0,82.29,84H56.48A84.51,84.51,0,0,1,97.79,49.64ZM56.48,172H82.29a140.82,140.82,0,0,0,15.5,34.36A84.51,84.51,0,0,1,56.48,172Zm101.73,34.36A140.82,140.82,0,0,0,173.71,172h25.81A84.51,84.51,0,0,1,158.21,206.36Z"/></svg>
                 </div>
                 <h3
-                  class="text-2xl font-semibold text-gray-900 mb-3 text-center"
+                  class="bb-h3 mb-3 text-center"
                 >
                   Website
                 </h3>
-                <ul class="space-y-2 text-gray-700 text-center">
+                <ul class="space-y-2 text-center">
                   <li>Design responsive websites with a modern stack</li>
                   <li>Communicate brand story with clean visuals</li>
                   <li>
@@ -1031,21 +853,17 @@
 
               <!-- Hiring -->
               <div
-                class="bg-white rounded-3xl p-8 shadow-xl transform md:translate-y-0 hover:shadow-2xl transition duration-300 flex-1"
+                class="bb-card p-8 transform md:translate-y-0 flex-1"
               >
-                <div
-                  class="w-20 h-20 rounded-full bg-gradient-to-r from-green-300 to-green-500 flex items-center justify-center text-white mx-auto mb-6"
-                >
-                  <span class="material-symbols-outlined text-3xl"
-                    >handshake</span
-                  >
+                <div class="bb-icon mx-auto mb-6">
+                  <svg class="bb-ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M253.88,108.11l-25.53-51a20,20,0,0,0-26.83-9L178.34,59.7,131.7,44.58a12.14,12.14,0,0,0-7.4,0L77.66,59.7,54.48,48.11a20,20,0,0,0-26.83,9L2.12,108.11a20,20,0,0,0,9,26.83l26.67,13.34,51.18,37.41A12.15,12.15,0,0,0,93,187.62l62,16a12.27,12.27,0,0,0,3,.38,12,12,0,0,0,8.48-3.52l52.62-52.62,25.83-12.92a20,20,0,0,0,8.95-26.83Zm-58.12,29.15-27.52-26a12,12,0,0,0-16.76.26c-9.66,9.74-25.06,16.81-40.81,9.55l38.19-37h22.72l25.81,51.63ZM47.32,71.37,60.59,78l-22,43.9-13.27-6.63Zm107,107.3L101.23,165l-42-30.66L85.17,82.5,128,68.61l1.69.55L90,107.68l-.13.12a20,20,0,0,0,3.4,31c20.95,13.39,46,12.07,66.33-2.73l19.2,18.15Zm63-56.77-22-43.9,13.27-6.63,21.95,43.9ZM118.55,219a12,12,0,0,1-14.62,8.62l-26.6-6.87a12,12,0,0,1-4.08-1.93L48.92,201a12,12,0,0,1,14.16-19.37l22.47,16.42,24.38,6.29A12,12,0,0,1,118.55,219Z"/></svg>
                 </div>
                 <h3
-                  class="text-2xl font-semibold text-gray-900 mb-3 text-center"
+                  class="bb-h3 mb-3 text-center"
                 >
                   Hiring
                 </h3>
-                <ul class="space-y-2 text-gray-700 text-center">
+                <ul class="space-y-2 text-center">
                   <li>Find skilled teammates who share your mission</li>
                   <li>Create roles and onboard with clear expectations</li>
                   <li>Build momentum with purpose-driven collaboration</li>
@@ -2427,17 +2245,15 @@
       <!-- Vacancies Section -->
       <section
         id="vacancies"
-        class="relative py-24 bg-gradient-to-b from-blue-50 to-purple-50 overflow-hidden"
+        class="relative py-24 overflow-hidden"
       >
         <!-- Section Header -->
         <div class="text-center mb-20 px-6 relative z-10">
-          <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+          <h2 class="bb-h2 mb-4">
             Join as a Volunteer / Intern
           </h2>
-          <div
-            class="w-24 h-1 bg-gradient-to-r from-yellow-300 to-yellow-600 mx-auto mb-6 rounded-full"
-          ></div>
-          <p class="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          <div class="bb-ruler w-24 mx-auto mb-6" aria-hidden="true"></div>
+          <p class="text-lg max-w-3xl mx-auto leading-relaxed">
             Build a real startup's product with React, Node.js and AI tools.
             Expect 10+ hours a week, team meetings and a mentor. You'll leave
             with work you can show and a reference.
@@ -2450,31 +2266,24 @@
         >
           <!-- Left Gradient Panel -->
           <div
-            class="relative bg-gradient-to-br from-purple-400 to-blue-500 text-white rounded-3xl p-12 flex flex-col justify-center shadow-2xl overflow-hidden"
+            class="bb-card bb-ink p-12 flex flex-col justify-center overflow-hidden"
           >
-            <div
-              class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/microcarbon.png')] opacity-10 rounded-3xl"
-            ></div>
             <div class="relative z-10">
-              <div
-                class="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-8 shadow-lg"
-              >
-                <span class="material-symbols-outlined text-white text-5xl"
-                  >rocket_launch</span
-                >
+              <div class="bb-icon mb-8">
+                <svg class="bb-ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M227.85,46.89a20,20,0,0,0-18.74-18.74c-13.13-.77-46.65.42-74.48,28.24L131,60H74.36a19.83,19.83,0,0,0-14.14,5.86L25.87,100.19a20,20,0,0,0,11.35,33.95l37.14,5.18,42.32,42.32,5.19,37.18A19.88,19.88,0,0,0,135.34,235a20.13,20.13,0,0,0,6.37,1,19.9,19.9,0,0,0,14.1-5.87l34.34-34.35A19.85,19.85,0,0,0,196,181.64V125l3.6-3.59C227.43,93.54,228.62,60,227.85,46.89ZM76,84h31L75.75,115.28l-27.23-3.8ZM151.6,73.37A72.27,72.27,0,0,1,204,52a72.17,72.17,0,0,1-21.38,52.41L128,159,97,128ZM172,180l-27.49,27.49-3.8-27.23L172,149Zm-72,22c-8.71,11.85-26.19,26-60,26a12,12,0,0,1-12-12c0-33.84,14.12-51.32,26-60A12,12,0,1,1,68.18,175.3C62.3,179.63,55.51,187.8,53,203c15.21-2.51,23.37-9.3,27.7-15.18A12,12,0,1,1,100,202Z"/></svg>
               </div>
-              <h3 class="text-3xl lg:text-4xl font-bold mb-6 leading-snug">
+              <h3 class="bb-h3 mb-6">
                 Get the experience employers ask for
               </h3>
-              <p class="text-white/90 mb-10 leading-relaxed">
+              <p class="text-muted mb-10 leading-relaxed">
                 Join a global team of developers and gain hands-on experience
                 building impactful projects with modern technologies.
               </p>
               <a
                 href="#"
-                class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-400 to-blue-600 text-white border-2 border-white px-12 py-4 rounded-full shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300"
+                class="bb-btn"
               >
-                <span class="material-symbols-outlined text-lg">send</span>
+                <svg class="bb-ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M230.14,25.86a20,20,0,0,0-19.57-5.11l-.22.07L18.44,79a20,20,0,0,0-3.06,37.25L99,157l40.71,83.65a19.81,19.81,0,0,0,18,11.38c.57,0,1.15,0,1.73-.07A19.82,19.82,0,0,0,177,237.56L235.18,45.65a1.42,1.42,0,0,0,.07-.22A20,20,0,0,0,230.14,25.86ZM156.91,221.07l-34.37-70.64,46-45.95a12,12,0,0,0-17-17l-46,46L34.93,99.09,210,46Z"/></svg>
                 Apply Now
               </a>
             </div>
@@ -2482,23 +2291,19 @@
 
           <!-- Right Light Panel -->
           <div
-            class="relative bg-white/60 backdrop-blur-md rounded-3xl shadow-md p-10 transition duration-300 hover:shadow-lg"
+            class="bb-card relative p-10"
           >
             <!-- Requirements -->
             <div class="mb-10">
               <div class="flex items-center mb-4">
-                <div
-                  class="w-10 h-10 rounded-lg bg-gradient-to-r from-yellow-300 to-yellow-600 text-white flex items-center justify-center shadow-md"
-                >
-                  <span class="material-symbols-outlined text-xl"
-                    >check_circle</span
-                  >
+                <div class="bb-icon bb-icon--sm">
+                  <svg class="bb-ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"/></svg>
                 </div>
-                <h4 class="text-2xl font-bold text-gray-900 ml-3">
+                <h4 class="bb-h4 ml-3">
                   Requirements
                 </h4>
               </div>
-              <ul class="text-gray-700 space-y-2 ml-2">
+              <ul class="space-y-2 ml-2">
                 <li>• Passion for learning and teamwork</li>
                 <li>• Basic knowledge of HTML, CSS, or JavaScript</li>
                 <li>• 10+ hrs/week commitment</li>
@@ -2509,16 +2314,14 @@
             <!-- What You'll Gain -->
             <div class="mb-10">
               <div class="flex items-center mb-4">
-                <div
-                  class="w-10 h-10 rounded-lg bg-gradient-to-r from-purple-500 to-blue-600 text-white flex items-center justify-center shadow-md"
-                >
-                  <span class="material-symbols-outlined text-xl">star</span>
+                <div class="bb-icon bb-icon--sm">
+                  <svg class="bb-ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M243,96a20.33,20.33,0,0,0-17.74-14l-56.59-4.57L146.83,24.62a20.36,20.36,0,0,0-37.66,0L87.35,77.44,30.76,82A20.45,20.45,0,0,0,19.1,117.88l43.18,37.24-13.2,55.7A20.37,20.37,0,0,0,79.57,233L128,203.19,176.43,233a20.39,20.39,0,0,0,30.49-22.15l-13.2-55.7,43.18-37.24A20.43,20.43,0,0,0,243,96ZM172.53,141.7a12,12,0,0,0-3.84,11.86L181.58,208l-47.29-29.08a12,12,0,0,0-12.58,0L74.42,208l12.89-54.4a12,12,0,0,0-3.84-11.86L41.2,105.24l55.4-4.47a12,12,0,0,0,10.13-7.38L128,41.89l21.27,51.5a12,12,0,0,0,10.13,7.38l55.4,4.47Z"/></svg>
                 </div>
-                <h4 class="text-2xl font-bold text-gray-900 ml-3">
+                <h4 class="bb-h4 ml-3">
                   What You’ll Gain
                 </h4>
               </div>
-              <ul class="text-gray-700 space-y-2 ml-2">
+              <ul class="space-y-2 ml-2">
                 <li>• Mentorship from experienced developers</li>
                 <li>• Real-world project experience</li>
                 <li>• Opportunities to grow into leadership roles</li>
@@ -2528,7 +2331,7 @@
 
             <!-- Footer Info -->
             <div
-              class="border-t border-gray-200 pt-6 mt-4 text-gray-600 text-sm text-center"
+              class="border-t border-rule pt-6 mt-4 text-muted text-sm text-center"
             >
               Join <strong>50+ developers</strong> already building with us.
             </div>
@@ -2539,25 +2342,17 @@
       <!--Founder-->
       <section
         id="founders"
-        class="section-padding bg-gray-50 relative overflow-hidden"
+        class="section-padding relative overflow-hidden"
         role="region"
         aria-labelledby="founders-heading"
       >
-        <div
-          class="absolute -bottom-20 -left-20 w-72 h-72 bg-yellow-200 opacity-30 rounded-full"
-        ></div>
-        <div
-          class="absolute -top-24 -right-24 w-96 h-96 bg-purple-200 opacity-20 rounded-full"
-        ></div>
         <div class="max-w-6xl mx-auto">
           <div class="text-center mb-16">
-            <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h3 class="bb-h2 mb-6">
               Founders We Support
             </h3>
-            <div
-              class="w-24 h-1 bg-gradient-to-r from-yellow-300 to-yellow-600 mx-auto mb-6 rounded-full"
-            ></div>
-            <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            <div class="bb-ruler w-24 mx-auto mb-6" aria-hidden="true"></div>
+            <p class="text-xl max-w-3xl mx-auto leading-relaxed">
               We support startup founders who are committed to learning,
               building, and leading with purpose.
             </p>
@@ -2568,14 +2363,14 @@
             <div role="region" aria-labelledby="traits-heading">
               <h4
                 id="traits-heading"
-                class="text-2xl font-semibold text-gray-800 mb-4"
+                class="bb-h4 mb-4"
               >
                 Traits We Look For
               </h4>
-              <ul class="space-y-4 text-gray-700 text-lg">
+              <ul class="space-y-4 text-lg">
                 <li class="flex items-start space-x-2">
                   <span
-                    class="text-green-500 text-xl font-bold mt-0.5"
+                    class="text-xl font-bold mt-0.5"
                     aria-hidden="true"
                     >✓</span
                   >
@@ -2586,7 +2381,7 @@
 
                 <li class="flex items-start space-x-2">
                   <span
-                    class="text-green-500 text-xl font-bold mt-0.5"
+                    class="text-xl font-bold mt-0.5"
                     aria-hidden="true"
                     >✓</span
                   >
@@ -2597,7 +2392,7 @@
                 </li>
                 <li class="flex items-start space-x-2">
                   <span
-                    class="text-green-500 text-xl font-bold mt-0.5"
+                    class="text-xl font-bold mt-0.5"
                     aria-hidden="true"
                     >✓</span
                   >
@@ -2607,7 +2402,7 @@
                 </li>
                 <li class="flex items-start space-x-2">
                   <span
-                    class="text-green-500 text-xl font-bold mt-0.5"
+                    class="text-xl font-bold mt-0.5"
                     aria-hidden="true"
                     >✓</span
                   >
@@ -2621,13 +2416,13 @@
 
             <!-- Right: What We Teach -->
             <div role="region" aria-labelledby="teach-heading">
-              <h4 class="text-2xl font-semibold text-gray-800 mb-4">
+              <h4 class="bb-h4 mb-4">
                 What We Teach
               </h4>
-              <ul class="space-y-4 text-gray-700 text-lg">
+              <ul class="space-y-4 text-lg">
                 <li class="flex items-start space-x-2">
                   <span
-                    class="text-purple-600 text-xl font-bold mt-0.5"
+                    class="text-xl font-bold mt-0.5"
                     aria-hidden="true"
                     >★</span
                   >
@@ -2638,7 +2433,7 @@
                 </li>
                 <li class="flex items-start space-x-2">
                   <span
-                    class="text-purple-600 text-xl font-bold mt-0.5"
+                    class="text-xl font-bold mt-0.5"
                     aria-hidden="true"
                     >★</span
                   >
@@ -2649,7 +2444,7 @@
                 </li>
                 <li class="flex items-start space-x-2">
                   <span
-                    class="text-purple-600 text-xl font-bold mt-0.5"
+                    class="text-xl font-bold mt-0.5"
                     aria-hidden="true"
                     >★</span
                   >
@@ -2667,10 +2462,10 @@
       <!-- Meetup Events -->
       <section
         id="meetup-events"
-        class="section-padding bg-gradient-to-br from-purple-400 to-blue-600 text-white"
+        class="section-padding bb-ink"
       >
         <div class="max-w-6xl mx-auto text-center">
-          <h3 class="text-4xl md:text-5xl font-bold mb-6">Meetup Events</h3>
+          <h3 class="bb-h2 mb-6">Meetup Events</h3>
 
           <!-- Purpose -->
           <p class="text-xl mb-6 max-w-3xl mx-auto leading-relaxed opacity-90">
@@ -2691,7 +2486,7 @@
           <a
             href="https://www.meetup.com/it-volunteers-and-interns/"
             target="_blank"
-            class="inline-flex items-center bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition transform hover:scale-105 shadow-lg"
+            class="bb-btn"
             aria-label="View BetaBuilders events on Meetup"
           >
             View Events on Meetup
@@ -2716,7 +2511,7 @@
           >
             <!-- Pitch to Build -->
             <div
-              class="bg-white text-gray-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl group"
+              class="bb-card overflow-hidden transform"
             >
               <div class="overflow-hidden">
                 <img
@@ -2726,12 +2521,12 @@
                   loading="lazy"
                   decoding="async"
                   alt="Pitch to Build Event"
-                  class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                  class="w-full h-48 object-cover"
                 />
               </div>
               <div class="p-4">
                 <h4
-                  class="text-lg font-semibold mb-2 group-hover:text-purple-600 transition-colors duration-300"
+                  class="bb-h4 mb-2"
                 >
                   Pitch to Build
                 </h4>
@@ -2744,7 +2539,7 @@
 
             <!-- Founder Interview -->
             <div
-              class="bg-white text-gray-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl group"
+              class="bb-card overflow-hidden transform"
             >
               <div class="overflow-hidden">
                 <img
@@ -2754,12 +2549,12 @@
                   loading="lazy"
                   decoding="async"
                   alt="Founder Interview"
-                  class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                  class="w-full h-48 object-cover"
                 />
               </div>
               <div class="p-4">
                 <h4
-                  class="text-lg font-semibold mb-2 group-hover:text-purple-600 transition-colors duration-300"
+                  class="bb-h4 mb-2"
                 >
                   Founder Spotlight
                 </h4>
@@ -2772,7 +2567,7 @@
 
             <!-- Masterclass -->
             <div
-              class="bg-white text-gray-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl group"
+              class="bb-card overflow-hidden transform"
             >
               <div class="overflow-hidden">
                 <img
@@ -2782,12 +2577,12 @@
                   loading="lazy"
                   decoding="async"
                   alt="Startup Masterclass"
-                  class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                  class="w-full h-48 object-cover"
                 />
               </div>
               <div class="p-4">
                 <h4
-                  class="text-lg font-semibold mb-2 group-hover:text-purple-600 transition-colors duration-300"
+                  class="bb-h4 mb-2"
                 >
                   Startup Masterclass
                 </h4>
@@ -2805,30 +2600,22 @@
       <!-- Volunteer -->
       <section
         id="volunteers"
-        class="section-padding bg-gray-50 relative overflow-hidden"
+        class="section-padding relative overflow-hidden"
         role="region"
         aria-labelledby="volunteer-heading"
       >
-        <div
-          class="absolute -top-20 -left-20 w-72 h-72 bg-pink-200 opacity-30 rounded-full"
-        ></div>
-        <div
-          class="absolute -bottom-24 -right-24 w-96 h-96 bg-green-200 opacity-20 rounded-full"
-        ></div>
 
         <div class="max-w-6xl mx-auto">
           <!-- Section Header -->
           <div class="text-center mb-16">
             <h3
               id="volunteer-heading"
-              class="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+              class="bb-h2 mb-6"
             >
               Volunteer With Us
             </h3>
-            <div
-              class="w-24 h-1 bg-gradient-to-r from-yellow-300 to-yellow-600 mx-auto mb-6 rounded-full"
-            ></div>
-            <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            <div class="bb-ruler w-24 mx-auto mb-6" aria-hidden="true"></div>
+            <p class="text-xl max-w-3xl mx-auto leading-relaxed">
               Want to grow your skills, build your portfolio, and contribute to
               something meaningful? BetaBuilders is your launchpad for
               real-world experience and impact.
@@ -2844,93 +2631,37 @@
                 aria-label="Volunteer Benefits"
               >
                 <div
-                  class="flex items-center space-x-4 p-4 bg-gray-100 rounded-xl"
+                  class="bb-card bb-card--flat flex items-center space-x-4 p-4"
                 >
-                  <div
-                    class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0"
-                  >
-                    <svg
-                      class="w-5 h-5 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </div>
-                  <span class="text-gray-800 font-medium"
+                  <div class="bb-check"><svg class="bb-ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"/></svg></div>
+                  <span class="font-medium"
                     >Work on real startup MVPs</span
                   >
                 </div>
 
                 <div
-                  class="flex items-center space-x-4 p-4 bg-gray-100 rounded-xl"
+                  class="bb-card bb-card--flat flex items-center space-x-4 p-4"
                 >
-                  <div
-                    class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0"
-                  >
-                    <svg
-                      class="w-5 h-5 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </div>
-                  <span class="text-gray-800 font-medium"
+                  <div class="bb-check"><svg class="bb-ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"/></svg></div>
+                  <span class="font-medium"
                     >Collaborate with passionate founders</span
                   >
                 </div>
 
                 <div
-                  class="flex items-center space-x-4 p-4 bg-gray-100 rounded-xl"
+                  class="bb-card bb-card--flat flex items-center space-x-4 p-4"
                 >
-                  <div
-                    class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0"
-                  >
-                    <svg
-                      class="w-5 h-5 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </div>
-                  <span class="text-gray-800 font-medium"
+                  <div class="bb-check"><svg class="bb-ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"/></svg></div>
+                  <span class="font-medium"
                     >Learn by doing, not just watching</span
                   >
                 </div>
 
                 <div
-                  class="flex items-center space-x-4 p-4 bg-gray-100 rounded-xl"
+                  class="bb-card bb-card--flat flex items-center space-x-4 p-4"
                 >
-                  <div
-                    class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0"
-                  >
-                    <svg
-                      class="w-5 h-5 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </div>
-                  <span class="text-gray-800 font-medium"
+                  <div class="bb-check"><svg class="bb-ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"/></svg></div>
+                  <span class="font-medium"
                     >Get references, feedback, and networking support</span
                   >
                 </div>
@@ -2940,28 +2671,21 @@
             <!-- Right Column: CTA Card -->
             <div class="relative">
               <div
-                class="absolute inset-0 bg-gradient-to-br from-purple-400 to-blue-600 rounded-3xl transform -rotate-6"
-              ></div>
-              <div
-                class="relative bg-white p-8 rounded-3xl shadow-xl border border-gray-100"
+                class="bb-card relative p-8 border border-rule"
               >
                 <div class="text-center">
-                  <div
-                    class="w-20 h-20 bg-gradient-to-r from-yellow-300 to-yellow-600 rounded-full mx-auto flex items-center justify-center mb-6"
-                  >
-                    <span class="material-symbols-outlined text-white text-3xl">
-                      rocket_launch
-                    </span>
+                  <div class="bb-icon mx-auto mb-6">
+                    <svg class="bb-ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M227.85,46.89a20,20,0,0,0-18.74-18.74c-13.13-.77-46.65.42-74.48,28.24L131,60H74.36a19.83,19.83,0,0,0-14.14,5.86L25.87,100.19a20,20,0,0,0,11.35,33.95l37.14,5.18,42.32,42.32,5.19,37.18A19.88,19.88,0,0,0,135.34,235a20.13,20.13,0,0,0,6.37,1,19.9,19.9,0,0,0,14.1-5.87l34.34-34.35A19.85,19.85,0,0,0,196,181.64V125l3.6-3.59C227.43,93.54,228.62,60,227.85,46.89ZM76,84h31L75.75,115.28l-27.23-3.8ZM151.6,73.37A72.27,72.27,0,0,1,204,52a72.17,72.17,0,0,1-21.38,52.41L128,159,97,128ZM172,180l-27.49,27.49-3.8-27.23L172,149Zm-72,22c-8.71,11.85-26.19,26-60,26a12,12,0,0,1-12-12c0-33.84,14.12-51.32,26-60A12,12,0,1,1,68.18,175.3C62.3,179.63,55.51,187.8,53,203c15.21-2.51,23.37-9.3,27.7-15.18A12,12,0,1,1,100,202Z"/></svg>
                   </div>
-                  <h4 class="text-2xl font-bold mb-4 text-gray-900">
+                  <h4 class="bb-h4 mb-4">
                     Ready to Start?
                   </h4>
-                  <p class="text-gray-600 mb-6">
+                  <p class="text-muted mb-6">
                     Join hundreds of volunteers building the future
                   </p>
                   <a
                     href="#contact"
-                    class="inline-block bg-gradient-to-r from-purple-400 to-blue-600 text-white px-6 py-3 rounded-full font-medium transition duration-300 hover:opacity-90 hover:shadow-lg"
+                    class="bb-btn"
                   >
                     Get Started
                   </a>
@@ -2973,9 +2697,9 @@
       </section>
 
       <!-- Contact -->
-      <section id="contact" class="section-padding bg-gray-900 text-white">
+      <section id="contact" class="section-padding bb-ink">
         <div class="max-w-6xl mx-auto text-center">
-          <h3 class="text-4xl md:text-5xl font-bold mb-6">Connect With Us</h3>
+          <h3 class="bb-h2 mb-6">Connect With Us</h3>
 
           <p class="text-xl mb-6 max-w-3xl mx-auto leading-relaxed opacity-90">
             Are you a founder looking to find like-minded people to move forward
@@ -2994,7 +2718,7 @@
             href="https://www.linkedin.com/company/beta-builders-club"
             target="_blank"
             aria-label="Connect with BetaBuilders on LinkedIn"
-            class="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-700 transition transform hover:scale-105 shadow-lg"
+            class="bb-btn"
           >
             <svg class="mr-3 w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path
@@ -3024,7 +2748,7 @@
               href="https://www.facebook.com/profile.php?id=61577926374535"
               target="_blank"
               aria-label="Facebook"
-              class="hover:text-blue-400 transition text-3xl font-bold flex items-center justify-center w-8 h-8"
+              class="text-3xl font-bold flex items-center justify-center w-8 h-8"
             >
               <i class="fab fa-facebook-f"></i>
             </a>
@@ -3034,7 +2758,7 @@
               href="https://www.instagram.com/betabuilders_org/"
               target="_blank"
               aria-label="Instagram"
-              class="hover:text-yellow-300 transition text-3xl font-bold flex items-center justify-center w-8 h-8"
+              class="text-3xl font-bold flex items-center justify-center w-8 h-8"
             >
               <i class="fab fa-x"></i>
             </a>
@@ -3044,7 +2768,7 @@
               href="https://x.com/BetaBuildersOrg"
               target="_blank"
               aria-label="X"
-              class="hover:text-blue-400 transition text-3xl font-bold flex items-center justify-center w-8 h-8"
+              class="text-3xl font-bold flex items-center justify-center w-8 h-8"
             >
               <i class="fab fa-instagram"></i>
             </a>
@@ -3054,14 +2778,14 @@
               href="https://www.meetup.com/it-volunteers-and-interns/"
               target="_blank"
               aria-label="Meetup"
-              class="hover:text-yellow-300 transition text-3xl font-bold flex items-center justify-center w-8 h-8"
+              class="text-3xl font-bold flex items-center justify-center w-8 h-8"
             >
               <i class="fab fa-meetup"></i>
             </a>
           </div>
 
           <!-- Copyright -->
-          <p class="text-gray-400 mt-12 text-sm">
+          <p class="text-muted mt-12 text-sm">
             © 2025 BetaBuilders. Built by volunteers.
           </p>
         </div>
@@ -3111,7 +2835,7 @@
 
       // Close mobile menu on window resize (if screen becomes large)
       window.addEventListener("resize", () => {
-        if (window.innerWidth >= 1024) {
+        if (window.innerWidth >= 1280) {
           // lg breakpoint
           mobileMenu.classList.add("hidden");
           mobileMenuToggle.setAttribute("aria-expanded", "false");
