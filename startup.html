@@ -4,25 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BetaBuilders — Featured Startups</title>
+    <meta
+      name="description"
+      content="Meet the 15 startups building with BetaBuilders volunteers — from AI job tools to fashion technology, urban art and sustainable living."
+    />
+    <link rel="canonical" href="https://betabuilders.org/startup.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://betabuilders.org/startup.html" />
+    <meta property="og:title" content="BetaBuilders — Featured Startups" />
+    <meta
+      property="og:description"
+      content="Meet the 15 startups building with BetaBuilders volunteers — from AI job tools to fashion technology, urban art and sustainable living."
+    />
+    <meta property="og:image" content="https://betabuilders.org/images/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="BetaBuilders" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@BetaBuildersOrg" />
 
     <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="images/betabuilder_favicon.png" type="image/png" />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    <!-- tailwind.css: purged Tailwind 2.2.19 build, rebuild with
+         npx tailwindcss@2.2.19 -c tailwind.config.js -o tailwind.css --minify -->
+    <link rel="stylesheet" href="tailwind.css" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/brand/logo-mark.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
     <!-- ── style.css (provided) ── -->
     <style>
@@ -515,17 +536,15 @@
           <div class="flex items-center">
             <a href="/" class="flex items-center">
               <img
-                src="images/betabuilder_gold2.png"
-                alt="BetaBuilders Logo"
-                class="w-8 h-8 sm:w-12 sm:h-12 md:w-14 md:h-14 object-contain origin-left transition-transform duration-200"
-                style="
-                  transform: scaleX(1.25) scaleY(1.25);
-                  background: transparent;
-                "
+                src="brand/logo.svg"
+                width="481"
+                height="100"
+                alt="BetaBuilders"
+                class="h-7 sm:h-9 md:h-10 w-auto"
               />
             </a>
             <span
-              class="ml-14 sm:ml-16 md:ml-18 text-sm sm:text-base md:text-lg leading-none text-gradient font-semibold tracking-wide whitespace-nowrap"
+              class="hidden sm:inline lg:hidden xl:inline ml-4 pl-4 border-l border-gray-200 text-sm md:text-base leading-none text-gradient font-semibold tracking-wide whitespace-nowrap"
             >
               First Pre-Startup Accelerator
             </span>
@@ -711,7 +730,11 @@
                 <span class="card-num">01</span>
                 <div class="card-icon-box">
                   <img
-                    src="images/JobSearch_Logo.png"
+                    src="images/JobSearch_Logo.webp"
+                    width="192"
+                    height="192"
+                    loading="lazy"
+                    decoding="async"
                     alt="JobSearchWorks Logo"
                   />
                 </div>
@@ -821,7 +844,7 @@
               <div class="card-left">
                 <span class="card-num">02</span>
                 <div class="card-icon-box">
-                  <img src="images/Quicksite_Logo.png" alt="QuickSite Logo" />
+                  <img src="images/Quicksite_Logo.webp" alt="QuickSite Logo" width="192" height="175" loading="lazy" decoding="async" />
                 </div>
                 <div class="card-name-text">Quick<br />Site</div>
                 <span class="card-category-badge" style="color: #10b981"
@@ -929,7 +952,7 @@
               <div class="card-left">
                 <span class="card-num">03</span>
                 <div class="card-icon-box">
-                  <img src="images/talent_hub_logo.png" alt="TalentHub Logo" />
+                  <img src="images/talent_hub_logo.webp" alt="TalentHub Logo" width="192" height="192" loading="lazy" decoding="async" />
                 </div>
                 <div class="card-name-text">Talent<br />Hub</div>
                 <span class="card-category-badge" style="color: #f59e0b"
@@ -1037,7 +1060,7 @@
               <div class="card-left">
                 <span class="card-num">04</span>
                 <div class="card-icon-box">
-                  <img src="images/artout_logo.png" alt="ArtOut Logo" />
+                  <img src="images/artout_logo.webp" alt="ArtOut Logo" width="192" height="192" loading="lazy" decoding="async" />
                 </div>
                 <div class="card-name-text">Art<br />Out</div>
                 <span class="card-category-badge" style="color: #f97316"
@@ -1145,7 +1168,7 @@
               <div class="card-left">
                 <span class="card-num">05</span>
                 <div class="card-icon-box">
-                  <img src="images/grasskarmalogo.png" alt="GrassKarma Logo" />
+                  <img src="images/grasskarmalogo.webp" alt="GrassKarma Logo" width="192" height="192" loading="lazy" decoding="async" />
                 </div>
                 <div class="card-name-text">Grass<br />Karma</div>
                 <span class="card-category-badge" style="color: #22c55e"
@@ -1253,7 +1276,7 @@
               <div class="card-left">
                 <span class="card-num">06</span>
                 <div class="card-icon-box">
-                  <img src="images/heart_logo.png" alt="HeartFull Logo" />
+                  <img src="images/heart_logo.webp" alt="HeartFull Logo" width="192" height="192" loading="lazy" decoding="async" />
                 </div>
                 <div class="card-name-text">Heart<br />Full</div>
                 <span class="card-category-badge" style="color: #ec4899"
@@ -1361,7 +1384,7 @@
               <div class="card-left">
                 <span class="card-num">07</span>
                 <div class="card-icon-box">
-                  <img src="images/seedstart_space.png" alt="SeedStart Logo" />
+                  <img src="images/seedstart_space.webp" alt="SeedStart Logo" width="192" height="192" loading="lazy" decoding="async" />
                 </div>
                 <div class="card-name-text">Seed<br />Start</div>
                 <span class="card-category-badge" style="color: #16a34a"
@@ -1470,7 +1493,7 @@
               <div class="card-left">
                 <span class="card-num">08</span>
                 <div class="card-icon-box">
-                  <img src="images/builders.png" alt="Buildless Logo" />
+                  <img src="images/builders.webp" alt="Buildless Logo" width="192" height="185" loading="lazy" decoding="async" />
                 </div>
                 <div class="card-name-text">Build<br />less</div>
                 <span class="card-category-badge" style="color: #3b82f6"
@@ -1579,7 +1602,7 @@
               <div class="card-left">
                 <span class="card-num">09</span>
                 <div class="card-icon-box">
-                  <img src="images/peacock_logo.png" alt="Peacock Dating Logo" />
+                  <img src="images/peacock_logo.webp" alt="Peacock Dating Logo" width="192" height="192" loading="lazy" decoding="async" />
                 </div>
                 <div class="card-name-text">Peacock<br />Dating</div>
                 <span class="card-category-badge" style="color: #06b6d4"
@@ -1688,7 +1711,7 @@
               <div class="card-left">
                 <span class="card-num">10</span>
                 <div class="card-icon-box">
-                  <img src="images/gotjob_online_logo.jpg" alt="GotJob Logo" />
+                  <img src="images/gotjob_online_logo.webp" alt="GotJob Logo" width="192" height="192" loading="lazy" decoding="async" />
                 </div>
                 <div class="card-name-text">Got<br />Job</div>
                 <span class="card-category-badge" style="color: #8b5cf6"
@@ -1797,7 +1820,7 @@
               <div class="card-left">
                 <span class="card-num">11</span>
                 <div class="card-icon-box">
-                  <img src="images/scrum_force.png" alt="Scrumforce Logo" />
+                  <img src="images/scrum_force.webp" alt="Scrumforce Logo" width="192" height="159" loading="lazy" decoding="async" />
                 </div>
                 <div class="card-name-text">Scrum<br />force</div>
                 <span class="card-category-badge" style="color: #22c55e"
@@ -1906,7 +1929,7 @@
               <div class="card-left">
                 <span class="card-num">12</span>
                 <div class="card-icon-box">
-                  <img src="images/car_ads.png" alt="CarAds Logo" />
+                  <img src="images/car_ads.webp" alt="CarAds Logo" width="192" height="43" loading="lazy" decoding="async" />
                 </div>
                 <div class="card-name-text">Car<br />Ads</div>
                 <span class="card-category-badge" style="color: #3b82f6"
@@ -2014,7 +2037,7 @@
               <div class="card-left">
                 <span class="card-num">13</span>
                 <div class="card-icon-box">
-                  <img src="images/data_lab.png" alt="DatasetLab Logo" />
+                  <img src="images/data_lab.webp" alt="DatasetLab Logo" width="192" height="192" loading="lazy" decoding="async" />
                 </div>
                 <div class="card-name-text">Dataset<br />Lab</div>
                 <span class="card-category-badge" style="color: #16a34a"
@@ -2123,7 +2146,7 @@
               <div class="card-left">
                 <span class="card-num">14</span>
                 <div class="card-icon-box">
-                  <img src="images/mylife.png" alt="Startup Name Logo" />
+                  <img src="images/mylife.webp" alt="Startup Name Logo" width="112" height="60" loading="lazy" decoding="async" />
                 </div>
                 <div class="card-name-text">My<br />Life</div>
                 <span class="card-category-badge" style="color: #f59e0b"
@@ -2233,7 +2256,7 @@
               <div class="card-left">
                 <span class="card-num">15</span>
                 <div class="card-icon-box">
-                  <img src="images/shop_your_closet.png" alt="Shop Your Closet Logo" />
+                  <img src="images/shop_your_closet.webp" alt="Shop Your Closet Logo" width="192" height="181" loading="lazy" decoding="async" />
                 </div>
                 <div class="card-name-text">Shop Your<br />Closet</div>
                 <span class="card-category-badge" style="color: #ec4899"

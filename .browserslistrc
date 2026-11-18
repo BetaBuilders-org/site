@@ -1,0 +1,4 @@
+# Autoprefixer targets for the tailwind.css build (keeps -webkit-backdrop-filter for Safari/iOS < 18)
+defaults
+safari >= 14
+ios_saf >= 14

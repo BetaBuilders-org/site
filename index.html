@@ -9,23 +9,14 @@
       BetaBuilders – First Pre-Startup Accelerator | Volunteer with Startups
     </title>
     <meta
-      name="title"
-      content="BetaBuilders – First Pre-Startup Accelerator | Volunteer with Startups"
-    />
-    <meta
       name="description"
-      content="Join BetaBuilders, the first pre-startup accelerator connecting volunteer developers, designers, and product managers with early-stage startup founders to build MVPs and gain real-world experience. Free startup coaching, marketing, and team building."
-    />
-    <meta
-      name="keywords"
-      content="startup accelerator, volunteer developers, MVP building, startup coaching, tech volunteers, startup founders, product development, web development, UI/UX design, startup community"
+      content="BetaBuilders is a free pre-startup accelerator: volunteer developers, designers and product managers team up with early-stage founders to build MVPs."
     />
     <meta name="author" content="BetaBuilders" />
     <meta
       name="robots"
       content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     />
-    <meta name="googlebot" content="index, follow" />
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://betabuilders.org/" />
@@ -43,7 +34,7 @@
     />
     <meta
       property="og:image"
-      content="https://betabuilders.org/images/betabuilder_gold2.png"
+      content="https://betabuilders.org/images/og-image.jpg"
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -51,21 +42,21 @@
     <meta property="og:locale" content="en_US" />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://betabuilders.org/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://betabuilders.org/" />
     <meta
-      property="twitter:title"
+      name="twitter:title"
       content="BetaBuilders – First Pre-Startup Accelerator | Volunteer with Startups"
     />
     <meta
-      property="twitter:description"
+      name="twitter:description"
       content="Join BetaBuilders, the first pre-startup accelerator connecting volunteer developers, designers, and product managers with early-stage startup founders to build MVPs and gain real-world experience."
     />
     <meta
-      property="twitter:image"
-      content="https://betabuilders.org/images/betabuilder_gold2.png"
+      name="twitter:image"
+      content="https://betabuilders.org/images/og-image.jpg"
     />
-    <meta property="twitter:site" content="@BetaBuildersOrg" />
+    <meta name="twitter:site" content="@BetaBuildersOrg" />
 
     <!-- Additional SEO Meta Tags -->
     <meta name="theme-color" content="#667eea" />
@@ -74,8 +65,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="BetaBuilders" />
 
+    <!-- Material Symbols subset: add any new icon name to icon_names (alphabetical) or it renders as text -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=campaign,check_circle,groups,handshake,mic,public,rocket,rocket_launch,school,send,star,visibility&display=block"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -96,25 +88,39 @@
     </script>
 
     <!-- Preconnect to external domains for performance optimization -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <!-- Stylesheets -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
+    <!-- tailwind.css: purged Tailwind 2.2.19 build, rebuild with
+         npx tailwindcss@2.2.19 -c tailwind.config.js -o tailwind.css --minify -->
+    <link rel="stylesheet" href="tailwind.css" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
-    <link rel="icon" href="images/betabuilder_favicon.png" type="image/png" />
+    <noscript>
+      <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/brand/logo-mark.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -124,7 +130,7 @@
         "name": "BetaBuilders",
         "alternateName": "First Pre-Startup Accelerator",
         "url": "https://betabuilders.org",
-        "logo": "https://betabuilders.org/images/betabuilder_gold2.png",
+        "logo": "https://betabuilders.org/brand/logo-mark-512.png",
         "description": "BetaBuilders is the first pre-startup accelerator connecting volunteer developers, designers, and product managers with early-stage startup founders to build MVPs and gain real-world experience.",
         "foundingDate": "2024",
         "sameAs": [
@@ -139,11 +145,6 @@
           "contactType": "customer service",
           "url": "https://www.linkedin.com/company/beta-builders-club"
         },
-        "location": {
-          "@type": "VirtualLocation",
-          "url": "https://betabuilders.org"
-        },
-        "serviceType": "Startup Accelerator",
         "areaServed": "Worldwide"
       }
     </script>
@@ -153,52 +154,10 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "BetaBuilders",
-        "url": "https://betabuilders.org",
-        "description": "First Pre-Startup Accelerator connecting volunteers with startup founders",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://betabuilders.org/#{search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
+        "url": "https://betabuilders.org/",
+        "description": "First Pre-Startup Accelerator connecting volunteers with startup founders"
       }
     </script>
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Event",
-        "name": "BetaBuilders Pitch to Build Events",
-        "description": "Weekly events where startup founders pitch ideas to volunteer developers and designers",
-        "startDate": "2024-01-01",
-        "endDate": "2025-12-31",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "image": "https://betabuilders.org/images/meetup2.jpg",
-        "location": {
-          "@type": "Place",
-          "name": "Online Event",
-          "url": "https://www.meetup.com/it-volunteers-and-interns/"
-        },
-        "organizer": {
-          "@type": "Organization",
-          "name": "BetaBuilders",
-          "url": "https://www.linkedin.com/company/beta-builders-club"
-        },
-        "performer": {
-          "@type": "Organization",
-          "name": "BetaBuilders"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock",
-          "validFrom": "2024-01-01",
-          "url": "https://www.meetup.com/it-volunteers-and-interns/"
-        }
-      }
-    </script>
-
-     
   </head>
 
   <body class="bg-gray-50 text-gray-800">
@@ -211,17 +170,15 @@
           <div class="flex items-center">
             <a href="/" class="flex items-center">
               <img
-                src="images/betabuilder_gold2.png"
-                alt="BetaBuilders Logo"
-                class="w-8 h-8 sm:w-12 sm:h-12 md:w-14 md:h-14 object-contain origin-left transition-transform duration-200"
-                style="
-                  transform: scaleX(1.25) scaleY(1.25);
-                  background: transparent;
-                "
+                src="brand/logo.svg"
+                width="481"
+                height="100"
+                alt="BetaBuilders"
+                class="h-7 sm:h-9 md:h-10 w-auto"
               />
             </a>
             <span
-              class="ml-14 sm:ml-16 md:ml-18 text-sm sm:text-base md:text-lg leading-none text-gradient font-semibold tracking-wide whitespace-nowrap"
+              class="hidden sm:inline lg:hidden xl:inline ml-4 pl-4 border-l border-gray-200 text-sm md:text-base leading-none text-gradient font-semibold tracking-wide whitespace-nowrap"
             >
               First Pre-Startup Accelerator
             </span>
@@ -1151,7 +1108,11 @@
                 <a href="https://jobsearch.works/" target="_blank" class="mb-4">
                   <div class="bg-blue-100 p-6 rounded-full shadow-md">
                     <img
-                      src="images/JobSearch_Logo.png"
+                      src="images/JobSearch_Logo.webp"
+                      width="192"
+                      height="192"
+                      loading="lazy"
+                      decoding="async"
                       alt="JobSearchWorks Logo"
                       class="w-24 h-24 object-contain rounded-full"
                     />
@@ -1250,7 +1211,11 @@
                 <a href="https://quicksite.space/" target="_blank" class="mb-4">
                   <div class="bg-green-100 p-6 rounded-full shadow-md">
                     <img
-                      src="images/Quicksite_Logo.png"
+                      src="images/Quicksite_Logo.webp"
+                      width="192"
+                      height="175"
+                      loading="lazy"
+                      decoding="async"
                       alt="QuickSite Logo"
                       class="w-24 h-24 object-contain rounded-full"
                     />
@@ -1344,7 +1309,11 @@
                 <a href="https://talenthub.show/" target="_blank" class="mb-4">
                   <div class="bg-gray-100 p-6 rounded-full shadow-md">
                     <img
-                      src="images/talent_hub_logo.png"
+                      src="images/talent_hub_logo.webp"
+                      width="192"
+                      height="192"
+                      loading="lazy"
+                      decoding="async"
                       alt="TalentHub Logo"
                       class="w-24 h-24 object-contain rounded-full"
                     />
@@ -1446,7 +1415,11 @@
                 <a href="https://artout.site/" target="_blank" class="mb-4">
                   <div class="bg-yellow-100 p-6 rounded-full shadow-md">
                     <img
-                      src="images/artout_logo.png"
+                      src="images/artout_logo.webp"
+                      width="192"
+                      height="192"
+                      loading="lazy"
+                      decoding="async"
                       alt="ArtOut Logo"
                       class="w-24 h-24 object-contain rounded-full"
                     />
@@ -1547,7 +1520,11 @@
                 >
                   <div class="bg-green-100 p-6 rounded-full shadow-md">
                     <img
-                      src="images/grasskarma_Logo.png"
+                      src="images/grasskarmalogo.webp"
+                      width="192"
+                      height="192"
+                      loading="lazy"
+                      decoding="async"
                       alt="GrassKarma Logo"
                       class="w-24 h-24 object-contain rounded-full"
                     />
@@ -1645,7 +1622,11 @@
                 >
                   <div class="bg-pink-100 p-6 rounded-full shadow-md">
                     <img
-                      src="images/heart_logo.png"
+                      src="images/heart_logo.webp"
+                      width="192"
+                      height="192"
+                      loading="lazy"
+                      decoding="async"
                       alt="HeartFull Logo"
                       class="w-24 h-24 object-contain rounded-full"
                     />
@@ -1739,7 +1720,11 @@
                 <a href="https://seedstart.world/" target="_blank" class="mb-4">
                   <div class="bg-green-100 p-6 rounded-full shadow-md">
                     <img
-                      src="images/seedstart_logo.png"
+                      src="images/seedstart_logo.webp"
+                      width="192"
+                      height="192"
+                      loading="lazy"
+                      decoding="async"
                       alt="SeedStart Logo"
                       class="w-24 h-24 object-contain rounded-full"
                     />
@@ -1837,7 +1822,11 @@
                 >
                   <div class="bg-blue-200 p-6 rounded-full shadow-md">
                     <img
-                      src="images/builders.png"
+                      src="images/builders.webp"
+                      width="192"
+                      height="185"
+                      loading="lazy"
+                      decoding="async"
                       alt="Buildless Logo"
                       class="w-24 h-24 object-contain rounded-full"
                     />
@@ -1941,7 +1930,11 @@
                 >
                   <div class="bg-green-100 p-6 rounded-full shadow-md">
                     <img
-                      src="images/peacock_logo.png"
+                      src="images/peacock_logo.webp"
+                      width="192"
+                      height="192"
+                      loading="lazy"
+                      decoding="async"
                       alt="Peacock Dating Logo"
                       class="w-24 h-24 object-contain rounded-full"
                     />
@@ -2143,7 +2136,11 @@
                 >
                   <div class="bg-green-50 p-6 rounded-full shadow-md">
                     <img
-                      src="images/scrum_forse.png"
+                      src="images/scrum_forse.webp"
+                      width="192"
+                      height="140"
+                      loading="lazy"
+                      decoding="async"
                       alt="Scrumforce Logo"
                       class="w-24 h-24 object-contain rounded-full"
                     />
@@ -2240,7 +2237,11 @@
                 <a href="https://carads.online/" target="_blank" class="mb-4">
                   <div class="bg-blue-100 p-6 rounded-full shadow-md">
                     <img
-                      src="images/car_ads.png"
+                      src="images/car_ads.webp"
+                      width="192"
+                      height="43"
+                      loading="lazy"
+                      decoding="async"
                       alt="CarAds Logo"
                       class="w-24 h-24 object-contain rounded-full"
                     />
@@ -2336,7 +2337,11 @@
                 <a href="https://datasetlab.org/" target="_blank" class="mb-4">
                   <div class="bg-green-100 p-6 rounded-full shadow-md">
                     <img
-                      src="images/data_lab.png"
+                      src="images/data_lab.webp"
+                      width="192"
+                      height="192"
+                      loading="lazy"
+                      decoding="async"
                       alt="DatasetLab Logo"
                       class="w-24 h-24 object-contain rounded-full"
                     />
@@ -2723,7 +2728,11 @@
             >
               <div class="overflow-hidden">
                 <img
-                  src="images/meetup2.jpg"
+                  src="images/meetup2.webp"
+                  width="800"
+                  height="450"
+                  loading="lazy"
+                  decoding="async"
                   alt="Pitch to Build Event"
                   class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
                 />
@@ -2747,7 +2756,11 @@
             >
               <div class="overflow-hidden">
                 <img
-                  src="images/meetup4.jpeg"
+                  src="images/meetup4.webp"
+                  width="800"
+                  height="534"
+                  loading="lazy"
+                  decoding="async"
                   alt="Founder Interview"
                   class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
                 />
@@ -2771,7 +2784,11 @@
             >
               <div class="overflow-hidden">
                 <img
-                  src="images/meetup5.jpeg"
+                  src="images/meetup5.webp"
+                  width="612"
+                  height="408"
+                  loading="lazy"
+                  decoding="async"
                   alt="Startup Masterclass"
                   class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
                 />
